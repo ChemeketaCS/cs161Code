@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    const int MYSTERY_VALUE = 120;
+
+    int number = MYSTERY_VALUE;
+    int curNumber = number - 1;
+    bool found = false;
+    while (curNumber >= 1 && !found) {
+        if (number % curNumber == 0)
+            found = true;
+        else
+            curNumber--;
+    }
+
+    cout << "Largest factor is " << curNumber << endl;
+
+    return 0;
+}
+

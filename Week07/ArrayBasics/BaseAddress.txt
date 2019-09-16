@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+	int nums[5] = {10, 12, 16, 31 ,22};
+	int otherNums[5];
+
+	cout << nums << endl;
+
+
+	if(nums < otherNums) {
+		cout << "num's ADDRESS is smaller" << endl;
+	} else {
+		cout << "otherNum's ADDRESS is smaller" << endl;
+	}
+
+
+	return 0;
+}

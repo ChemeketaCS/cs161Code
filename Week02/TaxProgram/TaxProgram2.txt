@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Prompt the user to enter filing status
+    cout << "(0-single filer, 1-married jointly, "
+         << "or qualifying widow(er)," << endl
+         << "2-married separately, 3-head of household)" << endl
+         << "Enter the filing status: ";
+
+    int status;
+    cin >> status;
+
+    // Prompt the user to enter taxable income
+    cout << "Enter the taxable income: ";
+    double income;
+    cin >> income;
+
+
+    if (status == 0) // Compute tax for single filers
+    {
+        cout << "TODO: Single Filer";
+    }
+    else if (status == 1) // Compute tax for married file jointly
+    {
+        cout << "TODO: Maried Filer";
+    }
+    else if (status == 2) // Compute tax for married separately
+    {
+        cout << "TODO: Maried Separate Filer";
+    }
+    else if (status == 3) // Compute tax for head of household
+    {
+        cout << "TODO: Head of Household Filer";
+    }
+    else
+    {
+        cout << "Error: invalid status";
+        return 0;
+    }
+
+
+    //Print tax
+
+    return 0;
+}

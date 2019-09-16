@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+//returns absolute value of a number
+int abs(int number) {
+    if (number < 0)
+        number = -number;
+
+    return number;
+}
+
+int main()
+{
+    cout << abs(12) << endl;
+    cout << abs(-6) << endl;
+    cout << abs(0) << endl;
+    return 0;
+}
+

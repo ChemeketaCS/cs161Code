@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+
+//attempts to return absolute value of a number
+int myabs(int number) {
+    if (number < 0) {
+        number = -number;
+        //does not return a value!
+    } else {
+        return number;
+    }
+}
+
+int main()
+{
+    cout << myabs(12) << endl;
+    cout << myabs(-6) << endl;
+    cout << myabs(0) << endl;
+    return 0;
+}

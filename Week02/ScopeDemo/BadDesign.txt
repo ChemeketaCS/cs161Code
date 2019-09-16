@@ -1,0 +1,42 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int hours;
+    int overtimeHours;
+    double payRate;
+    double salary;
+    const int SALARIED_EMPLOYEE = 0;
+    const int HOURLY_EMPLOYEE = 1;
+    int employeeType;
+    double pay;
+
+    cout << "Enter employee type (0: salaried, 1: hourly): ";
+    cin >> employeeType;
+
+    if(employeeType == SALARIED_EMPLOYEE) {
+        cout << "Enter salary: ";
+        cin >> salary;
+        //assumes biweekly paychecks
+        pay = salary / 26;
+    } else if(employeeType == HOURLY_EMPLOYEE) {
+        cout << "Enter hours worked: ";
+        cin >> hours;
+        cout << "Enter hourly rate: ";
+        cin >> payRate;
+        if(hours > 40) {
+            overtimeHours = hours - 40;
+            hours = 40;
+        } else {
+            overtimeHours = 0;
+        }
+        //time and a half overtime
+        pay = (hours + overtimeHours * 1.5) * payRate;
+    }
+
+    cout << "Paycheck is: " << pay << endl;
+}
+

@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter a percent: ";
+    int grade;
+    cin >> grade;
+
+    if(grade >= 60)
+        cout << "Passed" << endl;
+
+    return 0;
+}
+

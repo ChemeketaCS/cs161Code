@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Prompt the user to enter filing status
+    cout << "(0-single filer, 1-married jointly, "
+         << "or qualifying widow(er)," << endl
+         << "2-married separately, 3-head of household)" << endl
+         << "Enter the filing status: ";
+
+    int status;
+    cin >> status;
+
+    // Prompt the user to enter taxable income
+    cout << "Enter the taxable income: ";
+    double income;
+    cin >> income;
+
+
+    //Do math based on inputs
+
+    //Print tax
+
+    return 0;
+}

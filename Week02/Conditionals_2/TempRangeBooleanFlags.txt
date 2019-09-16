@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter temperature: ";
+
+    int temperature;
+    cin >> temperature;
+
+    //temperature should be between 68 and 72
+    bool tempOK = true;
+
+    if( temperature > 72 ) {
+        tempOK = false;
+    }
+    if( temperature < 68 ) {
+        tempOK = false;
+    }
+
+    if(tempOK)
+        cout << "Don't touch that dial!" << endl;
+    else
+        cout << "Adjust the thermostat!";
+
+    return 0;
+
+}
+

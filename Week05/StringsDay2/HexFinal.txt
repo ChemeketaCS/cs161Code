@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cctype>  //toupper
+
+using namespace std;
+
+int main()
+{
+    string hexString;
+    cout << "Enter a hex value:";
+    cin >> hexString;
+
+    int placeValue = 1;     //multiplier for current digit
+    unsigned int decimalValue = 0;
+
+    //work from end of string back to start
+    int length = hexString.length();
+    for(int i = length - 1; i >= 0; i--) {
+
+        //Get current digit
+        char curDigit = hexString.at(i);
+        //Force letters to Upper
+        curDigit = static_cast<char>(toupper(curDigit));
+
+        //determine value of current digit
+        int digitValue = 0;
+        if(curDigit >= '0' && curDigit <= '9') {
+            digitValue = curDigit - '0';
+        } else if( curDigit >= 'A' && curDigit <= 'F' ) {
+            digitValue = curDigit - 'A' + 10;
+        } else {
+            cout << "Invalid digit!" << endl;
+            return 0;  //kill program
+        }
+
+        decimalValue += digitValue * placeValue;
+        placeValue *= 16; //next place is 16 times larger
+    }
+    cout << "As a decimal number that is: "
+         << decimalValue << endl;
+
+    return 0;
+}

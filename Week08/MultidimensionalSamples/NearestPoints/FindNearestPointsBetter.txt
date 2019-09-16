@@ -1,0 +1,59 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+const int X_CORD = 0;
+const int Y_CORD = 1;
+
+// Compute the distance between two points (x1, y1) and (x2, y2)
+double getDistance(double x1, double y1, double x2, double y2)
+{
+    return sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+}
+
+
+int main()
+{
+    const int NUMBER_OF_POINTS = 8;
+
+    // Each row in points represents a point
+    double points[NUMBER_OF_POINTS][2];
+
+    cout << "Enter " << NUMBER_OF_POINTS << " points: ";
+    for (int i = 0; i < NUMBER_OF_POINTS; i++)
+        cin >> points[i][0] >> points[i][1];
+
+    // p1 and p2 are the indices in the points array
+    int p1 = 0, p2 = 1; // Initial two points
+
+    //Assume first two points are closest
+    double shortestDistance = getDistance(points[p1][X_CORD], points[p1][Y_CORD],
+                                          points[p2][X_CORD], points[p2][Y_CORD]);
+
+    // Compute distance for every two points
+    for (int i = 0; i < NUMBER_OF_POINTS; i++)
+    {
+        for (int j = i + 1; j < NUMBER_OF_POINTS; j++)
+        {
+            // Find distance, see if closer than closest known pair
+            double distance = getDistance(points[i][X_CORD], points[i][Y_CORD],
+                                          points[j][X_CORD], points[j][Y_CORD]);
+
+            if (shortestDistance > distance)
+            {
+                p1 = i; // Update p1
+                p2 = j; // Update p2
+                shortestDistance = distance; // Update shortestDistance
+            }
+        }
+    }
+
+
+    // Display result
+    cout << "The closest two points are " <<
+            "(" << points[p1][X_CORD] << ", " << points[p1][Y_CORD] << ") and (" <<
+            points[p2][X_CORD] << ", " << points[p2][Y_CORD] << ")" << endl;
+
+    return 0;
+}

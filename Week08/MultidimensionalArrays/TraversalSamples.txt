@@ -1,0 +1,96 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+
+int main()
+{
+    srand(time(0));
+
+    const int ROW_SIZE = 3;
+    const int COL_SIZE = 2;
+
+    int scores[ROW_SIZE][COL_SIZE];
+
+    //Insert random numbers 1-10
+    for(int i = 0; i < ROW_SIZE; i++) {
+        for(int j = 0; j < COL_SIZE; j++) {
+            scores[i][j] = rand() % 10 + 1;
+        }
+    }
+
+
+    //Print numbers
+    for(int i = 0; i < ROW_SIZE; i++) {
+        for(int j = 0; j < COL_SIZE; j++) {
+            cout << scores[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    //Total all numbers
+    int total = 0;
+    for(int i = 0; i < ROW_SIZE; i++) {
+        for(int j = 0; j < COL_SIZE; j++) {
+            total += scores[i][j];
+        }
+    }
+    cout << endl << "Total is: " << total << endl << endl;
+
+    //Total second row:
+    int rowTotal = 0;
+    for(int j = 0; j < COL_SIZE; j++) {
+        rowTotal += scores[1][j];
+    }
+    cout << endl << "Row 2 total is: " << rowTotal << endl << endl;
+
+    //First col total:
+    int colTotal = 0;
+    for(int i = 0; i < ROW_SIZE; i++) {
+        colTotal += scores[i][0];
+    }
+    cout << endl << "First col total is: " << colTotal << endl << endl;
+
+
+
+    //Total each column
+    for(int j = 0; j < COL_SIZE; j++) {
+        int curColtotal = 0;
+        for(int i = 0; i < ROW_SIZE; i++) {
+            curColtotal += scores[i][j];
+        }
+        cout << "Total of col " << (j+1) << " is: " << curColtotal << endl;
+    }
+
+
+
+    //Build array of Row totals and Col Totals
+    int rowTotals[ROW_SIZE] = {0};
+    int colTotals[COL_SIZE] = {0};
+
+    for(int i = 0; i < ROW_SIZE; i++) {
+        for(int j = 0; j < COL_SIZE; j++) {
+            rowTotals[i] += scores[i][j];
+            colTotals[j] += scores[i][j];
+        }
+    }
+
+    //print all totals
+    cout << "Row totals: ";
+    for(int i = 0; i < ROW_SIZE; i++)
+        cout << i << ":" << rowTotals[i] << "   ";
+    cout << endl;
+
+    cout << "Col totals: ";
+    for(int i = 0; i < COL_SIZE; i++)
+        cout << i << ":" << colTotals[i] << "   ";
+    cout << endl;
+
+
+
+
+    return 0;
+}
+

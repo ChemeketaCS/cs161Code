@@ -1,0 +1,41 @@
+#include <iostream>
+#include <fstream>
+#include <ctime>
+
+using namespace std;
+
+// const string& does not copy large string, but also
+//   prevents changing the value
+int coutCharacters(const string& s, char c) {
+    int count = 0;
+    for(unsigned int i = 0; i < s.length(); i++) {
+        if(s.at(i) == c)
+            count++;
+    }
+    return count;
+}
+
+int main()
+{
+    ifstream inputFile;
+    inputFile.open("Sherlock.txt");
+
+    //Entire text of book
+    string text;
+    //read until end of file
+    while(!inputFile.eof()) {
+        string line;
+        getline(inputFile, line); //read one line
+        text += line;             //add to text variable
+    }
+
+    cout << "What character should I count?";
+    char searchChar;
+    cin.get(searchChar);  //read in one character, possible white space
+
+    int numEs = coutCharacters(text, searchChar);
+
+    cout << "Found " << numEs << " " << searchChar << "'s" << endl;
+
+    return 0;
+}

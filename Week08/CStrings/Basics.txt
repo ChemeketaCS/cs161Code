@@ -1,0 +1,30 @@
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+int main(void)
+{
+
+	char name[] = "Joe";
+	cout << "Hello " << name << endl;
+
+	char name2[] = {'S','a','m'};
+	cout << "Hello " << name2 << endl;
+
+	cout << "name has length: " << strlen(name) << endl;
+	cout << "name2 has length: " << strlen(name2) << endl;
+
+	name[1] = '\0';
+	cout << "name has length: " << strlen(name) << endl;
+	cout << "Hello " << name2 << endl;
+
+
+	//copy name->name2
+	strcpy(name2,"Bob");
+	cout << "Hello " << name2 << endl;
+
+	return 0;
+}
+

@@ -1,0 +1,21 @@
+
+#include <iostream>
+using namespace std;
+
+int keepCount() {
+    static int x = 0;
+    x++;
+    return x;
+}
+
+
+int main()
+{
+    cout << keepCount() << endl;
+    cout << keepCount() << endl;
+    cout << keepCount() << endl;
+    cout << keepCount() << endl;
+    cout << keepCount() << endl;
+
+    return 0;
+}

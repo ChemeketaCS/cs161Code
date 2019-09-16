@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter a number";
+    int number;
+    cin >> number;
+
+    if( number % 5 == 0 )
+        cout << "It is a multiple of 5" << endl;
+
+    if( number % 3 == 0 )
+        cout << "It is a multiple of 3" << endl;
+
+
+    if( number % 2 == 0 )
+        cout << "It is even" << endl;
+
+    if( number % 2 == 1 )
+        cout << "It is odd" << endl;
+
+    return 0;
+
+}
+
+ 

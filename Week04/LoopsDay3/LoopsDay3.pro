@@ -1,0 +1,39 @@
+CONFIG   += console 
+CONFIG	 -= debug_and_release
+CONFIG   -= app_bundle
+
+TEMPLATE = app
+SOURCES += main.cpp
+
+
+QMAKE_CXXFLAGS += -std=c++11
+QMAKE_LFLAGS += -std=c++11
+
+QMAKE_CXXFLAGS += -Wmissing-include-dirs
+QMAKE_CXXFLAGS += -Wfloat-equal
+QMAKE_CXXFLAGS += -Wredundant-decls
+QMAKE_CXXFLAGS += -Winit-self
+QMAKE_CXXFLAGS += -Wshadow
+QMAKE_CXXFLAGS += -Wconversion
+
+# QMAKE_CXXFLAGS += -Werror
+# QMAKE_CXXFLAGS += -Wno-error=unused-variable
+
+QMAKE_CXXFLAGS += -pedantic
+QMAKE_CXXFLAGS += -pedantic-errors
+
+OTHER_FILES += \
+    Break.txt \
+    BreakNeed.txt \
+    NestedLoops.txt \
+    MultiplicationTable.txt \
+    NestedWhilesBroke.txt \
+    NestedWhilesCorrect.txt \
+    Primes1Start.txt \
+    Primes2IdentifyPrimes.txt \
+    Primes3Merged.txt \
+    Primes4WithCount.txt \
+    Primes5Finished.txt \
+    Primes6Optimized.txt
+
+

@@ -1,0 +1,10 @@
+1 	Jacob	21875 	Isabella 	22731
+2 	Ethan	17866 	Sophia 	20477
+3 	Michael	17133 	Emma 	17179
+4 	Jayden	17030 	Olivia 	16860
+5 	William	16870 	Ava 	15300
+6 	Alexander	16634 	Emily 	14172
+7 	Noah	16281 	Abigail 	14124
+8 	Daniel	15679 	Madison 	13070
+9 	Aiden	15403 	Chloe 	11656
+10 	Anthony	15364 	Mia 	10541

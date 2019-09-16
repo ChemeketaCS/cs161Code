@@ -1,0 +1,9 @@
+*Makefile*
+*.pro.user*
+Week05/BinaryIO/info.dat
+*.zip
+*Release/
+*.qmake*
+*.autosave
+.hg/*
+*Debug/

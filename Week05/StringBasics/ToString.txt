@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+    double radius = 5.2;
+    double area = 3.14159 * radius * radius;
+
+    string areaString = "The area is " + to_string(area);
+
+    cout << areaString << endl;
+
+    return 0;
+}
+

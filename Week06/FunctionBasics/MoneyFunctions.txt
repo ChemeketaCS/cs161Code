@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void printAsMoney(double amount) {
+    cout << fixed << setprecision(2);
+    cout << "$" << amount;
+}
+
+double getBalanceFromUser() {
+    cout << "Enter your bank balance: ";
+    double income;
+    cin >> income;
+    return income;
+}
+
+int main()
+{
+    double money = getBalanceFromUser();
+    money *= 1.05;
+
+    cout << "Increased by 5% that is: ";
+    printAsMoney(money);
+    cout << endl;
+
+    return 0;
+}
+

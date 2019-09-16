@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+// Takes an int by reference
+// x is an alias for whatever variable is passed in
+void addOne(int& x) {
+    x = x + 1;
+}
+
+int main()
+{
+    int num = 100;
+    cout << "In main, num = " << num << endl;
+
+    addOne(num);
+    cout << "In main, num = " << num << endl;
+
+    return 0;
+}

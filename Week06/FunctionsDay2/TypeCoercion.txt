@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+void printNTimes(char c, int n) {
+    for(int i = 0; i < n; i++) {
+        cout << c;
+    }
+}
+
+int main()
+{
+    printNTimes('A', 15.6);
+    cout << endl;
+    printNTimes('A', 100);
+    cout << endl;
+    printNTimes(100, 'A');
+    cout << endl;
+    return 0;
+}

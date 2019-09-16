@@ -1,0 +1,22 @@
+//Give me the C++ version of the library
+#include <cstdio>
+
+
+int main() {
+
+   int number1 = 12345, number2 = 678;
+
+   printf("Hello, number1 is %d \n", number1);                // 1 format specifier
+   printf("number1=%d, number2=%d \n", number1, number2);     // 2 format specifiers
+   printf("number1=%8d, number2=%5d \n", number1, number2);   // Set field-widths
+   printf("number1=%08d, number2=%05d \n", number1, number2); // Pad with zero
+   printf("number1=%-8d, number2=%-5d \n", number1, number2); // Left-align
+
+
+   double value = 123.14159265;
+   printf("value=%lf;\n", value);
+   printf("value=%.4lf;\n", value);   //4 decimal places
+   printf("value=%9.4lf;\n", value);  //4 decimal places, occupy 9 chars space
+   printf("value=%3.2lf;\n", value);  // Field-width too short. Ignored.
+
+}

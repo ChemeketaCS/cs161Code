@@ -1,0 +1,21 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string hexString;
+    cout << "Enter a hex value:";
+    cin >> hexString;
+
+
+    //work from end of string back to start
+    int length = hexString.length();
+    for(int i = length - 1; i >= 0; i--) {
+        char curDigit = hexString.at(i);
+        cout << curDigit << endl;
+    }
+
+    return 0;
+}

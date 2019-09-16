@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter pattern:";
+    string pattern;
+    //cin >> pattern;
+    pattern = "5033-123-1233-49544-2-32-434";
+    cout << endl;
+
+    ////More correct version
+    //string::size_type nextDashLoc = pattern.find('-');
+    //while(nextDashLoc != string::npos) {
+
+    ////Less nit-picky version
+    int nextDashLoc = pattern.find('-');
+    while(nextDashLoc != -1) {
+        //print out next part
+        cout << pattern.substr(0, nextDashLoc) << endl;
+        //erase up to dash
+        pattern = pattern.erase(0, nextDashLoc + 1);
+        //find next
+        nextDashLoc = pattern.find('-');
+    }
+    cout << pattern << endl; //last part
+
+    return 0;
+}

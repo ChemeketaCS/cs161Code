@@ -1,0 +1,26 @@
+
+
+#include <iostream>
+
+using namespace std;
+
+enum fontStyle {PLAIN, BOLD, ITALIC, UNDERLINE};
+
+int main()
+{
+    cout << "Attempt to set font style to bold and italic" << endl;
+    fontStyle curStyle = static_cast<fontStyle>(BOLD + ITALIC);
+
+    //Check style:
+    if(curStyle == BOLD)
+        cout << "Bold" << endl;
+    if(curStyle == ITALIC)
+        cout << "Italic" << endl;
+    if(curStyle == UNDERLINE)
+        cout << "Underline" << endl;
+
+    return 0;
+}
+
+
+

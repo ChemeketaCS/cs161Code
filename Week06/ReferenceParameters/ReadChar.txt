@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter a character:";
+
+    char c;
+    //.get() takes parameter by reference and changes it
+    cin.get(c);
+
+    cout << "|" << c << "|" << endl;
+
+    return 0;
+}
+

@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i = 1;
+    int total = 0;
+
+    while(i <= 100) {
+        total += i;     //add current value
+        i++;            //go to next value
+    }
+
+    double average = static_cast<double>(total) / i;
+
+    cout << average << endl;
+
+    return 0;
+}
+
