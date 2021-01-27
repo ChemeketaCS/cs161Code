@@ -13,8 +13,8 @@ int main()
     int n2;
     cin >> n2;
 
-    //start from larger of the two numbers
-    int curNumber = max(n1, n2);
+    //start from smaller of the two numbers
+    int curNumber = min(n1, n2);
 
     //count down until we find common factor
     bool found = false;
