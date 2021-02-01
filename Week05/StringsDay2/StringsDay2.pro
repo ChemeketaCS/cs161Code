@@ -32,6 +32,7 @@ OTHER_FILES += \
     HexFinal.txt
 
 DISTFILES += \
+    EmailModification.txt \
     EmailParse2.txt
 
 
