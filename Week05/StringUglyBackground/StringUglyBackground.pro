@@ -23,7 +23,8 @@ QMAKE_CXXFLAGS += -pedantic
 QMAKE_CXXFLAGS += -pedantic-errors
 
 DISTFILES += \
-    SimpleVersion.txt \
-    ComplexStuff.txt
+    ComplexStuff.txt \
+    charVsString.txt \
+    size_type.txt
 
 

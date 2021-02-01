@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+
     string s1 = "Dog";
     string s2 = "cat";
     string s3 = "Cat";
