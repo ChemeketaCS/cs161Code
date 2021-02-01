@@ -55,5 +55,4 @@ int main()
             "(" << points[p1][X_CORD] << ", " << points[p1][Y_CORD] << ") and (" <<
             points[p2][X_CORD] << ", " << points[p2][Y_CORD] << ")" << endl;
 
-    return 0;
 }

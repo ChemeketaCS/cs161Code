@@ -17,6 +17,5 @@ int main()
     cout << abs(12) << endl;
     cout << abs(-6) << endl;
     cout << abs(0) << endl;
-    return 0;
 }
 

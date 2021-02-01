@@ -18,6 +18,5 @@ int main()
     cout << "y = " << y << endl;
     cout << (y == INFINITY) << endl;
 
-    return 0;
 }
 

@@ -24,5 +24,4 @@ int main()
 
     cout << "PI is " << pi << endl;
 
-    return 0;
 }

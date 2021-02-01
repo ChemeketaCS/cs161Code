@@ -19,5 +19,4 @@ int main()
     cout << hour << ":" << minute << ":" << second << endl;
 
 
-    return 0;
 }

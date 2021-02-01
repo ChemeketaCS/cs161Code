@@ -20,6 +20,5 @@ int main()
     cout << cos(angleRadians) << endl;
     cout << tan(angleRadians) << endl;
 
-    return 0;
 }
 

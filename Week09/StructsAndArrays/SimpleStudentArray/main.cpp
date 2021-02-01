@@ -39,5 +39,4 @@ int main()
         printStudent(students[i]);
     }
 
-    return 0;
 }

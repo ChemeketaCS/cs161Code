@@ -22,7 +22,6 @@ int main()
     else
         cout << "Turn it down!";
 
-    return 0;
 
 }
 

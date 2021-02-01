@@ -51,5 +51,4 @@ int main()
             "(" << points[p1][0] << ", " << points[p1][1] << ") and (" <<
             points[p2][0] << ", " << points[p2][1] << ")" << endl;
 
-    return 0;
 }

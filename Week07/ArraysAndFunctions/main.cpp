@@ -14,6 +14,5 @@ int main()
     int numbers[5] = {1, 4, 3, 6, 8};
     printArray(numbers);
 
-    return 0;
 }
 

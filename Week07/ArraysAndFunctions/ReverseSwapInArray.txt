@@ -63,5 +63,4 @@ int main()
     printArray(newList, ARRAY_SIZE);
     cout << endl;
 
-    return 0;
 }

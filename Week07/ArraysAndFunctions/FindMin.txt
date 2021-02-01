@@ -61,5 +61,4 @@ int main()
 		 << "   value: " << list[locOfSmallest] << endl;
 
 
-	return 0;
 }

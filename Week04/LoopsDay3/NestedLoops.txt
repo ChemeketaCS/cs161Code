@@ -15,5 +15,4 @@ int main()
         cout << endl;
     } //end outer loop
 
-    return 0;
 }

@@ -13,6 +13,5 @@ int main()
 
     cout << myChar << endl;
 
-    return 0;
 }
 

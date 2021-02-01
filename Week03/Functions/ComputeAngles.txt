@@ -25,5 +25,4 @@ int main()
     cout << "The three angles are " << A * 180 / PI << " "
          << B * 180 / PI << " " << C * 180 / PI << endl;
 
-    return 0;
 }

@@ -38,5 +38,4 @@ int main()
         cout << "Saturday" << endl;
 
 
-    return 0;
 }

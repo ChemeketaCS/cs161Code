@@ -35,6 +35,5 @@ int main()
         cout << right<< setw(4) << i <<  ":" << left << counts[i] << endl;
     }
 
-    return 0;
 }
 

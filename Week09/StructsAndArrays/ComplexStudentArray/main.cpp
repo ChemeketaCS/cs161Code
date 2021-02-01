@@ -104,6 +104,5 @@ int main()
 
     printGradeCounts(students, NUM_STUDENTS);
 
-    return 0;
 }
 

@@ -37,11 +37,9 @@ int main()
     else
     {
         cout << "Error: invalid status";
-        return 0;
     }
 
 
     //Print tax
 
-    return 0;
 }

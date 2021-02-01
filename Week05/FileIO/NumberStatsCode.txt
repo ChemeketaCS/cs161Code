@@ -28,6 +28,5 @@ int main()
     cout << "The highest was " << highestValue << endl;
     cout << "The average was " << average << endl;
 
-    return 0;
 }
 

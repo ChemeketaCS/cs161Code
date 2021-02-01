@@ -23,6 +23,5 @@ int main()
     cout << "The maximum between " << i <<
             " and " << j << " is " << k << endl;
 
-    return 0;
 }
 

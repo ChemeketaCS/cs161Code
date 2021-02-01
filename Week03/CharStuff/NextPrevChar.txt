@@ -13,5 +13,4 @@ int main()
     char prevLetter = static_cast<char>(firstInitial - 1);
     cout << prevLetter << endl;
 
-    return 0;
 }

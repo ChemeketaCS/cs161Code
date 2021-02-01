@@ -56,7 +56,6 @@ int main()
 //    weekday meetingDay = getDay(userInput);
 //    printDay(meetingDay);
 
-    return 0;
 }
 
 

@@ -27,5 +27,4 @@ int main()
     cout << "It is a digit character " << endl;
   }
 
-  return 0;
 }

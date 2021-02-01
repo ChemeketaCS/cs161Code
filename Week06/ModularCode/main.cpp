@@ -18,7 +18,6 @@ int main()
 
     cout << endl << "There are " << numPrimes << " primes <= " << n << endl;
 
-    return 0;
 }
 
 

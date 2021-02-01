@@ -49,5 +49,4 @@ int main()
     cout << "F's: " << gradeCounts[F_BUCKET] << endl;
 
 
-    return 0;
 }

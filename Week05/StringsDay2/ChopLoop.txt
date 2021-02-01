@@ -27,5 +27,4 @@ int main()
     }
     cout << pattern << endl; //last part
 
-    return 0;
 }

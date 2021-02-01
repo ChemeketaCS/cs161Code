@@ -18,6 +18,5 @@ int main()
 
     cout << "Those add to: " << total << endl;
 
-    return 0;
 }
 

@@ -24,7 +24,6 @@ int main()
     else
         cout << "Adjust the thermostat!";
 
-    return 0;
 
 }
 

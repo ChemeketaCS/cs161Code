@@ -32,5 +32,4 @@ int main()
 
     cout << "\nSum of all elements is " << sum(matrix, ROW_SIZE) << endl;
 
-    return 0;
 }

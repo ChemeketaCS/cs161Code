@@ -16,6 +16,5 @@ int main()
 
     cout << "You entered \"" << letter1 << "\"" << endl;
 
-    return 0;
 }
 

@@ -31,6 +31,5 @@ int main()
     cout << numNickels << " nickel(s)" << endl;
     cout << numPennies << " penny(ies)" << endl;
 
-    return 0;
 }
 

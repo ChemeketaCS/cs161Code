@@ -26,5 +26,4 @@ int main()
   cout << "Current time is " << currentHour << ":"
     << currentMinute << ":" << currentSecond << " GMT" << endl;
 
-  return 0;
 }

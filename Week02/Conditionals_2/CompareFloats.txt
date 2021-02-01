@@ -23,7 +23,6 @@ int main()
         cout << "myNumber is CLOSE to 3.02" << endl;
     }
 
-    return 0;
 
 }
 

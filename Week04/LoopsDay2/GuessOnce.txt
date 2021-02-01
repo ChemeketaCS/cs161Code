@@ -26,5 +26,4 @@ int main()
     else
         cout << "Your guess is too low" << endl;
 
-    return 0;
 }

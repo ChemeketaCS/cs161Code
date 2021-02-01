@@ -37,5 +37,4 @@ int main()
                 correctCount << endl;
     }
 
-    return 0;
 }

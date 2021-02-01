@@ -16,6 +16,5 @@ int main()
     cout << name;
 
 
-    return 0;
 }
 

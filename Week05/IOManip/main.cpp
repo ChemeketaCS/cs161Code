@@ -34,6 +34,5 @@ int main()
     cout << setw(5) << 12 << setw(5) << 10;
 
 
-    return 0;
 }
 

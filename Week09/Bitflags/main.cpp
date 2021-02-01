@@ -59,5 +59,4 @@ int main()
     cout << setw(20) << " ITALIC " << std::bitset<32>(ITALIC)  << endl;
     cout << setw(20) << " curStyle ^ ITALIC " << std::bitset<32>(curStyle)  << endl << endl;
 
-    return 0;
 }

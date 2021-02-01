@@ -9,6 +9,5 @@ int main()
 
     cout << letter1 << endl;
 
-    return 0;
 }
 

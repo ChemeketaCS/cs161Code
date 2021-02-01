@@ -16,6 +16,5 @@ int main()
     cout << *pTen << endl;
     cout << *pTen << endl;
 
-    return 0;
 }
 

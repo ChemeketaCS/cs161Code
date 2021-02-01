@@ -43,5 +43,4 @@ int main()
   //messWithGlobal4();
   //cout << "In main, y = " << y << endl;
 
-  return 0;
 }

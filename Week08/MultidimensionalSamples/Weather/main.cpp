@@ -34,5 +34,4 @@ int main()
              << dailyHumidityTotal / NUMBER_OF_HOURS << endl;
     }
 
-    return 0;
 }

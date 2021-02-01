@@ -24,6 +24,5 @@ int main()
     //guess it worked
     cout << number << endl;
 
-    return 0;
 }
 

@@ -32,5 +32,4 @@ int main()
     cout << "Your answer is wrong." << endl << number1 << " - "
          << number2 << " should be " << correctAnswer << endl;
 
-  return 0;
 }

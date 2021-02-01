@@ -14,6 +14,5 @@ int main()
     s3 = "Cat" + 'a';
     cout << s3 << endl;
 
-    return 0;
 }
 

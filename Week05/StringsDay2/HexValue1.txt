@@ -17,5 +17,4 @@ int main()
         cout << curDigit << endl;
     }
 
-    return 0;
 }

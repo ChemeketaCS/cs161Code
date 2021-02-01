@@ -17,5 +17,4 @@ int main()
     cout << keepCount() << endl;
     cout << keepCount() << endl;
 
-    return 0;
 }

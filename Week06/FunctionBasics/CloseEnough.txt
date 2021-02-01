@@ -31,6 +31,5 @@ int main()
     cout << "x and y are close: "  << closeEnough(x, y) << endl;
     cout << "x and z are close: "  << closeEnough(x, z) << endl;
     cout << "y and z are close: "  << closeEnough(y, z) << endl;
-    return 0;
 }
 

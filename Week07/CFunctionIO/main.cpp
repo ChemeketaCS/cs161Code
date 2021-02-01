@@ -25,5 +25,4 @@ int main() {
 //    printf("Your number is %d.%d.%d\n", areaCode, prefix, number);
 
 
-   return 0;
 }

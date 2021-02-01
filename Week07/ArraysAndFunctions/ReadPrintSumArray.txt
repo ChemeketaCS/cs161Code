@@ -43,5 +43,4 @@ int main()
 	cout << "They add to: " << sum << endl;
 	cout << endl;
 
-	return 0;
 }

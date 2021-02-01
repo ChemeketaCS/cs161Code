@@ -11,6 +11,5 @@ int main()
     if(grade >= 60)
         cout << "Passed" << endl;
 
-    return 0;
 }
 

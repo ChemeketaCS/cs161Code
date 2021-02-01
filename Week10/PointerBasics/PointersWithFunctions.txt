@@ -45,5 +45,4 @@ int main()
     doubleVariableCStyle(&num);
     cout << num << endl;
 
-    return 0;
 }

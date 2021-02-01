@@ -18,7 +18,6 @@ int main()
 
     cout << (isValid(grid) ? "Valid solution" : "Invalid solution");
 
-    return 0;
 }
 
 

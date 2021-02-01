@@ -75,6 +75,5 @@ int main()
 
     cout << "Smallest value is: " << endl;
 
-    return 0;
 }
 

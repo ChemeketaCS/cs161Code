@@ -29,7 +29,6 @@ int main()
 	// Print calendar for the month of the year
 	printMonth(year, month);
 
-	return 0;
 }
 
 

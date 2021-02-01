@@ -18,6 +18,5 @@ int main()
     if( !outFile.fail() )
         cout << "File written successfully" << endl;
 
-    return 0;
 }
 

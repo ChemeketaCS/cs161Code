@@ -38,5 +38,4 @@ int main()
 			 << rank << " of " << suit << endl;
 	}
 
-	return 0;
 }

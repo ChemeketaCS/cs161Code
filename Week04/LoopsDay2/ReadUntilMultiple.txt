@@ -25,6 +25,5 @@ int main()
 
     cout << "Finally!"<< endl;
 
-    return 0;
 }
 

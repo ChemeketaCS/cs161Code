@@ -14,5 +14,4 @@ int main()
     if(0 <= x && x <= 10)
         cout << "x is between 0 and 10" << endl;
 
-    return 0;
 }

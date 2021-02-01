@@ -18,6 +18,5 @@ int main()
 
     cout << "Largest factor is " << curNumber << endl;
 
-    return 0;
 }
 

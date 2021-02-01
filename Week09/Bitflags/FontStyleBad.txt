@@ -19,7 +19,6 @@ int main()
     if(curStyle == UNDERLINE)
         cout << "Underline" << endl;
 
-    return 0;
 }
 
 

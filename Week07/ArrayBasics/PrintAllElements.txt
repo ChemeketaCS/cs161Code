@@ -12,5 +12,4 @@ int main()
 			 << nums[i] << endl;
 	}
 
-	return 0;
 }

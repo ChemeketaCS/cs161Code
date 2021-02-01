@@ -12,6 +12,5 @@ int main()
 	nums[5] = 15;       //ooops there is no [5] in that array
 	cout << x << endl;
 
-	return 0;
 }
 

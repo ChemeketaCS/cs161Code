@@ -22,5 +22,4 @@ int main()
     printGrades( scores );
 
 
-    return 0;
 }

@@ -19,5 +19,4 @@ int main()
     cout << myabs(12) << endl;
     cout << myabs(-6) << endl;
     cout << myabs(0) << endl;
-    return 0;
 }

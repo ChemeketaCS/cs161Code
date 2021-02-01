@@ -15,5 +15,4 @@ int main()
     addOne(num);
     cout << "In main, num = " << num << endl;
 
-    return 0;
 }

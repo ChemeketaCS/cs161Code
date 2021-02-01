@@ -9,5 +9,4 @@ int main()
 
     //Print tax
 
-    return 0;
 }

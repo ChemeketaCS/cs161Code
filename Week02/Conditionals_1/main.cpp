@@ -14,5 +14,4 @@ int main()
     }
 
     cout << x;  //x is now 4
-    return 0;
 }

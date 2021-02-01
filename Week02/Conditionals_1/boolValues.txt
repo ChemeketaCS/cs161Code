@@ -18,6 +18,5 @@ int main()
     cout << "isGreen:  " << isGreen << endl;
     cout << "isRed:    " << isRed << endl;
 
-    return 0;
 }
 

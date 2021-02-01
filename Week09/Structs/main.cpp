@@ -99,7 +99,6 @@ int main()
     printStudent(s5);
 
 
-    return 0;
 }
 
 

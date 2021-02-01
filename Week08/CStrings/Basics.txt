@@ -25,6 +25,5 @@ int main(void)
 	strcpy(name2,"Bob");
 	cout << "Hello " << name2 << endl;
 
-	return 0;
 }
 

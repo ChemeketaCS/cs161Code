@@ -24,6 +24,5 @@ int main()
     printAsMoney(money);
     cout << endl;
 
-    return 0;
 }
 

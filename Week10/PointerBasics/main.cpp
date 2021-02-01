@@ -11,5 +11,4 @@ int main()
 
     cout << p << " : " << *p << endl;
 
-    return 0;
 }

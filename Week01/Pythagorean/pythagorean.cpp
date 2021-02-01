@@ -22,6 +22,5 @@ int main()
     //Output Answer
     cout << "Hypotenuse is: " << c << endl;
 
-    return 0;
 }
 

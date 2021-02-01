@@ -19,5 +19,4 @@ int main()
         i++;
     } //end of outer loop
 
-    return 0;
 }

@@ -32,5 +32,4 @@ int main()
         cout << curDigit << "--" << digitValue  << endl;
     }
 
-    return 0;
 }

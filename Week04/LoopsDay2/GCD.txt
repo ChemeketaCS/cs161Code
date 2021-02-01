@@ -30,5 +30,4 @@ int main()
          << n1 << " and "
          << n2 << " is " << curNumber << endl;
 
-    return 0;
 }

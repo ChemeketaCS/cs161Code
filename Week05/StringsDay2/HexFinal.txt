@@ -38,5 +38,4 @@ int main()
     cout << "As a decimal number that is: "
          << decimalValue << endl;
 
-    return 0;
 }

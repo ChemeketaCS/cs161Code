@@ -32,5 +32,4 @@ int main()
     cout << text2 << endl;
 
 
-    return 0;
 }

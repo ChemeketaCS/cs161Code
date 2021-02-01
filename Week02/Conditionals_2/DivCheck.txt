@@ -21,7 +21,6 @@ int main()
     if( number % 2 == 1 )
         cout << "It is odd" << endl;
 
-    return 0;
 
 }
 

@@ -33,5 +33,4 @@ int main()
     //Will not get here until guess is correct
     cout << "Yes, the number is " << number << endl;
 
-    return 0;
 }

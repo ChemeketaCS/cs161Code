@@ -58,11 +58,9 @@ int main()
     else
     {
         cout << "Error: invalid status";
-        return 0;
     }
 
     // Display the result
     cout << "Tax is " << static_cast<int>(tax * 100) / 100.0 << endl;
 
-    return 0;
 }

@@ -19,5 +19,4 @@ int main()
             "Tuition will be $" << tuition << " in "
          << year << " years" << endl;
 
-    return 0;
 }
