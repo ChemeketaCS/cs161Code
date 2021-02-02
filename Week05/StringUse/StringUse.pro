@@ -25,13 +25,6 @@ QMAKE_CXXFLAGS += -pedantic-errors
 OTHER_FILES += \
     EmailParse.txt \
     ChopNumbers.txt \
-    ChopLoop.txt \
-    LoopingThroughChars.txt \
-    HexValue1.txt \
-    HexValue2.txt \
-    HexFinal.txt
-
-DISTFILES += \
     EmailModification.txt \
     EmailParse2.txt
 
