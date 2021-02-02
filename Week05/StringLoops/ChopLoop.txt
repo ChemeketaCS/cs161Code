@@ -9,7 +9,6 @@ int main()
     string pattern;
     //cin >> pattern;
     pattern = "5033-123-1233-49544-2-32-434";
-    cout << endl;
 
     string::size_type nextDashLoc = pattern.find('-');
     while(nextDashLoc != string::npos) {
