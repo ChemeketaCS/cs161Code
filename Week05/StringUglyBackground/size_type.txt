@@ -49,7 +49,7 @@ int main()
             cout << "No x" <<endl;
     }
 
-    //Method 2 - OK
+    //Method 2 - OK but warnings
     {
         string school = "Chemeketa";
 
@@ -58,6 +58,18 @@ int main()
 
         int xLocation = school.find("x");
         if(xLocation == string::npos)
+            cout << "No x" <<endl;
+    }
+
+    //Method 3 - Use cast to get rid of warnings
+    {
+        string school = "Chemeketa";
+
+        int schoolLength = static_cast<int>(school.length());
+        cout << "School is " << schoolLength << " letters long" << endl;
+
+        int xLocation = static_cast<int>(school.find("x"));
+        if(xLocation == static_cast<int>(string::npos))
             cout << "No x" <<endl;
     }
 }
