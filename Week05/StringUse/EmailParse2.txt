@@ -17,7 +17,7 @@ int main()
 
         //another copy for rear
         string rear = mystring;
-        rear.erase(0, index);       //delete first index chars
+        rear.erase(0, index + 1);   //delete up to and including @
 
         cout << front << endl;
         cout << rear << endl;
