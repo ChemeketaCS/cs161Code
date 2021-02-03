@@ -9,6 +9,11 @@ int main()
     ifstream inFile;
     inFile.open("Babynamesranking2010.txt");
 
+    if(inFile.fail()) {
+        cout << "No open file!" << endl;
+        return 0;
+    }
+
     while(!inFile.eof()) {
         string boyname, girlname;
         int rank, trash;
