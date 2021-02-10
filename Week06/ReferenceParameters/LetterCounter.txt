@@ -6,7 +6,7 @@ using namespace std;
 
 // const string& does not copy large string, but also
 //   prevents changing the value
-int coutCharacters(const string& s, char c) {
+int countCharacters(const string& s, char c) {
     int count = 0;
     for(unsigned int i = 0; i < s.length(); i++) {
         if(s.at(i) == c)
@@ -33,7 +33,7 @@ int main()
     char searchChar;
     cin.get(searchChar);  //read in one character, possible white space
 
-    int numEs = coutCharacters(text, searchChar);
+    int numEs = countCharacters(text, searchChar);
 
     cout << "Found " << numEs << " " << searchChar << "'s" << endl;
 
