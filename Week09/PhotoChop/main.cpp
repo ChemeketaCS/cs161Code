@@ -5,8 +5,8 @@
 #include "Image.h"
 #include "ImageIOLib.h"
 
-using namespace std;
-
+using std::max;
+using std::min;
 
 //-------------------------------------------------------------
 //Custom Filters:
