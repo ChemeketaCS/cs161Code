@@ -2,16 +2,21 @@
 
 using namespace std;
 
-
 int main()
 {
-    int x = 1;
+    bool isHappy = true;
+    bool isSad = false;
+    cout << "isHappy: " << isHappy << endl;
+    cout << "isSad:   " << isSad << endl;
 
-    if( true ) {
-        x = 4;
-        int y = 2;
-        cout << y;
-    }
 
-    cout << x;  //x is now 4
+    bool isBlue = 3.3;      //true
+    bool isGreen = -5;      //true
+    bool isRed = 0;         //false
+
+    cout << "isBlue:   " << isBlue << endl;
+    cout << "isGreen:  " << isGreen << endl;
+    cout << "isRed:    " << isRed << endl;
+
 }
+

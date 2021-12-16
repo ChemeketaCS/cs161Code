@@ -3,8 +3,7 @@ CONFIG	 -= debug_and_release
 CONFIG   -= app_bundle
 
 TEMPLATE = app
-SOURCES += \
-    assign1p1.cpp
+SOURCES += main.cpp
 
 
 QMAKE_CXXFLAGS += -std=c++11
@@ -22,5 +21,13 @@ QMAKE_CXXFLAGS += -Wconversion
 
 QMAKE_CXXFLAGS += -pedantic
 QMAKE_CXXFLAGS += -pedantic-errors
+
+OTHER_FILES += \
+    TypeCoercion.txt \
+    Static.txt \
+    Overloads.txt \
+    Primes.txt \
+    PrimesFunctions.txt \
+    Shadows.txt
 
 

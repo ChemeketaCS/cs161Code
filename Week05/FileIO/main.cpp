@@ -1,22 +1,43 @@
 #include <iostream>
-#include <iomanip>
 #include <fstream>
+#include <climits>
 
 using namespace std;
 
 int main()
 {
-    ofstream outFile;
-    outFile.open("MyData.txt");
+    ifstream inFile;
+    inFile.open("Numbers.txt");
+    if(inFile.fail()) {
+        cout << " Could not open file";
+        return 0;
+    }
 
+    int sum = 0;
+    int numNumbers = 0;
+    int highestValue = INT_MIN;  //super low value
 
-    outFile << "Hello";
-    outFile << " there" << endl;
-    outFile << setw(10) << 12;
+    while( !inFile.eof() ) {
+        int num;
+        inFile >> num;
 
-    outFile.close();
-    if( !outFile.fail() )
-        cout << "File written successfully" << endl;
+        if(inFile.fail()) {
+            break;
+        }
+
+        //check to see if this is the highest number
+        if( num > highestValue )
+            highestValue = num;
+
+        sum += num;
+        numNumbers++;
+    }
+
+    double average = static_cast<double>(sum)/numNumbers;
+
+    cout << "I read in " << numNumbers << " values" << endl;
+    cout << "The highest was " << highestValue << endl;
+    cout << "The average was " << average << endl;
 
 }
 

@@ -1,9 +1,16 @@
+/**
+* @brief Assignment 1
+* @name Andrew Scholer
+*/
+
 #include <iostream>
 #include <ctime>
+
 using namespace std;
 
 int main()
 {
+
   // Obtain the total seconds since the midnight, Jan 1, 1970
   int totalSeconds = time(0);
 

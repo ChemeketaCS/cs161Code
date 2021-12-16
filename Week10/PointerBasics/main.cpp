@@ -3,12 +3,45 @@
 using namespace std;
 
 
+//C++ style
+void doubleVariable(int& x) {
+    x = x * 2;
+}
+
+
+//C style
+void doubleVariableCStyle(int* x) {
+    //Get value at location stored x and multiply by 2
+    int temp = (*x) * 2;
+
+    //Set value at location stored in x
+    *x = temp;
+}
+
+
+//Take two addresses, return the one that points
+//   to the smaller value
+int* addressOfSmaller(int* x, int* y) {
+    //compare VALUES at the address
+    int xValue = *x;
+    int yValue = *y;
+    if(xValue < yValue)
+        return x;  //return address
+    else
+        return y;
+}
+
+
 
 int main()
 {
-    int i = 100;
-    int* p = &i;
 
-    cout << p << " : " << *p << endl;
+    int num = 10;
+    cout << num << endl;
 
+    doubleVariable(num);
+    cout << num << endl;
+
+    doubleVariableCStyle(&num);
+    cout << num << endl;
 }

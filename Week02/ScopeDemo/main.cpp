@@ -1,19 +1,14 @@
 #include <iostream>
-
 using namespace std;
-
 
 int main()
 {
-    int x = 1;
+    int userInput;
+    cin >> userInput;
 
-    if( true ) {
-        int y = 2;
-        int x = y;
-        cout << y << endl;
-    }
+    //cout << userInput << endl;
 
-    cout << x << endl;
-
+    if(userInput == 7)
+        cout << "Lucky";
 }
 

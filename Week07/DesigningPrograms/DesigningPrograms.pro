@@ -23,12 +23,11 @@ QMAKE_CXXFLAGS += -pedantic
 QMAKE_CXXFLAGS += -pedantic-errors
 
 OTHER_FILES += \
-    Globals.txt \
-    TypeCoercion.txt \
-    Static.txt \
-    Overloads.txt \
-    Primes.txt \
-    PrimesFunctions.txt \
-    Shadows.txt
+    CompleteProgram.txt \
+    BottomUp.txt \
+    TopDown.txt
+
+HEADERS += \
+    Calender.h
 
 

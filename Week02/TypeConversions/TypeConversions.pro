@@ -3,7 +3,6 @@ CONFIG	 -= debug_and_release
 CONFIG   -= app_bundle
 
 TEMPLATE = app
-SOURCES += main.cpp
 
 
 QMAKE_CXXFLAGS += -std=c++11
@@ -22,6 +21,6 @@ QMAKE_CXXFLAGS += -Wconversion
 QMAKE_CXXFLAGS += -pedantic
 QMAKE_CXXFLAGS += -pedantic-errors
 
-HEADERS +=
+SOURCES += main.cpp
 
 

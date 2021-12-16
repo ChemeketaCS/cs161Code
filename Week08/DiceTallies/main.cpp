@@ -2,6 +2,9 @@
 #include <iomanip>
 #include <string>
 
+#include <cmath>
+
+
 #include "DiceFunctions.h"
 
 using namespace std;

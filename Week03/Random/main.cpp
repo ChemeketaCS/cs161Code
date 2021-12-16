@@ -1,10 +1,35 @@
 #include <iostream>
-
+#include <ctime> // for time function
+#include <cstdlib> // for rand and srand functions
 using namespace std;
 
 int main()
 {
-    cout << "Hello world" << endl;
+  // 1. Generate two random single-digit integers
+  srand(time(0));
+  int number1 = rand() % 10 + 1;
+  int number2 = rand() % 10 + 1;
+
+  // 2. If number1 < number2, swap number1 with number2
+  if (number1 < number2)
+  {
+    int temp = number1;
+    number1 = number2;
+    number2 = temp;
+  }
+
+  // 3. Prompt the student to answer “what is number1 – number2?”
+  cout << "What is " << number1 << " - " << number2 << "? ";
+  int answer;
+  cin >> answer;
+
+  int correctAnswer = number1 - number2;
+
+  // 4. Grade the answer and display the result
+  if (correctAnswer == answer)
+    cout << "You are correct!";
+  else
+    cout << "Your answer is wrong." << endl << number1 << " - "
+         << number2 << " should be " << correctAnswer << endl;
 
 }
-

@@ -20,6 +20,9 @@ int sum(const int a[][COL_SIZE], int rowSize)
 
 int main()
 {
+    int nums[100000];
+
+
     const int ROW_SIZE = 3;
     int matrix[ROW_SIZE][COL_SIZE];
 

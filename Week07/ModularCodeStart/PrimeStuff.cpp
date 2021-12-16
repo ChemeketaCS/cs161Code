@@ -1,22 +1,8 @@
-//Include any standard libraies we need:
 #include <iostream>
 #include <cmath>
 using namespace std;
 
-
-//Include the .h file that declares these functions
 #include "PrimeStuff.h"
-
-
-
-bool isPrime(int number) {
-    for(int i = 2; i < number; i++) {
-        if( number % i == 0 ) {
-            return false;
-        }
-    }
-    return true;
-}
 
 
 int printAndCountPrimes(int limit) {
@@ -41,4 +27,13 @@ int printAndCountPrimes(int limit) {
     return numberOfPrimes;
 }
 
+
+bool isPrime(int number) {
+    for(int i = 2; i < number; i++) {
+        if( number % i == 0 ) {
+            return false;
+        }
+    }
+    return true;
+}
 

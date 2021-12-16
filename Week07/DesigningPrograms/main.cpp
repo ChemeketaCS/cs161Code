@@ -6,7 +6,6 @@ using namespace std;
 void printMonth(int year, int month);
 void printMonthTitle(int year, int month);
 string getMonthName(int month);
-
 void printMonthBody(int year, int month);
 int getStartDay(int year, int month);
 int getTotalNumberOfDays(int year, int month);
@@ -15,23 +14,13 @@ bool isLeapYear(int year);
 
 int main()
 {
-//    string name = getMonthName(4);
-//    string name2 = getMonthName(13);
-
-//    //Test one function
-//    for(int i = 1; i <= 13; i++)
-//        cout << i << " : " << getMonthName(i) << endl;
-
-    printMonthTitle(2005, 12);
+    //Test one function
+    for(int i = 1; i <= 12; i++)
+        cout << i << " : " << getMonthName(i) << endl;
 
 }
 
 
-void printMonthTitle(int year, int month) {
-    string monthName = getMonthName(month);
-
-    cout << "       " << monthName << ", " << year << endl;
-}
 
 // Get the English name for the month
 string getMonthName(int month)

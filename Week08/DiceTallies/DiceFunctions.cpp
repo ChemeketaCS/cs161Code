@@ -3,6 +3,7 @@
 
 #include "DiceFunctions.h"
 
+
 int getRandomInt(int minValue, int maxValue)
 {
     static bool firstRun = true;
