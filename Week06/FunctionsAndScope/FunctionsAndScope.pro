@@ -23,11 +23,11 @@ QMAKE_CXXFLAGS += -pedantic
 QMAKE_CXXFLAGS += -pedantic-errors
 
 OTHER_FILES += \
-    TypeCoercion.txt \
+    Globals.txt \
     Static.txt \
-    Overloads.txt \
-    Primes.txt \
-    PrimesFunctions.txt \
-    Shadows.txt
+    PrimeFunctionsScope.txt
+
+DISTFILES += \
+    PrimeWithGlobals.txt
 
 

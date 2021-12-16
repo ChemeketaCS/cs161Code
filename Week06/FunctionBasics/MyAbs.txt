@@ -5,17 +5,25 @@ using namespace std;
 
 
 //returns absolute value of a number
-int abs(int number) {
+double myabs(double number) {
     if (number < 0)
         number = -number;
 
     return number;
 }
 
+////Failed version - does not return a value on all paths
+//double myabs(double number) {
+//    if (number < 0) {
+//        return -number;
+//        //does not return a value!
+//    }
+//}
+
 int main()
 {
-    cout << abs(12) << endl;
-    cout << abs(-6) << endl;
-    cout << abs(0) << endl;
+    cout << myabs(12) << endl;
+    cout << myabs(-6.5) << endl;
+    cout << myabs(0) << endl;
 }
 

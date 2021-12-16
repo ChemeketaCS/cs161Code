@@ -25,7 +25,6 @@ QMAKE_CXXFLAGS += -pedantic-errors
 OTHER_FILES += \
     AddOne.txt \
     ReferenceVariable.txt \
-    ValueVariable.txt \
     LetterCounter.txt \
     ReadChar.txt \
     DivideByRef.txt \

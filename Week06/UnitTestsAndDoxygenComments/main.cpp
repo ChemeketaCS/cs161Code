@@ -40,19 +40,21 @@ bool isPrime(int number) {
     return true;
 }
 
+
 /**
- * @brief numPrimesUpTo Find the number of prime numbers up to given limit
- * @param limit Highest value to check (inclusive)
- * @return Number of primes
+ * @brief nthPrime Finds the nth prime number
+ * @param n assumed to be positive
+ * @return nth prime
  */
-int numPrimesUpTo(int limit) {
+int nthPrime(int n) {
+    int number = 1;
     int primeCount = 0;
-    int number = 2; // number we are testing for primeness
-    for(number = 2; number <= limit; number++) {
+    while(primeCount < n) {
+        number++;
         if(isPrime(number))
             primeCount++;
     }
-    return primeCount;
+    return number;
 }
 
 
@@ -75,10 +77,10 @@ TEST_CASE( "isPrime - Wierd Inputs" ) {
     CHECK( isPrime(1) == false );
 }
 
-TEST_CASE( "numPrimesUpTo" ) {
-    CHECK( numPrimesUpTo(1) == 0 );
-    CHECK( numPrimesUpTo(2) == 1 );
-    CHECK( numPrimesUpTo(6) == 3 );
-    CHECK( numPrimesUpTo(11) == 5 );
-    CHECK( numPrimesUpTo(21) == 8 );
+TEST_CASE( "nthPrime" ) {
+    CHECK( nthPrime(1) == 2 );
+    CHECK( nthPrime(2) == 3 );
+    CHECK( nthPrime(4) == 7 );
+    CHECK( nthPrime(5) == 11 );
+    CHECK( nthPrime(8) == 19 );
 }

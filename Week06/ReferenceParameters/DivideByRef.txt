@@ -25,5 +25,4 @@ int main()
 
     cout << "Put " << peoplePerTable << " people at each table." << endl;
     cout << "There will be " << leftOverPeople << " left over." << endl;
-
 }

@@ -18,7 +18,6 @@ void messWithGlobal3(int y) {
     y = 302;
 }
 
-////Doesn't work in VIP - does in real c++
 //void messWithGlobal4() {
 //	int y;
 //	::y = 302;  //access global y

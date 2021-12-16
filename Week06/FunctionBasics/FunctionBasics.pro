@@ -23,14 +23,12 @@ QMAKE_CXXFLAGS += -pedantic
 QMAKE_CXXFLAGS += -pedantic-errors
 
 OTHER_FILES += \
-    Max.txt \
-    PrintAsMoney.txt \
-    MyAbsBad.txt \
     MyAbs.txt \
+    TypeCoercion.txt \
+    CloseEnough.txt \
     MoneyFunctions.txt \
-    Globals.txt
+    SumFunction.txt \
+    SumNoFunction.txt
 
-DISTFILES += \
-    CloseEnough.txt
 
 

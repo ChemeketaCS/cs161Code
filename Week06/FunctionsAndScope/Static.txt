@@ -1,13 +1,13 @@
-
 #include <iostream>
 using namespace std;
+
+//Static variables are bad in general...
 
 int keepCount() {
     static int x = 0;
     x++;
     return x;
 }
-
 
 int main()
 {
@@ -16,5 +16,4 @@ int main()
     cout << keepCount() << endl;
     cout << keepCount() << endl;
     cout << keepCount() << endl;
-
 }

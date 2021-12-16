@@ -3,26 +3,35 @@
 
 using namespace std;
 
+//A void function does not return, just does some work
+//ONLY print to the console if that is the function's job
 void printAsMoney(double amount) {
     cout << fixed << setprecision(2);
-    cout << "$" << amount;
+    cout << "$" << amount << endl;
 }
 
+//ONLY read from the console if that is the function's job
 double getBalanceFromUser() {
+    double balance = -1;
     cout << "Enter your bank balance: ";
-    double income;
-    cin >> income;
-    return income;
+    cin >> balance;
+    while( cin.fail() ) {
+        cin.clear();                        //reset error state
+        cin.ignore(INT_MAX, '\n');          //ignore existing input
+        cout << "Enter your bank balance: ";
+        cin >> balance;
+    }
+    return balance;
 }
 
 int main()
 {
     double money = getBalanceFromUser();
-    money *= 1.05;
 
-    cout << "Increased by 5% that is: ";
-    printAsMoney(money);
-    cout << endl;
-
+    cout << "Invested over 15 years at 5% that will look like:" << endl;
+    for(int y = 1; y < 15; y++) {
+          money *= 1.05;
+          printAsMoney(money);
+    }
 }
 

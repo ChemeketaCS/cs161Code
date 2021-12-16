@@ -4,16 +4,17 @@
 
 using namespace std;
 
-// const string& does not copy large string, but also
-//   prevents changing the value
-int countCharacters(const string& s, char c) {
-    int count = 0;
-    for(unsigned int i = 0; i < s.length(); i++) {
-        if(s.at(i) == c)
-            count++;
-    }
-    return count;
+
+///Returns true if the indexed char from s matches c ignoring case
+//const string& avoids copying the large string over and over
+// but guarantees it won't get changed
+bool isCharMatch(const string& s, int index, char c) {
+    if(tolower(s.at(index)) == c)
+        return true;
+    else
+        return false;
 }
+
 
 int main()
 {
@@ -29,12 +30,21 @@ int main()
         text += line;             //add to text variable
     }
 
-    cout << "What character should I count?";
-    char searchChar;
-    cin.get(searchChar);  //read in one character, possible white space
+    cout << "Starting..." << endl;
+    int startTime = clock();
 
-    int numEs = countCharacters(text, searchChar);
-
-    cout << "Found " << numEs << " " << searchChar << "'s" << endl;
-
+    //For each letter a-z
+    for(char letter = 'a'; letter <= 'z'; letter++) {
+        int numCopies = 0;
+        //For each character in the text
+        for(unsigned int charNum = 0; charNum < text.length(); charNum++) {
+            //Check if s.at(charNum) matches letter ignoring case
+            if(isCharMatch(text, charNum, letter))
+                numCopies++;
+        }
+        cout << letter << " : " << numCopies << endl;
+    }
+    cout << "That took "
+         << static_cast<double>(clock() - startTime) / CLOCKS_PER_SEC * 1000
+         << " ms" << endl;
 }

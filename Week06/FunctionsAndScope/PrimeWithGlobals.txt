@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+//-------------------------------------------
+//THESE GLOBAL VARIABLES ARE BAD - DO NOT DO
+
+int numberToCheck;
+bool wasPrime;
+
+//Awful version of isPrime
+void isPrime() {
+    if(numberToCheck < 2) {
+        wasPrime = false;
+        return;
+    }
+
+    for(int i = 2; i < numberToCheck; i++) {
+        if( numberToCheck % i == 0 ) {
+            wasPrime = false;
+            return;
+        }
+    }
+    wasPrime = true;
+}
+
+int nthPrime(int n) {
+    int number = 1;
+    int primeCount = 0;
+    while(primeCount < n) {
+        number++;
+
+        ///What we should do
+        ///if(isPrime(number))
+        /// primeCount++;
+
+        //What we do with awful version of function
+        numberToCheck = number;     //need to set special variable
+        isPrime();                  //call function
+        if(wasPrime)                //know that wasPrime has the result
+            primeCount++;
+    }
+    return number;
+}
+
+int main() {
+    int n = 5;
+    int primeNum = nthPrime(n);
+    cout << "The " << n << "th prime is " << primeNum << endl;
+}
