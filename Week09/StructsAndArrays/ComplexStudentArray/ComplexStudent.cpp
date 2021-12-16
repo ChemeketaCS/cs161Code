@@ -74,8 +74,8 @@ void readStudents(Student studentList[], int size) {
                >> studentList[studentIndex].name.last;
 
         //Read in bday - file order is month day year
-        inFile >> studentList[studentIndex].birthDay.day
-               >> studentList[studentIndex].birthDay.month
+        inFile >> studentList[studentIndex].birthDay.month
+               >> studentList[studentIndex].birthDay.day
                >> studentList[studentIndex].birthDay.year;
 
         //Read in the scores that each student has

@@ -11,9 +11,12 @@
 #include <QGraphicsScene>
 #include <QVBoxLayout>
 
-
-using namespace std;
-
+using std::ios;
+using std::ifstream;
+using std::ofstream;
+using std::string;
+using std::cout;
+using std::endl;
 
 Image readImage(const string fileName) {
     //Empty image we will return
