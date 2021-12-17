@@ -26,15 +26,11 @@ SOURCES += main.cpp
 
 
 OTHER_FILES += \
-    Babynamesranking2010.txt
-
-DISTFILES += \
-    MyData.txt \
-    Numbers.txt \
-    NumberStatsCode.txt \
-    ReadNumberCode.txt \
-    ReadNumbersCode.txt \
-    ReadNumberWithCheckCode.txt \
-    SimpleWriterCode.txt
+    TypeCoercion.txt \
+    Static.txt \
+    Overloads.txt \
+    Primes.txt \
+    PrimesFunctions.txt \
+    Shadows.txt
 
 
