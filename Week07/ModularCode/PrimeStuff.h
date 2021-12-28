@@ -6,9 +6,7 @@
 //using namespace std;
 
 /**
- * @brief isPrime Determines if given number is
- *          prime or not
- *
+ * @brief Determines if given number is prime or not
  * @param number Number to test
  * @return True if number is prime
  */
@@ -16,7 +14,7 @@ bool isPrime(int number);
 
 
 /**
- * @brief printAndCountPrimes Prints all primes up to given limit
+ * @brief Prints all primes up to given limit
  * @param limit Highest value (inclusive) to consider
  * @return Number of primes printed
  */

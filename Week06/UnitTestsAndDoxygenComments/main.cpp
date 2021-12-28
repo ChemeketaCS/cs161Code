@@ -24,7 +24,7 @@ using namespace std;
 //Functions
 
 /**
- * @brief isPrime Checks if the given number is prime
+ * @brief Checks if the given number is prime
  * @param number Value to check
  * @return true if number is prime, else false
  */
@@ -42,7 +42,7 @@ bool isPrime(int number) {
 
 
 /**
- * @brief nthPrime Finds the nth prime number
+ * @brief Finds the nth prime number
  * @param n assumed to be positive
  * @return nth prime
  */

@@ -2,17 +2,17 @@
 #define PRIMESTUFF_H
 
 /**
- * @brief isPrime decides if number is prime
- * @param number Number to check - assumed to be positive
- * @return true if number is prime
+ * @brief Determines if given number is prime or not
+ * @param number Number to test
+ * @return True if number is prime
  */
 bool isPrime(int number);
 
 
 /**
- * @brief printAndCountPrimes
- * @param limit
- * @return
+ * @brief Prints all primes up to given limit
+ * @param limit Highest value (inclusive) to consider
+ * @return Number of primes printed
  */
 int printAndCountPrimes(int limit);
 
