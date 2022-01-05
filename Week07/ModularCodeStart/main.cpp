@@ -3,7 +3,6 @@
 using namespace std;
 
 
-
 /**
  * @brief Determines if given number is prime or not
  * @param number Number to test
@@ -20,11 +19,27 @@ bool isPrime(int number) {
 
 
 /**
+ * @brief Finds the nth prime number
+ * @param n assumed to be positive
+ * @return nth prime
+ */
+int nthPrime(int n) {
+    int number = 1;
+    int primeCount = 0;
+    while(primeCount < n) {
+        number++;
+        if(isPrime(number))
+            primeCount++;
+    }
+    return number;
+}
+
+
+/**
  * @brief Prints all primes up to given limit
  * @param limit Highest value (inclusive) to consider
- * @return Number of primes printed
  */
-int printAndCountPrimes(int limit) {
+void printPrimesUpTo(int limit) {
     int numberOfPrimes = 0;
     const int NUMBERS_PER_LINE = 10;
     int numbersOnLine = 0;
@@ -42,22 +57,35 @@ int printAndCountPrimes(int limit) {
         }
         number++;
     }
-
-    return numberOfPrimes;
 }
 
 
 int main()
 {
+    cout << "Would you like to find all the primes up to a value n (enter 1)," << endl
+         << "or find the first n primes (enter 2)? ";
 
-    cout << "Find all prime numbers <= n, enter n: ";
-    int n;
-    cin >> n;
+    int job;
+    cin >> job;
 
-    int numPrimes = printAndCountPrimes(n);
+    if(job == 1) {
+        cout << "What number do you want to stop searching at? ";
+        int maxNum;
+        cin >> maxNum;
 
-    cout << endl << "There are " << numPrimes << " primes <= " << n << endl;
+        printPrimesUpTo(maxNum);
+        cout << endl;
+    } else if(job == 2) {
+        cout << "Which prime do you want to find? ";
+        int n;
+        cin >> n;
 
+        int number = nthPrime(n);
+
+        cout << number << " is the " << n << "th prime number: " << endl;
+        printPrimesUpTo(number);
+        cout << endl;
+    }
 }
 
 

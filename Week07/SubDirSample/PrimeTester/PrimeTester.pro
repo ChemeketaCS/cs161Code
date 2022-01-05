@@ -22,14 +22,11 @@ QMAKE_CXXFLAGS += -Wconversion
 
 #------------------------------
 
-SOURCES += main.cpp
+SOURCES += PrimeTester.cpp \
+    ../PrimeFinder/PrimeStuff.cpp
 
+HEADERS += \
+    ../PrimeFinder/PrimeStuff.h \
+    doctest.h
 
-OTHER_FILES += \
-    CompleteProgram.txt \
-    BottomUp.txt \
-    TopDown.txt
-
-HEADERS +=
-
-
+INCLUDEPATH += "../PrimeFinder/"

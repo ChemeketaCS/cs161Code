@@ -14,11 +14,18 @@ bool isPrime(int number);
 
 
 /**
+ * @brief Finds the nth prime number
+ * @param n assumed to be positive
+ * @return nth prime
+ */
+int nthPrime(int n);
+
+
+/**
  * @brief Prints all primes up to given limit
  * @param limit Highest value (inclusive) to consider
- * @return Number of primes printed
  */
-int printAndCountPrimes(int limit);
+void printPrimesUpTo(int limit);
 
 
 #endif // PRIMESTUFF_H

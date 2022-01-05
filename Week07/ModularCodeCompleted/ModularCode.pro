@@ -22,14 +22,10 @@ QMAKE_CXXFLAGS += -Wconversion
 
 #------------------------------
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    PrimeStuff.cpp
 
-
-OTHER_FILES += \
-    CompleteProgram.txt \
-    BottomUp.txt \
-    TopDown.txt
-
-HEADERS +=
+HEADERS += \
+    PrimeStuff.h
 
 

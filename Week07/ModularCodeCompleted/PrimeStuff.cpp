@@ -8,7 +8,6 @@ using namespace std;
 #include "PrimeStuff.h"
 
 
-
 bool isPrime(int number) {
     for(int i = 2; i < number; i++) {
         if( number % i == 0 ) {
@@ -19,7 +18,20 @@ bool isPrime(int number) {
 }
 
 
-int printAndCountPrimes(int limit) {
+int nthPrime(int n) {
+    int number = 1;
+    int primeCount = 0;
+    while(primeCount < n) {
+        number++;
+        if(isPrime(number))
+            primeCount++;
+    }
+    return number;
+}
+
+
+
+void printPrimesUpTo(int limit) {
     int numberOfPrimes = 0;
     const int NUMBERS_PER_LINE = 10;
     int numbersOnLine = 0;
@@ -37,8 +49,6 @@ int printAndCountPrimes(int limit) {
         }
         number++;
     }
-
-    return numberOfPrimes;
 }
 
 
