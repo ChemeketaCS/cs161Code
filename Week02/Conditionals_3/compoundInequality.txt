@@ -1,53 +1,31 @@
+
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    cout << "Enter a month number: ";
-    int month;
-    cin >> month;
+    int grade = 95;
 
-    switch( month ) {
-        case 1:
-            cout << "Jan";
-            break;
-        case 2:
-            cout << "Feb";
-            break;
-        case 3:
-            cout << "Mar";
-            break;
-        case 4:
-            cout << "Apr";
-            break;
-        case 5:
-            cout << "May";
-            break;
-        case 6:
-            cout << "Jun";
-            break;
-        case 7:
-            cout << "Jul";
-            break;
-        case 8:
-            cout << "Aug";
-            break;
-        case 9:
-            cout << "Sep";
-            break;
-        case 10:
-            cout << "Oct";
-            break;
-        case 11:
-            cout << "Nov";
-            break;
-        case 12:
-            cout << "Dec";
-            break;
-        default:
-            cout << "What???";
+    //This does not work!!!
+    if( 80 <= grade < 90 ) {
+        cout << "B" << endl;
     }
-    cout << endl;
 
+    //Correct:
+    if( 80 <= grade && grade < 90 ) {
+        cout << "B" << endl;
+    }
+
+
+    //This does not work and no warning!!!
+    int age = 10;
+    if(age == 11 || 12) {
+        cout << "Preteen" << endl;
+    }
+
+    //Correct:
+    if(age == 11 || age == 12) {
+        cout << "Preteen" << endl;
+    }
 }
