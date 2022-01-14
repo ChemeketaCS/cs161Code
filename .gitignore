@@ -7,3 +7,4 @@ Week05/BinaryIO/info.dat
 *.autosave
 .hg/*
 *Debug/
+.vscode
