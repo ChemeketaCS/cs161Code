@@ -13,18 +13,7 @@ int sum(int start, int end)
 
 int main()
 {
-    int sum = 0;
-    for (int i = 1; i <= 10; i++)
-        sum += i;
-    cout << "Sum from 1 to 10 is " << sum << endl;
-
-    sum = 0;
-    for (int i = 35; i <= 49; i++)
-        sum += i;
-    cout << "Sum from 35 to 49 is " << sum << endl;
-
-    sum = 0;
-    for (int i = 25; i <= 1000; i++)
-        sum += i;
-    cout << "Sum from 25 to 1000 is " << sum << endl;
+    cout << "Sum from 1 to 10 is " << sum(1, 10) << endl;
+    cout << "Sum from 35 to 49 is " << sum(35, 49) << endl;
+    cout << "Sum from 25 to 1000 is " << sum(25, 1000) << endl;
 }

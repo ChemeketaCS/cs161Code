@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//Global constant is fine
+const double PI = 3.14159;
+
+double getCircleArea(double radius) {
+    return PI * pow(radius, 2);
+}
+
+double getCircleCircumference(double radius) {
+    return PI * 2 * radius;
+}
+
+
+int main() {
+}

@@ -4,7 +4,7 @@
 using namespace std;
 
 //returns the absolute value of a number
-int myabs(int number) {
+int myAbs(int number) {
     if (number < 0)
         number = -number;
 
@@ -15,7 +15,7 @@ int myabs(int number) {
 bool closeEnough(int num1, int num2) {
     int difference = num1 - num2;
     //use myabs to ensure value is positive
-    difference = myabs(difference);
+    difference = myAbs(difference);
 
     if(difference <= 1)
         return true;

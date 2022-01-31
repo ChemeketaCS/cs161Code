@@ -27,7 +27,6 @@ SOURCES += main.cpp
 
 OTHER_FILES += \
     MyAbs.txt \
-    TypeCoercion.txt \
     CloseEnough.txt \
     MoneyFunctions.txt \
     SumFunction.txt \

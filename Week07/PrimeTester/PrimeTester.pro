@@ -22,16 +22,10 @@ QMAKE_CXXFLAGS += -Wconversion
 
 #------------------------------
 
-SOURCES += main.cpp
+SOURCES += PrimeTester.cpp \
+    PrimeStuff.cpp
 
-
-OTHER_FILES += \
-    Globals.txt \
-    Static.txt \
-    PrimeFunctionsScope.txt
-
-DISTFILES += \
-    GlobalConstant.txt \
-    PrimeWithGlobals.txt
-
+HEADERS += \
+    PrimeStuff.h \
+    doctest.h
 

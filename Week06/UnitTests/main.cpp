@@ -60,7 +60,6 @@ int nthPrime(int n) {
 
 
 //Tests
-
 TEST_CASE( "isPrime" ) {
     CHECK( isPrime(2) == true );
     CHECK( isPrime(3) == true );
