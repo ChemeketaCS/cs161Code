@@ -35,6 +35,7 @@ DISTFILES += \
     ReadNumberCode.txt \
     ReadNumbersCode.txt \
     ReadNumberWithCheckCode.txt \
+    ReadNumbersGetLine.txt \
     SimpleWriterCode.txt
 
 
