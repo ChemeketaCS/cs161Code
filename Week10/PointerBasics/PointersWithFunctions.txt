@@ -19,16 +19,11 @@ void doubleVariableCStyle(int* x) {
 }
 
 
-//Take two addresses, return the one that points
-//   to the smaller value
-int* addressOfSmaller(int* x, int* y) {
-    //compare VALUES at the address
-    int xValue = *x;
-    int yValue = *y;
-    if(xValue < yValue)
-        return x;  //return address
-    else
-        return y;
+//Swap the values contained in two variables
+void swapValues(int* x, int* y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
 }
 
 
@@ -44,4 +39,10 @@ int main()
 
     doubleVariableCStyle(&num);
     cout << num << endl;
+
+    int a = 5, b = 10;
+    cout << "a = " << a << "; b = " << b << endl;
+
+    swapValues(&a, &b);
+    cout << "a = " << a << "; b = " << b << endl;
 }

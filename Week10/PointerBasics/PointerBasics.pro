@@ -28,4 +28,7 @@ SOURCES += main.cpp
 OTHER_FILES += \
     PointersWithFunctions.txt
 
+DISTFILES += \
+    Pointers.txt
+
 
