@@ -1,6 +1,4 @@
 #include <iostream>
-#include <iomanip>
-
 using namespace std;
 
 //returns the absolute value of a number

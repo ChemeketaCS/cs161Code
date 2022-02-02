@@ -4,11 +4,10 @@
 
 using namespace std;
 
-
 ///Returns true if the indexed char from s matches c ignoring case
 //const string& avoids copying the large string over and over
 // but guarantees it won't get changed
-bool isCharMatch(const string& s, int index, char c) {
+bool isMatchAt(const string& s, int index, char c) {
     if(tolower(s.at(index)) == c)
         return true;
     else
@@ -39,7 +38,7 @@ int main()
         //For each character in the text
         for(unsigned int charNum = 0; charNum < text.length(); charNum++) {
             //Check if s.at(charNum) matches letter ignoring case
-            if(isCharMatch(text, charNum, letter))
+            if(isMatchAt(text, charNum, letter))
                 numCopies++;
         }
         cout << letter << " : " << numCopies << endl;

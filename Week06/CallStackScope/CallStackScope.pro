@@ -25,11 +25,5 @@ QMAKE_CXXFLAGS += -Wconversion
 SOURCES += main.cpp
 
 
-OTHER_FILES += \
-    MyAbs.txt \
-    MoneyFunctions.txt \
-    SumFunction.txt \
-    SumNoFunction.txt
-
 
 
