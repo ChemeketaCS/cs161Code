@@ -27,10 +27,8 @@ SOURCES += main.cpp
 
 OTHER_FILES += \
     TypeCoercion.txt \
-    Static.txt \
     Overloads.txt \
-    Primes.txt \
-    PrimesFunctions.txt \
-    Shadows.txt
+    DefaultParams.txt \
+    OverloadsAsDefault.txt
 
 

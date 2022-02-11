@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+//assumes places >= 0 and num >= 0
+double myRound(double num, int places) {
+    num *= pow(10, places);
+    num += 0.5;
+    num = floor(num);
+    num /= pow(10, places);
+    return num;
+}
+
+double myRound(double num) {
+    return myRound(num, 2);
+}
+
+int main()
+{
+    const double PI = 3.14159265;
+    cout << myRound(PI, 4) << endl;
+    cout << myRound(PI) << endl;
+}
+

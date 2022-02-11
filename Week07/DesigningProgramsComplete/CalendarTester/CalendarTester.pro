@@ -20,16 +20,14 @@ QMAKE_CXXFLAGS += -Winit-self
 QMAKE_CXXFLAGS += -Wshadow
 QMAKE_CXXFLAGS += -Wconversion
 
+
 #------------------------------
 
-SOURCES += main.cpp
+INCLUDEPATH += ../Calendar
 
+HEADERS += doctest.h \
+    ../Calendar/calendarFunctions.h
 
-OTHER_FILES += \
-    CompleteProgram.txt \
-    BottomUp.txt \
-    TopDown.txt
-
-HEADERS +=
-
-
+SOURCES += \
+    ../Calendar/calendarFunctions.cpp \
+    calendarTester.cpp

@@ -20,12 +20,14 @@ QMAKE_CXXFLAGS += -Winit-self
 QMAKE_CXXFLAGS += -Wshadow
 QMAKE_CXXFLAGS += -Wconversion
 
+
 #------------------------------
 
-SOURCES += PrimeTester.cpp \
-    PrimeStuff.cpp
+INCLUDEPATH += ../Calendar
 
-HEADERS += \
-    PrimeStuff.h \
-    doctest.h
+HEADERS += doctest.h \
+    ../Calendar/calendarFunctions.h
 
+SOURCES += \
+    ../Calendar/calendarFunctions.cpp \
+    calendarTester.cpp
