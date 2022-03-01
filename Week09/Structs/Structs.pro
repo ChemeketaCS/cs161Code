@@ -27,3 +27,4 @@ OTHER_FILES += \
     ComplexStudent.txt
 
 
+SOURCES += main.cpp

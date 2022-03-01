@@ -25,3 +25,4 @@ QMAKE_CXXFLAGS += -Wconversion
 OTHER_FILES += \
     WeatherInput.txt 
 
+SOURCES += main.cpp

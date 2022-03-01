@@ -31,4 +31,4 @@ OTHER_FILES += \
 DISTFILES += \
     Namespaces.txt
 
-
+SOURCES += main.cpp

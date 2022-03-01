@@ -27,3 +27,5 @@ OTHER_FILES += \
     CheckSudokuInput.txt \
     CheckSudokuBetterNames.txt 
 
+
+SOURCES += main.cpp

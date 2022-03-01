@@ -29,4 +29,5 @@ OTHER_FILES += \
     DynamicAllocationAndDeletion.txt \
     DynamicArrayAllocation.txt
 
+SOURCES += main.cpp
 

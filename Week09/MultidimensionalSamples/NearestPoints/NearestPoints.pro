@@ -28,3 +28,4 @@ OTHER_FILES += \
     FindNearestPoints.txt
 
 
+SOURCES += main.cpp
