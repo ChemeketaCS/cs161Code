@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -53,25 +54,29 @@ int main()
     //Example 2
     //---------------------------------------------------
     //Use getline to read until each comma
-    inFile.close();     //close/reopen file to restart reading
+    inFile.close();                 //close/reopen file to restart reading
+
     inFile.open("data.csv");
     string ignore;
-    getline(inFile, ignore);    //read first line and ignore it
+    getline(inFile, ignore);        //read first line and ignore it
+
+    string line2;
+    getline(inFile, line);          //read second line
+
+    //Make a streingstream so we can read from the string like a file
+    stringstream lineParser(line2);
 
     string part1, part2, part3, part4;
-    //Line1
-    getline(inFile, part1, ',');    //read until ,
-    getline(inFile, part2, ',');
-    getline(inFile, part3, ',');
-    getline(inFile, part4);         //read until end of line
+    getline(lineParser, part1, ',');    //read from lineParser until ,
+    getline(lineParser, part2, ',');    //read from lineParser until ,
+    getline(lineParser, part3, ',');    //read from lineParser until ,
+    getline(lineParser, part4);         //read until end of line
 
     people[1].id = stoi(part1);
     people[1].name = part2;
     people[1].gps_latitude = stod(part3);
     people[1].address = part4;
     //repeat over and over...
-
-
 
     for(int i = 0; i < 2; i++) {
         cout << people[i].name << "(" << people[i].id << ")" << endl;
