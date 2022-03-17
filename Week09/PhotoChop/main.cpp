@@ -105,7 +105,7 @@ Image makeAqua() {
  * @return the created image
  */
 Image makeGradient() {
-    Image newImage = {}; //all black
+    Image newImage; //all black
 
     for(int i = 0; i < IMG_HEIGHT; i++) {            //for each row
         //Set a gray value by making each color = to row * 2
@@ -132,7 +132,8 @@ void redShift(Image& source, int shiftAmount) {
     for(int i = 0; i < IMG_HEIGHT; i++) {            //for each row
         for(int j = 0; j < IMG_WIDTH; j++) {         //for each column
             //Clamp function makes sure we don't go past 255 and wrap back around to 0
-            source.data[i][j].red = clamp(source.data[i][j].red + shiftAmount);
+            int resultValue = source.data[i][j].red + shiftAmount;
+            source.data[i][j].red = clamp(resultValue);
 
         }
     }
