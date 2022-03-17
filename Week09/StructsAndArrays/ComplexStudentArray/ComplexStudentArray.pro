@@ -26,6 +26,8 @@ SOURCES += main.cpp \
     ComplexStudent.cpp
 
 OTHER_FILES += ComplexStudentData.txt
+OTHER_FILES += ComplexStudent.txt
+OTHER_FILES += ComplexStudentsFromFile.txt
 
 HEADERS += \
     ComplexStudent.h

@@ -1,9 +1,10 @@
-#include "ComplexStudent.h"
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <sstream>
+
+#include "ComplexStudent.h"
+
 
 using namespace std;
 
@@ -11,17 +12,22 @@ using namespace std;
 const int NAME_COL_WIDTH = 25;
 const int SCORE_COL_WIDTH = 5;
 
-void printStudentRecord(const Student& s) {
-    //use stringstream to build "last, first" into one string
-    stringstream nameBuilder;
-    nameBuilder << s.name.last << ", " << s.name.first;
-    cout << left <<  setw(NAME_COL_WIDTH)
-         << nameBuilder.str(); //print string we built up
+string getFirstCommaLast(const Name& n) {
+    string output = n.last + ", " + n.first;
+    return output;
+}
+
+string getStudentRecordString(const Student& s) {
+    //use stringstream to build up the 
+    stringstream outStream;
+    outStream << left <<  setw(NAME_COL_WIDTH);
+    outStream << getFirstCommaLast(s.name);
 
     for(int i = 0; i < NUM_SCORES; i++) {
-        cout << setw(SCORE_COL_WIDTH) << s.scores[i];
+        outStream << setw(SCORE_COL_WIDTH) << s.scores[i];
     }
-    cout << endl;
+
+    return outStream.str();
 }
 
 
@@ -38,11 +44,10 @@ double getAverageForAssignment(const Student studentList[],
     return static_cast<double>(total)/size;
 }
 
-
 void printStudentRecords(const Student studentList[], int size) {
     //print each student
     for(int i = 0; i < size; i++) {
-        printStudentRecord(studentList[i]);
+        cout << getStudentRecordString(studentList[i]) << endl;
     }
 
     //print averages
@@ -57,6 +62,18 @@ void printStudentRecords(const Student studentList[], int size) {
 
 }
 
+int getHighestScorerForAssignment(const Student studentList[], int size, int assignNumber) {
+    //Assume Student 0 has the highest score
+    int highestScorer = 0;
+    //Search rest
+    for(int i = 1; i < size; i++) {
+        double curScore = studentList[i].scores[assignNumber];
+
+        if(curScore > studentList[highestScorer].scores[assignNumber])
+            highestScorer = i;
+    }
+    return highestScorer;
+}
 
 void readStudents(Student studentList[], int size) {
     ifstream inFile;

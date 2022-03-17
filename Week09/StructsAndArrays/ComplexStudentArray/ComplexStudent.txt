@@ -1,33 +1,15 @@
 #include <iostream>
 #include <iomanip>
 
+#include "ComplexStudent.h"
 
 using namespace std;
 
-struct Name {
-    string first;
-    string middle;
-    string last;
-};
-
-struct Date {
-    int year;
-    int month;
-    int day;
-};
-
-const int NUM_SCORES = 5;
-struct Student {
-    Name name;
-    Date birthDay;
-    int scores[NUM_SCORES];
-};
-
-
-
-
 int main()
 {
+    //Simple example of one Complex student
+    //See code from ComplexStudentsFromFile for full example
+
     Student s1 = {{"Sue", "Sally", "Smith"},
                   {1994, 4, 1},
                   {96, 85, 91, 84, 87}};

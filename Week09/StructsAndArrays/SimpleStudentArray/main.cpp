@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 int main()
 {
     ifstream inFile;
@@ -36,7 +35,7 @@ int main()
     students[1].name = "Zoro";
 
     for(int i = 0; i < NUM_STUDENTS; i++) {
-        printStudent(students[i]);
+        cout << toString(students[i]) << endl;
     }
 
 }

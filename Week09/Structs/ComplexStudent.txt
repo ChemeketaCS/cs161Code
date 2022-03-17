@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -21,17 +22,26 @@ struct Student {
     int labAvg;
 };
 
-void printDate(const Date& theDate) {
-    cout << theDate.month << "/"
-         << theDate.day << "/"
-         << theDate.year << endl;
+string toString(const Date& theDate) {
+    stringstream outStream;
+    //Use string stream to avoid having to convert int's to strings and can use endl
+    outStream << theDate.month << "/"
+              << theDate.day << "/"
+              << theDate.year;
+    return outStream.str();  //return string that outStream built
 }
 
-void printStudent(const Student& theStudent) {
-    cout << theStudent.name.last << ", " << theStudent.name.first << endl;
-    cout << "  Born: ";
-    printDate(theStudent.birthDay);
-    cout << "  Averages: " << theStudent.labAvg << " " << theStudent.quizAvg << endl;
+string toString(const Student& theStudent) {
+    //Building with a string, must use \n to insert newlines
+    string output = theStudent.name.last + ", " + theStudent.name.first + "\n";
+
+    string bDayString = toString(theStudent.birthDay);
+    output += "  Born: " + bDayString + "\n";
+    
+    output += "  QuizAvg: " +  to_string(theStudent.quizAvg) + "\n";
+    output += "  LabAvg: " +  to_string(theStudent.labAvg);
+
+    return output;
 }
 
 int main()
@@ -45,15 +55,11 @@ int main()
     //Change s1's lab average
     s1.labAvg = 88;
 
-    printStudent(s1);
+    cout << toString(s1) << endl;
 
     Student s2 = {{"Sue", "Sally", "Smith"},
                   {1994, 4, 1},
                   94, 86};
 
-    printStudent(s2);
-
+    cout << toString(s2) << endl;
 }
-
-
-

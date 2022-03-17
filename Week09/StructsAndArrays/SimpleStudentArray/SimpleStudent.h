@@ -1,6 +1,7 @@
 #ifndef SIMPLESTUDENT_H
 #define SIMPLESTUDENT_H
 
+
 #include <string>
 using namespace std;
 
@@ -13,11 +14,12 @@ struct Student {
     int labAvg;
 };
 
+
 /**
  * @brief printStudent prints a student struct to the console
  * @param s student record to print
  */
-void printStudent(const Student& s);
+string toString(const Student& s);
 
 /**
  * @brief parseStudent turns a string like "Bob Jones,84,92" into a Student
@@ -25,6 +27,5 @@ void printStudent(const Student& s);
  * @return Student struct
  */
 Student parseStudent(string dataString);
-
 
 #endif // SIMPLESTUDENT_H

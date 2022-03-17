@@ -11,9 +11,12 @@ struct Student {
 };
 
 
-void printStudent(const Student& s) {
-    cout << s.name << "    QuizAvg: " << s.quizAvg
-                   << " LabAvg: " << s.labAvg << endl;
+string toString(const Student& s) {
+    string output;
+    output += s.name;
+    output += "    QuizAvg: " +  to_string(s.quizAvg);
+    output += "    LabAvg: " +  to_string(s.labAvg);
+    return output;
 }
 
 void increaseQuizAvg(Student& s, int newAvg) {
@@ -85,30 +88,15 @@ int main()
     cout << s1.name << " QuizAvg: " << s1.quizAvg
                     << " LabAvg: " << s1.labAvg << endl;
 
-
-    printStudent(s2);
+    //Or have a function to make a string for me
+    cout << toString(s2) << endl;
     cout << "Increasing quiz avg by 10..." << endl;
     increaseQuizAvg(s2, 10);
-    printStudent(s2);
-
+    cout << toString(s2) << endl;
 
     Student s4 = buildEmptyStudent();
-    printStudent(s4);
+    cout << toString(s4) << endl;
 
     Student s5 = parseStudent("Lucia Sanchez, 98, 92");
-    printStudent(s5);
-
-
+    cout << toString(s5) << endl;
 }
-
-
-
-
-
-
-
-
-
-
-
-
