@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    cout << "Enter pattern:";
+    string pattern;
+    //cin >> pattern;
+    pattern = "5033-123-1233-49544-2-32-434";
+
+    string::size_type chunkStart = 0;
+    string::size_type chunkEnd = pattern.find('-');
+    while(chunkEnd != string::npos) {
+        //grab chunk
+        string::size_type chunkLength = chunkEnd - chunkStart;
+        string chunk = pattern.substr(chunkStart, chunkLength);
+        cout << chunk << endl;
+        //adjust starting position
+        chunkStart = chunkEnd + 1;
+        //find next dash after it
+        chunkEnd = pattern.find('-', chunkStart);
+    }
+    cout << pattern.substr(chunkStart) << endl; //last part
+}

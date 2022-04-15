@@ -12,13 +12,13 @@ int main()
 
     string::size_type nextDashLoc = pattern.find('-');
     while(nextDashLoc != string::npos) {
-        //print out next part
-        cout << pattern.substr(0, nextDashLoc) << endl;
+        //grab up to dash
+        string chunk = pattern.substr(0, nextDashLoc);
+        cout << chunk << endl;
         //erase up to dash
-        pattern = pattern.erase(0, nextDashLoc + 1);
+        pattern.erase(0, nextDashLoc + 1);
         //find next
         nextDashLoc = pattern.find('-');
     }
     cout << pattern << endl; //last part
-
 }

@@ -32,6 +32,4 @@ int main()
 
     cout << text << " shifed by one character:" << endl;
     cout << text2 << endl;
-
-
 }

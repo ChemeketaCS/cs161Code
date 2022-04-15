@@ -27,10 +27,10 @@ SOURCES += main.cpp
 
 OTHER_FILES += \
     ChopLoop.txt \
-    LoopingThroughChars.txt \
-    HexValue1.txt \
-    HexValue2.txt \
-    HexFinal.txt
+    LoopingThroughChars.txt
+
+DISTFILES += \
+    ChopLoop2.txt
 
 
 
