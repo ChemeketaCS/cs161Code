@@ -1,30 +1,25 @@
 #include <iostream>
 #include <iomanip>
-#include <fstream>
 
 #include "ComplexStudent.h"
 
 using namespace std;
 
-
-//Number of records in our file - only need this value in this file
-const int NUM_STUDENTS = 30;
-//Also getting constants from the .h file
-
 int main()
 {
-    Student students[NUM_STUDENTS];
+    //Simple example of one Complex student
+    //See code from ComplexStudentsFromFile for full example
 
-    readStudents(students, NUM_STUDENTS);
+    Student s1 = {{"Sue", "Sally", "Smith"},
+                  {1994, 4, 1},
+                  {96, 85, 91, 84, 87}};
 
-    printStudentRecords(students, NUM_STUDENTS);
+    s1.scores[0] = 100; //change first score
 
-    cout << endl << "Highest scores: " << endl;
-    for(int assignNum = 0; assignNum < NUM_SCORES; assignNum++) {
-        int highestScoreIndex = getHighestScorerForAssignment(students, NUM_STUDENTS, assignNum);
-        cout << (assignNum + 1) << " : ";
-        cout << getFirstCommaLast(students[highestScoreIndex].name);
-        cout << students[highestScoreIndex].scores[assignNum] << endl;
+    cout << s1.name.last << ", " << s1.name.first << endl;
+    cout << "   -Born: " << s1.birthDay.year << endl;
+    cout << "   -Scores: " << endl;
+    for(int i = 0; i < NUM_SCORES; i++) {
+        cout << setw(12) << s1.scores[i] << endl;
     }
 }
-

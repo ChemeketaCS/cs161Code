@@ -14,12 +14,12 @@ Student parseStudent(string dataString) {
     Student newStudent;
 
     //get name
-    unsigned int commaLoc = dataString.find(",");
+    string::size_type commaLoc = dataString.find(",");
     newStudent.name = dataString.substr(0, commaLoc);
 
     //get quiz score
     dataString.erase(0, commaLoc+1);  //clear everything up to first comma
-    unsigned int commaLoc2 = dataString.find(",");
+    string::size_type commaLoc2 = dataString.find(",");
     string qString =  dataString.substr(0, commaLoc2);
     
     //stoi turns a string into an int - defined in <string>

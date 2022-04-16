@@ -19,8 +19,8 @@ string toString(const Student& s) {
     return output;
 }
 
-void increaseQuizAvg(Student& s, int newAvg) {
-    s.quizAvg += newAvg;
+void increaseQuizAvg(Student& s, int adjustAmount) {
+    s.quizAvg += adjustAmount;
 }
 
 Student buildEmptyStudent() {
@@ -33,17 +33,18 @@ Student buildEmptyStudent() {
     return newStudent;
 }
 
-//accepts string like "Bob Jones,84,92" returns student struct
+//Accepts string like "Bob Jones,84,92" returns student struct
+//Take string by value so we can safely modify it
 Student parseStudent(string dataString) {
     Student newStudent;
 
     //get name
-    int commaLoc = dataString.find(",");
+    string::size_type commaLoc = dataString.find(",");
     newStudent.name = dataString.substr(0, commaLoc);
 
     //get quiz score
     dataString.erase(0, commaLoc+1);  //clear everything up to first comma
-    int commaLoc2 = dataString.find(",");
+    string::size_type commaLoc2 = dataString.find(",");
     string qString =  dataString.substr(0, commaLoc2);
     //stoi turns a string into an int - defined in <string>
     newStudent.quizAvg = stoi(qString);
@@ -90,6 +91,7 @@ int main()
 
     //Or have a function to make a string for me
     cout << toString(s2) << endl;
+
     cout << "Increasing quiz avg by 10..." << endl;
     increaseQuizAvg(s2, 10);
     cout << toString(s2) << endl;
