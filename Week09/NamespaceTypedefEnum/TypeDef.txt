@@ -5,12 +5,20 @@ using namespace std;
 //dumb idea
 typedef int number;
 
-//for other platforms we could change this to make
-//int32 always be 32 bits
+//If we are on a 64-bit intel processor, int is 32 bits
+#ifdef __x86_64
 typedef int int32;
+#endif
 
-//unsigned char is too wordy for 0-255... call it byte
-typedef unsigned char byte;
+//If we are on an 8-bit bit AVR processor, long is 32 bits
+#if defined(__AVR_ATmega328P__)
+typedef long int32;
+#endif
+
+//But c++11 already provides a tool for this
+//int32_t  - always a 32 bit value
+//int8_t - always a 8 bit value
+//uint8_t - always a value 0-255
 
 int main()
 {
@@ -18,12 +26,9 @@ int main()
     number x = 10;
     number y = 5;
 
-    //this means int z
     int32 z = 1000;
+    int32_t z2 = 1000;
 
     //a stores value 0-255
-    byte a = 100;
-
-
+    uint8_t a = 100;
 }
-

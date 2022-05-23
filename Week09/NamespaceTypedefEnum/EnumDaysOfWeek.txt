@@ -77,13 +77,13 @@ void printDay(weekday day) {
 weekday getDay(string name) {
     if(name == "Monday")
         return MONDAY;
-    if(name == "Tuesday")
+    else if(name == "Tuesday")
         return TUESDAY;
-    if(name == "Wednesady")
+    else if(name == "Wednesady")
         return WEDNESDAY;
-    if(name == "Thursday")
+    else if(name == "Thursday")
         return THURSDAY;
-    if(name == "Friday")
+    else if(name == "Friday")
         return FRIDAY;
 
     return FRIDAY; //better not reach this
