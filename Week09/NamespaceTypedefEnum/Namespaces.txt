@@ -23,7 +23,10 @@ namespace Library2 {
 
 int main()
 {
-    cout << foo() << endl;
+    cout << ::foo() << endl;        //global foo
     cout << Library1::foo() << endl;
     cout << Library2::foo() << endl;
+
+    using Library1::foo;
+    cout << foo() << endl;          //Library1::foo
 }
