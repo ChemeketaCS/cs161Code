@@ -61,7 +61,7 @@ int main()
     getline(inFile, ignore);        //read first line and ignore it
 
     string line2;
-    getline(inFile, line);          //read second line
+    getline(inFile, line2);          //read second line
 
     //Make a streingstream so we can read from the string like a file
     stringstream lineParser(line2);
