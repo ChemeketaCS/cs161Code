@@ -20,11 +20,8 @@ int main()
 
     cout<<"C squared is "<<cSquared;
 
-    //I tried this and couldn't get it working
-    // double c = power(cSquared, 0.5);
-
     //Output Answer
-    // cout << "Hypotenuse is: " << c << endl;
+    cout << "Hypotenuse is: " << c << endl;
 
 }
 
