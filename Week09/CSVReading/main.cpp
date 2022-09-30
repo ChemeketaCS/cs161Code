@@ -30,7 +30,7 @@ int main()
     string line;
     getline(inFile, line);
 
-    int commaLoc = line.find(",");
+    string::size_type commaLoc = line.find(",");
     string idString = line.substr(0, commaLoc);
     line.erase(0, commaLoc + 1);
 
