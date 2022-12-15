@@ -27,3 +27,4 @@ int main()
         cout << students[highestScoreIndex].scores[assignNum] << endl;
     }
 }
+
