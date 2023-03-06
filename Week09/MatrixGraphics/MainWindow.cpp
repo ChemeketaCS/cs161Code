@@ -173,7 +173,7 @@ void MainWindow::paintEvent(QPaintEvent* )
 
     //Magic code to paint text using your transformation
     QPainter painter(this);
-    painter.setMatrix(QMatrix(myTransform[0][0], myTransform[0][1],
+    painter.setTransform(QTransform (myTransform[0][0], myTransform[0][1],
                               myTransform[1][0], myTransform[1][1],
                               myTransform[0][2], myTransform[1][2]));
 
