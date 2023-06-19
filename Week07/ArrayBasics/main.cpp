@@ -1,79 +1,71 @@
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
-    //------------------------------------------------
-    //Initialize with loop and copy:
-    const int ARRAY_SIZE = 5;
-    int nums[ARRAY_SIZE];
+int main() {
+  //------------------------------------------------
+  // Initialize with loop and copy:
+  const int ARRAY_SIZE = 5;
+  int nums[ARRAY_SIZE];
 
-    //initialize all elements to 10
-    for(int i = 0; i < ARRAY_SIZE; i++) {
-        nums[i] = 10;
+  // initialize all elements to 10
+  for (int i = 0; i < ARRAY_SIZE; i++) {
+    nums[i] = 10;
+  }
+
+  // copy nums into otherNums
+  int otherNums[ARRAY_SIZE];
+  for (int i = 0; i < ARRAY_SIZE; i++) {
+    otherNums[i] = nums[i];
+  }
+
+  //------------------------------------------------
+  // Initialize with list and total
+
+  double values[] = {1.4, 5.2, 3.6, 6.1, 3.2, 1.8};
+  const int NUM_VALUES = 6;
+
+  // print array
+  cout << "Working with: {";
+  for (int i = 0; i < NUM_VALUES - 1; i++) {  // loop does all but last
+    cout << values[i] << ", ";
+  }
+  // now print last and end list
+  cout << values[NUM_VALUES - 1] << "}" << endl;
+
+  // build up sum
+  double total = 0;
+  for (int i = 0; i < NUM_VALUES; i++) {
+    total += values[i];
+  }
+  cout << "Total is: " << total << endl;
+
+  //------------------------------------------------
+  // Find smallest
+
+  double lowest = values[0];  // assume first is smallest
+  for (int i = 1; i < NUM_VALUES; i++) {
+    // is current item smaller than smallest I have seen?
+    if (values[i] < lowest) lowest = values[i];
+  }
+  cout << "Smallest value is: " << lowest << endl;
+
+  //------------------------------------------------
+  // Check if values are in order
+
+  bool sorted = true;
+  for (int i = 0; i < NUM_VALUES - 1; i++) {
+    // is current item larger than next item?
+    if (values[i] < values[i + 1]) {
+      sorted = false;  // we found a problem!
+      break;
     }
+  }
+  if (sorted)
+    cout << "That array is in order smallest to largest";
+  else
+    cout << "That array is in not in order";
 
-    //copy nums into otherNums
-    int otherNums[ARRAY_SIZE];
-    for(int i = 0; i < ARRAY_SIZE; i++) {
-        otherNums[i] = nums[i];
-    }
-
-    //------------------------------------------------
-    //Initialize with list and total
-
-    double values[] = {1.4, 5.2, 3.6, 6.1, 3.2, 1.8};
-    const int NUM_VALUES = 6;
-
-    //print array
-    cout << "Working with: {" ;
-    for(int i = 0; i < NUM_VALUES - 1; i++) {  //loop does all but last
-        cout << values[i] << ", ";
-    }
-    //now print last and end list
-    cout << values[NUM_VALUES - 1] << "}" << endl;
-
-    //build up sum
-    double total = 0;
-    for(int i = 0; i < NUM_VALUES; i++) {
-        total += values[i];
-    }
-    cout << "Total is: " << total << endl;
-
-
-
-    //------------------------------------------------
-    //Find smallest
-
-    double lowest = values[0];  //assume first is smallest
-    for(int i = 1; i < NUM_VALUES; i++) {
-        //is current item smaller than smallest I have seen?
-        if(values[i] < lowest)
-            lowest = values[i];
-    }
-    cout << "Smallest value is: " << lowest << endl;
-
-
-    //------------------------------------------------
-    //Check if values are in order
-
-    bool sorted = true;
-    for(int i = 0; i < NUM_VALUES - 1; i++) {
-        //is current item larger than next item?
-        if(values[i] < values[i+1]) {
-            sorted = false;     //we found a problem!
-            break;
-        }
-    }
-    if(sorted)
-        cout << "That array is in order smallest to largest";
-    else
-        cout << "That array is in not in order";
-
-
-    cout << "Smallest value is: " << endl;
-
+  cout << "Smallest value is: " << endl;
 }
-

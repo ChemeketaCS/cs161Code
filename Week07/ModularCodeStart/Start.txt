@@ -1,10 +1,10 @@
-#include <iostream>
-#include <iomanip>
 #include <cmath>
+#include <iomanip>
+#include <iostream>
 using namespace std;
 
 //----------------------------------------------------
-//Declare and Define functions
+// Declare and Define functions
 //----------------------------------------------------
 
 /**
@@ -13,14 +13,13 @@ using namespace std;
  * @return True if number is prime
  */
 bool isPrime(int number) {
-    for(int i = 2; i < number; i++) {
-        if( number % i == 0 ) {
-            return false;
-        }
+  for (int i = 2; i < number; i++) {
+    if (number % i == 0) {
+      return false;
     }
-    return true;
+  }
+  return true;
 }
-
 
 /**
  * @brief Finds the nth prime number
@@ -28,66 +27,62 @@ bool isPrime(int number) {
  * @return nth prime
  */
 int nthPrime(int n) {
-    int number = 1;
-    int primeCount = 0;
-    while(primeCount < n) {
-        number++;
-        if(isPrime(number))
-            primeCount++;
-    }
-    return number;
+  int number = 1;
+  int primeCount = 0;
+  while (primeCount < n) {
+    number++;
+    if (isPrime(number)) primeCount++;
+  }
+  return number;
 }
-
 
 /**
  * @brief Prints all primes up to given limit
  * @param limit Highest value (inclusive) to consider
  */
 void printPrimesUpTo(int limit) {
-    int numberOfPrimes = 0;
-    const int NUMBERS_PER_LINE = 8;
-    int numbersOnLine = 0;
-    int number = 2; // number we are testing for primeness
-    while (number <= limit)
-    {
-        if( isPrime(number) ) {
-            cout << setw(8) << number;
-            numberOfPrimes++;
-            numbersOnLine++;
-            if(numbersOnLine == NUMBERS_PER_LINE) {
-                cout << endl;
-                numbersOnLine = 0;
-            }
-        }
-        number++;
+  int numberOfPrimes = 0;
+  const int NUMBERS_PER_LINE = 8;
+  int numbersOnLine = 0;
+  int number = 2;  // number we are testing for primeness
+  while (number <= limit) {
+    if (isPrime(number)) {
+      cout << setw(8) << number;
+      numberOfPrimes++;
+      numbersOnLine++;
+      if (numbersOnLine == NUMBERS_PER_LINE) {
+        cout << endl;
+        numbersOnLine = 0;
+      }
     }
+    number++;
+  }
 }
 
+int main() {
+  cout << "Would you like to find all the primes up to a value n (enter 1),"
+       << endl
+       << "or find the first n primes (enter 2)? ";
 
-int main()
-{
-    cout << "Would you like to find all the primes up to a value n (enter 1)," << endl
-         << "or find the first n primes (enter 2)? ";
+  int job;
+  cin >> job;
 
-    int job;
-    cin >> job;
+  if (job == 1) {
+    cout << "What number do you want to stop searching at? ";
+    int maxNum;
+    cin >> maxNum;
 
-    if(job == 1) {
-        cout << "What number do you want to stop searching at? ";
-        int maxNum;
-        cin >> maxNum;
+    printPrimesUpTo(maxNum);
+    cout << endl;
+  } else if (job == 2) {
+    cout << "Which prime do you want to find? ";
+    int n;
+    cin >> n;
 
-        printPrimesUpTo(maxNum);
-        cout << endl;
-    } else if(job == 2) {
-        cout << "Which prime do you want to find? ";
-        int n;
-        cin >> n;
+    int number = nthPrime(n);
 
-        int number = nthPrime(n);
-
-        cout << number << " is the " << n << "th prime number: " << endl;
-        printPrimesUpTo(number);
-        cout << endl;
-    }
+    cout << number << " is the " << n << "th prime number: " << endl;
+    printPrimesUpTo(number);
+    cout << endl;
+  }
 }
