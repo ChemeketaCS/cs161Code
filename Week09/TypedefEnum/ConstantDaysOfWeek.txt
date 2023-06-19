@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+const int MONDAY = 0;
+const int TUESDAY = 1;
+const int WEDENSDAY = 2;
+const int THURSDAY = 3;
+const int FRIDAY = 4;
+
+const string DAY_NAMES[5] = {"Mon", "Tues", "Wed", "Thurs", "Fri"};
+
+int main() {
+  int today = MONDAY;
+  cout << DAY_NAMES[today] << endl;
+
+  int tomorrow = today + 1;
+  cout << DAY_NAMES[tomorrow] << endl;
+
+  if (today == THURSDAY) cout << "Today is traash day" << endl;
+
+  // uhhhh... constant does not protect us from Stupidity
+  int someDay = 123;
+  cout << DAY_NAMES[someDay] << endl;
+}

@@ -4,62 +4,58 @@
 using namespace std;
 
 struct Name {
-    string first;
-    string middle;
-    string last;
+  string first;
+  string middle;
+  string last;
 };
 
 struct Date {
-    int year;
-    int month;
-    int day;
+  int year;
+  int month;
+  int day;
 };
 
 struct Student {
-    Name name;
-    Date birthDay;
-    int quizAvg;
-    int labAvg;
+  Name name;
+  Date birthDay;
+  int quizAvg;
+  int labAvg;
 };
 
 string toString(const Date& theDate) {
-    stringstream outStream;
-    //Use string stream to avoid having to convert int's to strings and can use endl
-    outStream << theDate.month << "/"
-              << theDate.day << "/"
-              << theDate.year;
-    return outStream.str();  //return string that outStream built
+  stringstream outStream;
+  // Use string stream to avoid having to convert int's to strings and can use
+  // endl
+  outStream << theDate.month << "/" << theDate.day << "/" << theDate.year;
+  return outStream.str();  // return string that outStream built
 }
 
 string toString(const Student& theStudent) {
-    //Building with a string, must use \n to insert newlines
-    string output = theStudent.name.last + ", " + theStudent.name.first + "\n";
+  // Building with a string, must use \n to insert newlines
+  string output = theStudent.name.last + ", " + theStudent.name.first + "\n";
 
-    string bDayString = toString(theStudent.birthDay);
-    output += "  Born: " + bDayString + "\n";
-    
-    output += "  QuizAvg: " +  to_string(theStudent.quizAvg) + "\n";
-    output += "  LabAvg: " +  to_string(theStudent.labAvg);
+  string bDayString = toString(theStudent.birthDay);
+  output += "  Born: " + bDayString + "\n";
 
-    return output;
+  output += "  QuizAvg: " + to_string(theStudent.quizAvg) + "\n";
+  output += "  LabAvg: " + to_string(theStudent.labAvg);
+
+  return output;
 }
 
-int main()
-{
-    Date d1 = {1992, 12, 14};
-    Name n1 = {"John", "Jacob", "Jones"};
-    Student s1 = {n1, d1, 95, 85};
+int main() {
+  Date d1 = {1992, 12, 14};
+  Name n1 = {"John", "Jacob", "Jones"};
+  Student s1 = {n1, d1, 95, 85};
 
-    //Change s1's name:
-    s1.name.first = "Jack";
-    //Change s1's lab average
-    s1.labAvg = 88;
+  // Change s1's name:
+  s1.name.first = "Jack";
+  // Change s1's lab average
+  s1.labAvg = 88;
 
-    cout << toString(s1) << endl;
+  cout << toString(s1) << endl;
 
-    Student s2 = {{"Sue", "Sally", "Smith"},
-                  {1994, 4, 1},
-                  94, 86};
+  Student s2 = {{"Sue", "Sally", "Smith"}, {1994, 4, 1}, 94, 86};
 
-    cout << toString(s2) << endl;
+  cout << toString(s2) << endl;
 }
