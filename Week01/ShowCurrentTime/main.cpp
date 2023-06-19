@@ -1,15 +1,13 @@
 /**
-* @brief Time demo
-*/
+ * @brief Time demo
+ */
 
-#include <iostream>
 #include <ctime>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
-
+int main() {
   // Obtain the total seconds since the midnight, Jan 1, 1970
   int totalSeconds = time(0);
 
@@ -29,7 +27,6 @@ int main()
   int currentHour = totalHours % 24;
 
   // Display results
-  cout << "Current time is " << currentHour << ":"
-    << currentMinute << ":" << currentSecond << " GMT" << endl;
-
+  cout << "Current time is " << currentHour << ":" << currentMinute << ":"
+       << currentSecond << " GMT" << endl;
 }
