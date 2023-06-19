@@ -1,3 +1,7 @@
+/**
+* @brief Pythagorean demo
+*/
+
 #include <iostream>
 #include <cmath>
 

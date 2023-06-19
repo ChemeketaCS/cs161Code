@@ -1,6 +1,5 @@
 /**
-* @brief Assignment 1
-* @name Andrew Scholer
+* @brief Time demo
 */
 
 #include <iostream>

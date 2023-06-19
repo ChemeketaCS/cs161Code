@@ -1,3 +1,7 @@
+/**
+* @brief Coin demo
+*/
+
 #include <iostream>
 
 using namespace std;
