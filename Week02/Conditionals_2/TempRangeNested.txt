@@ -1,27 +1,21 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
-    cout << "Enter temperature: ";
+int main() {
+  cout << "Enter temperature: ";
 
-    int temperature;
-    cin >> temperature;
+  int temperature;
+  cin >> temperature;
 
-    //temperature should be between 68 and 72
+  // temperature should be between 68 and 72
 
-    if( temperature <= 72 ) {
-        if( temperature >= 68 ) {
-            cout << "Temp is OK!";
-        }
-        else
-            cout << "Turn it up!";
-    }
-    else
-        cout << "Turn it down!";
-
-
+  if (temperature <= 72) {
+    if (temperature >= 68) {
+      cout << "Temp is OK!";
+    } else
+      cout << "Turn it up!";
+  } else
+    cout << "Turn it down!";
 }
-

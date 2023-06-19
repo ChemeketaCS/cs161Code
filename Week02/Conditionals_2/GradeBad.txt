@@ -2,24 +2,14 @@
 
 using namespace std;
 
+int main() {
+  double score = 76;
 
-int main()
-{
-
-    double score = 76;
-
-
-    if (score >= 90.0)
-      cout << "Grade is A" << endl;
-    if (score >= 80.0)
-      cout << "Grade is B" << endl;
-    if (score >= 70.0)
-      cout << "Grade is C" << endl;
-    if (score >= 60.0)
-      cout << "Grade is D" << endl;
-    else
-      cout << "Grade is F" << endl;
-
-
+  if (score >= 90.0) cout << "Grade is A" << endl;
+  if (score >= 80.0) cout << "Grade is B" << endl;
+  if (score >= 70.0) cout << "Grade is C" << endl;
+  if (score >= 60.0)
+    cout << "Grade is D" << endl;
+  else
+    cout << "Grade is F" << endl;
 }
-

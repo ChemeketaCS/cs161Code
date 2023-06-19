@@ -1,12 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    //Get inputs
+int main() {
+  // Get inputs
 
-    //Do math based on inputs
+  // Do math based on inputs
 
-    //Print tax
-
+  // Print tax
 }

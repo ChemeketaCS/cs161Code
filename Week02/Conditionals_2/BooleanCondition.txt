@@ -1,23 +1,22 @@
+/**
+ * @brief Conditionals Demo
+ *
+ * .txt files have other samples. Copy and paste code from them into main.cpp
+ * to test them.
+ */
 #include <iostream>
 
 using namespace std;
 
-int main()
-{
-    //OK if between 68 and 72
-    bool tempOK;
+int main() {
+  // OK if between 68 and 72
+  bool tempOK;
 
-    cout << "Is the temperature OK? (1 = yes, 0 = no)" << endl;
+  cout << "Is the temperature OK? (1 = yes, 0 = no)" << endl;
 
-    cin >> tempOK;
+  cin >> tempOK;
 
-    if(true == tempOK)
-        cout << "Don't touch that dial!" << endl;
+  if (true == tempOK) cout << "Don't touch that dial!" << endl;
 
-    if(false == tempOK)
-        cout << "Adjust the thermostat!" << endl;
-
-
-
+  if (false == tempOK) cout << "Adjust the thermostat!" << endl;
 }
-

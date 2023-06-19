@@ -2,15 +2,12 @@
 
 using namespace std;
 
-int main()
-{
-    bool result1 = 10 > 5;      // 10 > 5
+int main() {
+  bool result1 = 10 > 5;  // 10 > 5
 
-    cout << "result1: " << result1 << endl;
+  cout << "result1: " << result1 << endl;
 
-    bool result2 = 7 == 3;      //Does 7 == 3
+  bool result2 = 7 == 3;  // Does 7 == 3
 
-    cout << "result2: " << result2 << endl;
-
+  cout << "result2: " << result2 << endl;
 }
-
