@@ -2,21 +2,18 @@
 
 using namespace std;
 
-int main()
-{
-    //add 5 numbers the user enters....
-    int total = 0;
+int main() {
+  // add 5 numbers the user enters....
+  int total = 0;
 
-    for(int i = 0; i < 5; i++ ) {
-        cout << "Enter a number: ";
+  for (int i = 0; i < 5; i++) {
+    cout << "Enter a number: ";
 
-        int curNumber;
-        cin >> curNumber;
+    int curNumber;
+    cin >> curNumber;
 
-        total += curNumber;
-    }
+    total += curNumber;
+  }
 
-    cout << "Those add to: " << total << endl;
-
+  cout << "Those add to: " << total << endl;
 }
-

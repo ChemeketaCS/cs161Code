@@ -2,23 +2,18 @@
 
 using namespace std;
 
-int main()
-{
-    const int MYSTERY_VALUE = 120;
+int main() {
+  const int MYSTERY_VALUE = 120;
 
-    int number = MYSTERY_VALUE;
-    int curNumber = number - 1;
+  int number = MYSTERY_VALUE;
+  int curNumber = number - 1;
 
-    while (curNumber >= 1) {
-        if (number % curNumber == 0)
-            break;
+  while (curNumber >= 1) {
+    if (number % curNumber == 0) break;
 
-        //never get here if we break...
-        curNumber--;
-    }
+    // never get here if we break...
+    curNumber--;
+  }
 
-    cout << "Largest factor is " << curNumber << endl;
-
-
+  cout << "Largest factor is " << curNumber << endl;
 }
-

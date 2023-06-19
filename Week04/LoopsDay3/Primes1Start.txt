@@ -1,24 +1,20 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
+  cout << "Find all prime numbers <= n, enter n: ";
+  int n;
+  cin >> n;
 
-    cout << "Find all prime numbers <= n, enter n: ";
-    int n;
-    cin >> n;
+  cout << "The prime numbers are:" << endl;
 
-    cout << "The prime numbers are:" << endl;
+  int number = 2;  // number we are testing for primeness
+  while (number <= n) {
+    cout << number << " ";
 
-    int number = 2; // number we are testing for primeness
-    while (number <= n)
-    {
-        cout << number << " ";
+    number++;
+  }
 
-        number++;
-    }
-
-    cout << endl;
-
+  cout << endl;
 }

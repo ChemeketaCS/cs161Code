@@ -1,29 +1,26 @@
-#include <iostream>
 #include <cstdlib>
-#include <ctime> // Needed for the time function
+#include <ctime>  // Needed for the time function
+#include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
+  const int MAX_NUMBER = 100;
 
-    const int MAX_NUMBER = 100;
+  // Generate a random number to be guessed
+  srand(time(0));
+  int number = rand() % MAX_NUMBER + 1;
 
-    // Generate a random number to be guessed
-    srand(time(0));
-    int number = rand() % MAX_NUMBER + 1;
+  cout << "Guess a number between 1 and " << MAX_NUMBER << endl;
 
-    cout << "Guess a number between 1 and " << MAX_NUMBER << endl;
+  // Prompt the user to guess the number
+  cout << "Enter your guess: ";
+  int guess;
+  cin >> guess;
 
-    // Prompt the user to guess the number
-    cout << "Enter your guess: ";
-    int guess;
-    cin >> guess;
-
-    if (guess == number)
-        cout << "Yes, the number is " << number << endl;
-    else if (guess > number)
-        cout << "Your guess is too high" << endl;
-    else
-        cout << "Your guess is too low" << endl;
-
+  if (guess == number)
+    cout << "Yes, the number is " << number << endl;
+  else if (guess > number)
+    cout << "Your guess is too high" << endl;
+  else
+    cout << "Your guess is too low" << endl;
 }

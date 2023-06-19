@@ -2,28 +2,20 @@
 
 using namespace std;
 
-int main()
-{
-    cout << "Enter numbers. I won't stop until you "
-         << "enter a number divisible by 2, 3, or 5 "
-         << endl;
+int main() {
+  cout << "Enter numbers. I won't stop until you "
+       << "enter a number divisible by 2, 3, or 5 " << endl;
 
+  bool found = false;
+  while (!found) {
+    cout << "Enter number: ";
+    int number;
+    cin >> number;
 
-    bool found = false;
-    while(!found) {
-        cout << "Enter number: ";
-        int number;
-        cin >> number;
+    if (number % 2 == 0) found = true;
+    if (number % 3 == 0) found = true;
+    if (number % 5 == 0) found = true;
+  }
 
-        if(number % 2 == 0)
-            found = true;
-        if(number % 3 == 0)
-            found = true;
-        if(number % 5 == 0)
-            found = true;
-    }
-
-    cout << "Finally!"<< endl;
-
+  cout << "Finally!" << endl;
 }
-

@@ -1,45 +1,41 @@
-#include <iostream>
-#include <iomanip>
 #include <cmath>
+#include <iomanip>
+#include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
+  cout << "Find all prime numbers <= n, enter n: ";
+  int n;
+  cin >> n;
 
-    cout << "Find all prime numbers <= n, enter n: ";
-    int n;
-    cin >> n;
+  cout << "The prime numbers are:" << endl;
 
-    cout << "The prime numbers are:" << endl;
-
-    int numberOfPrimes = 1;  //know that 2 is prime...
-    const int NUMBERS_PER_LINE = 10;
-    int numbersOnLine = 1;
-    cout << "2 ";
-    int number = 3; // number we are testing for primeness
-    while (number <= n)
-    {
-        bool isPrime = true;
-        int maxFactor = static_cast<int>(sqrt(number));
-        for(int i = 3; i <= maxFactor; i+=2) {
-            if( number % i == 0 ) {
-                isPrime = false;
-                break;
-            }
-        }
-        if(isPrime) {
-            cout << number << " " ;
-            numberOfPrimes++;
-            numbersOnLine++;
-            if(numbersOnLine == NUMBERS_PER_LINE) {
-                cout << endl;
-                numbersOnLine = 0;
-            }
-        }
-
-        number+=2;
+  int numberOfPrimes = 1;  // know that 2 is prime...
+  const int NUMBERS_PER_LINE = 10;
+  int numbersOnLine = 1;
+  cout << "2 ";
+  int number = 3;  // number we are testing for primeness
+  while (number <= n) {
+    bool isPrime = true;
+    int maxFactor = static_cast<int>(sqrt(number));
+    for (int i = 3; i <= maxFactor; i += 2) {
+      if (number % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
+      cout << number << " ";
+      numberOfPrimes++;
+      numbersOnLine++;
+      if (numbersOnLine == NUMBERS_PER_LINE) {
+        cout << endl;
+        numbersOnLine = 0;
+      }
     }
 
-    cout << endl << "There are " << numberOfPrimes << " primes <= " << n << endl;
+    number += 2;
+  }
 
+  cout << endl << "There are " << numberOfPrimes << " primes <= " << n << endl;
 }

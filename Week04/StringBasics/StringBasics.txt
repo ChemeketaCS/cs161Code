@@ -3,16 +3,11 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
+  string s1 = "Dog";
+  string s2 = "cat";
+  string s3 = "Cat";
 
-    string s1 = "Dog";
-    string s2 = "cat";
-    string s3 = "Cat";
-
-
-    s3 = "Cat" + 'a';
-    cout << s3 << endl;
-
+  s3 = "Cat" + 'a';
+  cout << s3 << endl;
 }
-
