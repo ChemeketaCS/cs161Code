@@ -1,18 +1,15 @@
-#include <iostream>
-#include <ctime>    //time()
 #include <cstdlib>  //srand() and rand()
+#include <ctime>    //time()
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
-    srand(time(0));            //seed number generator
+int main() {
+  srand(time(0));  // seed number generator
 
-    int randNum = rand() % 26; //number 0-25
+  int randNum = rand() % 26;  // number 0-25
 
-    char randChar = static_cast<char>('a' + randNum);
+  char randChar = static_cast<char>('a' + randNum);
 
-    cout << randChar << endl;
-
+  cout << randChar << endl;
 }
-

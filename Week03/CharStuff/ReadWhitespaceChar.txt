@@ -1,20 +1,17 @@
-#include <iostream>     //has cin
-#include <cstdio>       //getchar()
+#include <cstdio>    //getchar()
+#include <iostream>  //has cin
 
 using namespace std;
 
-int main()
-{
-    char letter1 = '?';
+int main() {
+  char letter1 = '?';
 
-    ////Read in a non-whitespace char
-    cin >> letter1;
+  ////Read in a non-whitespace char
+  cin >> letter1;
 
-    ////Read in any char
-    //letter1 = getchar();    //option1
-    //letter1 = cin.get();    //option2
+  ////Read in any char
+  // letter1 = getchar();    //option1
+  // letter1 = cin.get();    //option2
 
-    cout << "You entered \"" << letter1 << "\"" << endl;
-
+  cout << "You entered \"" << letter1 << "\"" << endl;
 }
-

@@ -1,13 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    char myChar = 'f';
+int main() {
+  char myChar = 'f';
 
-    int letterNumber = myChar - 'a' + 1;
+  int letterNumber = myChar - 'a' + 1;
 
-    cout << "That is the " << letterNumber << " letter." << endl;
-
+  cout << "That is the " << letterNumber << " letter." << endl;
 }
-

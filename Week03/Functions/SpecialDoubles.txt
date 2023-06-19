@@ -1,22 +1,16 @@
-#include <iostream>
-
 #include <cmath>
-
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
+int main() {
+  double x = sqrt(-1);
+  cout << "x = " << x << endl;
+  cout << (sqrt(-1) == x) << endl;
+  cout << (x == NAN) << endl;
+  cout << isnan(sqrt(-1)) << endl << endl;
 
-    double x = sqrt(-1);
-    cout << "x = " << x << endl;
-    cout << (sqrt(-1) == x) << endl;
-    cout << (x == NAN) << endl;
-    cout << isnan(sqrt(-1)) << endl  << endl;
-
-    double y = 1.0 / 0.0;
-    cout << "y = " << y << endl;
-    cout << (y == INFINITY) << endl;
-
+  double y = 1.0 / 0.0;
+  cout << "y = " << y << endl;
+  cout << (y == INFINITY) << endl;
 }
-
