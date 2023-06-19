@@ -2,31 +2,26 @@
 
 using namespace std;
 
+int main() {
+  const int ROW_SIZE = 5;
+  const int COL_SIZE = 3;
 
-int main()
-{
-    const int ROW_SIZE = 5;
-    const int COL_SIZE = 3;
+  int scores[ROW_SIZE][COL_SIZE];
 
-    int scores[ROW_SIZE][COL_SIZE];
-
-    //Number the cells in row major order
-    int cellNum = 1;
-    for(int rowNumber = 0; rowNumber < ROW_SIZE; rowNumber++) {
-        for(int colNumber = 0; colNumber < COL_SIZE; colNumber++) {
-            scores[rowNumber][colNumber] = cellNum;
-            cellNum++;
-        }
+  // Number the cells in row major order
+  int cellNum = 1;
+  for (int rowNumber = 0; rowNumber < ROW_SIZE; rowNumber++) {
+    for (int colNumber = 0; colNumber < COL_SIZE; colNumber++) {
+      scores[rowNumber][colNumber] = cellNum;
+      cellNum++;
     }
+  }
 
-    //Print out the cells
-    for(int rowNumber = 0; rowNumber < ROW_SIZE; rowNumber++) {
-        for(int colNumber = 0; colNumber < COL_SIZE; colNumber++) {
-            cout << scores[rowNumber][colNumber] << "\t";
-        }
-        cout << endl;  //end of row
+  // Print out the cells
+  for (int rowNumber = 0; rowNumber < ROW_SIZE; rowNumber++) {
+    for (int colNumber = 0; colNumber < COL_SIZE; colNumber++) {
+      cout << scores[rowNumber][colNumber] << "\t";
     }
-
-
+    cout << endl;  // end of row
+  }
 }
-

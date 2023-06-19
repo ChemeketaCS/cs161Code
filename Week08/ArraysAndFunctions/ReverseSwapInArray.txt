@@ -7,16 +7,13 @@ using namespace std;
  * @param newList Target - where reversed copy will be built
  * @param size    Number of elements to be reversed
  */
-void reverse(const int list[], int newList[], int size)
-{
-    int reverseIndex = size - 1;   //will count down from size - 1 to 0
-    for (int i = 0; i < size; i++)
-    {
-        newList[reverseIndex] = list[i];
-        reverseIndex--;
-    }
+void reverse(const int list[], int newList[], int size) {
+  int reverseIndex = size - 1;  // will count down from size - 1 to 0
+  for (int i = 0; i < size; i++) {
+    newList[reverseIndex] = list[i];
+    reverseIndex--;
+  }
 }
-
 
 /**
  * @brief swapElements  Swaps two elements of an array
@@ -25,42 +22,34 @@ void reverse(const int list[], int newList[], int size)
  * @param location2     Index of other element - No Sanity Check!
  */
 void swapElements(int theArray[], int location1, int location2) {
-    int temp = theArray[location1];
-    theArray[location1] = theArray[location2];
-    theArray[location2] = temp;
+  int temp = theArray[location1];
+  theArray[location1] = theArray[location2];
+  theArray[location2] = temp;
 }
 
-
-
-//Print size elements of the array list
-void printArray(const int list[], int size)
-{
-    for (int i = 0; i < size; i++)
-        cout << list[i] << " ";
+// Print size elements of the array list
+void printArray(const int list[], int size) {
+  for (int i = 0; i < size; i++) cout << list[i] << " ";
 }
 
+int main() {
+  const int ARRAY_SIZE = 6;
+  int list[] = {1, 2, 3, 4, 5, 6};
+  int newList[ARRAY_SIZE];
 
-int main()
-{
-    const int ARRAY_SIZE = 6;
-    int list[] = {1, 2, 3, 4, 5, 6};
-    int newList[ARRAY_SIZE];
+  reverse(list, newList, ARRAY_SIZE);
 
-    reverse(list, newList, ARRAY_SIZE);
+  cout << "The original array: ";
+  printArray(list, ARRAY_SIZE);
+  cout << endl;
 
-    cout << "The original array: ";
-    printArray(list, ARRAY_SIZE);
-    cout << endl;
+  cout << "The reversed array: ";
+  printArray(newList, ARRAY_SIZE);
+  cout << endl;
 
-    cout << "The reversed array: ";
-    printArray(newList, ARRAY_SIZE);
-    cout << endl;
+  swapElements(newList, 0, ARRAY_SIZE - 1);
 
-
-    swapElements(newList, 0, ARRAY_SIZE - 1);
-
-    cout << "After swapping first/last: ";
-    printArray(newList, ARRAY_SIZE);
-    cout << endl;
-
+  cout << "After swapping first/last: ";
+  printArray(newList, ARRAY_SIZE);
+  cout << endl;
 }
