@@ -2,40 +2,40 @@
 using namespace std;
 
 //-------------------------------------------
-//THESE GLOBAL VARIABLES ARE BAD - DO NOT DO
+// THESE GLOBAL VARIABLES ARE BAD - DO NOT DO
 int number = 1;
 bool wasPrime;
 
-//Awful version of isPrime
+// Awful version of isPrime
 void isPrime() {
-    if(number < 2) {
-        wasPrime = false;
-        return;
-    }
+  if (number < 2) {
+    wasPrime = false;
+    return;
+  }
 
-    for(int i = 2; i < number; i++) {
-        if( number % i == 0 ) {
-            wasPrime = false;
-            return;
-        }
+  for (int i = 2; i < number; i++) {
+    if (number % i == 0) {
+      wasPrime = false;
+      return;
     }
-    wasPrime = true;
+  }
+  wasPrime = true;
 }
 
-//Awful version of nthPrime
-//Number holds final answer
+// Awful version of nthPrime
+// Number holds final answer
 void nthPrime(int n) {
-    int primeCount = 0;
-    while(primeCount < n) {
-        number++;            //set special variable
-        isPrime();           //call function
-        if(wasPrime)         //know that wasPrime has the result
-            primeCount++;
-    }
+  int primeCount = 0;
+  while (primeCount < n) {
+    number++;      // set special variable
+    isPrime();     // call function
+    if (wasPrime)  // know that wasPrime has the result
+      primeCount++;
+  }
 }
 
 int main() {
-    int n = 5;
-    nthPrime(n);
-    cout << "The " << n << "th prime is " << number << endl;
+  int n = 5;
+  nthPrime(n);
+  cout << "The " << n << "th prime is " << number << endl;
 }

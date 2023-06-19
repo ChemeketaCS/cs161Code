@@ -1,29 +1,25 @@
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
 using namespace std;
 
-
-//returns absolute value of a number
+// returns absolute value of a number
 double myAbs(double number) {
-    if (number < 0)
-        number = -number;
+  if (number < 0) number = -number;
 
-    return number;
+  return number;
 }
 
 ////Failed version - does not return a value on all paths
-//double myAbs(double number) {
-//    if (number < 0) {
-//        return -number;
-//    }
-//    //does not return a value!
-//}
+// double myAbs(double number) {
+//     if (number < 0) {
+//         return -number;
+//     }
+//     //does not return a value!
+// }
 
-int main()
-{
-    cout << myAbs(12) << endl;
-    cout << myAbs(-6.5) << endl;
-    cout << myAbs(0) << endl;
+int main() {
+  cout << myAbs(12) << endl;
+  cout << myAbs(-6.5) << endl;
+  cout << myAbs(0) << endl;
 }
-

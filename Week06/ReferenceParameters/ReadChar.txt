@@ -2,15 +2,12 @@
 
 using namespace std;
 
-int main()
-{
-    cout << "Enter a character:";
+int main() {
+  cout << "Enter a character:";
 
-    char c;
-    //.get() takes parameter by reference and changes it
-    cin.get(c);
+  char c;
+  //.get() takes parameter by reference and changes it
+  cin.get(c);
 
-    cout << "|" << c << "|" << endl;
-
+  cout << "|" << c << "|" << endl;
 }
-

@@ -1,5 +1,5 @@
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
 using namespace std;
 
@@ -9,11 +9,9 @@ using namespace std;
  * @param end Last value to count (inclusive)
  * @return Sum of all values
  */
-int sum(int start, int end)
-{
-    //code goes here
+int sum(int start, int end) {
+  // code goes here
 }
-
 
 /**
  * @brief Finds the maximal temperature over a range of days
@@ -25,16 +23,13 @@ int sum(int start, int end)
  */
 double getMaxTemperature(int start, int range);
 
-
-
 /**
  * @brief Prints value with $ in front rounded to two places
  * @param amount Value in dollars.
  *               e.g. 1.02 for one dollar and two cents
  */
-void printAsMoney(double amount)
-{
-    //code goes here
+void printAsMoney(double amount) {
+  // code goes here
 }
 
 /**
@@ -43,17 +38,10 @@ void printAsMoney(double amount)
  * @param day Day of the year. Jan 1st = 1, Feb 1st = 32...
  * @return degrees F
  */
-double getForecastTemperature(int day)
-{
-    //code goes here
+double getForecastTemperature(int day) {
+  // code goes here
 }
 
-//int sum(int start, int end);
-
-//void printAsMoney(double amount);
-
-//double getForecastTemperature(int day);
-
-int main()
-{
+int main() {
+  
 }
