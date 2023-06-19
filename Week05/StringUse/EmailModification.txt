@@ -1,31 +1,28 @@
-#include <iostream>
 #include <climits>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
+int main() {
+  string mystring = "bob@a.com";
 
-    string mystring = "bob@a.com";
+  string::size_type index = mystring.find("@");
 
-    string::size_type index = mystring.find("@");
+  // method 1 - replace one char
+  mystring.at(index) = '#';
+  // mystring[index] = '#';      //same but DANGEROUS
 
-    //method 1 - replace one char
-    mystring.at(index) = '#';
-    //mystring[index] = '#';      //same but DANGEROUS
+  //    //Does not work - can't store string as char
+  //    //mystring.at(index) = "#";
 
-//    //Does not work - can't store string as char
-//    //mystring.at(index) = "#";
+  //    //method 2 - replace 1 character starting at index
+  //    // with the string "###"
+  //    mystring.replace(index, 1, "###");
 
-//    //method 2 - replace 1 character starting at index
-//    // with the string "###"
-//    mystring.replace(index, 1, "###");
+  //    //method 3 - break it down and rebuild from parts
+  //    string start = mystring.substr(0, index);
+  //    string end = mystring.substr(index + 1);
+  //    mystring = start + "#" + end;
 
-//    //method 3 - break it down and rebuild from parts
-//    string start = mystring.substr(0, index);
-//    string end = mystring.substr(index + 1);
-//    mystring = start + "#" + end;
-
-    cout << mystring << endl;
+  cout << mystring << endl;
 }
-

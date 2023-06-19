@@ -1,28 +1,26 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
-    ifstream inFile;
-    inFile.open("Numbers.txt");
+int main() {
+  ifstream inFile;
+  inFile.open("Numbers.txt");
 
-    string line;
-    getline(inFile, line);      //line is 15 12 14 18 22
+  string line;
+  getline(inFile, line);  // line is 15 12 14 18 22
 
-    string::size_type spaceLoc = line.find(" ");
-    string part1 = line.substr(0, spaceLoc);
-    int num1 = stoi(part1);     //stoi : string to int
-    line.erase(spaceLoc + 1);   //line now 12 14 18 22
+  string::size_type spaceLoc = line.find(" ");
+  string part1 = line.substr(0, spaceLoc);
+  int num1 = stoi(part1);    // stoi : string to int
+  line.erase(spaceLoc + 1);  // line now 12 14 18 22
 
-    spaceLoc = line.find(" ");
-    string part2 = line.substr(0, spaceLoc);
-    int num2 = stoi(part2);     //stoi : string to int
-    line.erase(spaceLoc + 1);   //line now 14 18 22
+  spaceLoc = line.find(" ");
+  string part2 = line.substr(0, spaceLoc);
+  int num2 = stoi(part2);    // stoi : string to int
+  line.erase(spaceLoc + 1);  // line now 14 18 22
 
-    //...
+  //...
 
-    cout << num1 + num2 << endl;
+  cout << num1 + num2 << endl;
 }
-

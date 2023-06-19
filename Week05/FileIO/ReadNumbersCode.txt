@@ -1,34 +1,29 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
-    ifstream inFile;
-    inFile.open("Numbers.txt");
+int main() {
+  ifstream inFile;
+  inFile.open("Numbers.txt");
 
-    if(inFile.fail()) {
-        cout << "Could not open file" << endl;
+  if (inFile.fail()) {
+    cout << "Could not open file" << endl;
+  }
 
-    }
+  //    //METHOD 1
+  //    int number;
+  //    //Try to read number, will report false if it does not work
+  //    while(inFile >> number) {
+  //        cout << number << endl;
+  //    }
 
-//    //METHOD 1
-//    int number;
-//    //Try to read number, will report false if it does not work
-//    while(inFile >> number) {
-//        cout << number << endl;
-//    }
+  // METHOD 2
+  while (!inFile.eof()) {
+    int number;
+    inFile >> number;          // try to read number
+    if (inFile.fail()) break;  // ooops - read failed, get out
 
-    //METHOD 2
-    while(!inFile.eof()) {
-        int number;
-        inFile >> number;      //try to read number
-        if(inFile.fail())
-            break;          //ooops - read failed, get out
-
-        cout << number << endl;
-    }
-
+    cout << number << endl;
+  }
 }
-
