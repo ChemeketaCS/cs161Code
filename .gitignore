@@ -1,10 +1,4 @@
-*Makefile*
-*.pro.user*
-Week05/BinaryIO/info.dat
 *.zip
+*.exe
 *Release/
-*.qmake*
-*.autosave
-.hg/*
 *Debug/
-.vscode
