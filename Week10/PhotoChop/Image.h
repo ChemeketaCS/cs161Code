@@ -1,11 +1,13 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef IMAGE_H
+#define IMAGE_H
+
+#include <cstdint>
 
 //Declares constants and data types used by program
 //No corresponding .cpp file as there are no functions to define
 
-//A byte will store values from 0-255 (shorter name for "unsigned char")
-typedef unsigned char byte;
+//A byte will store values from 0-255 (shorter name for "uint8_t")
+typedef uint8_t byte;
 
 /**
  * @brief The Pixel struct represents one dot in an image
@@ -29,5 +31,4 @@ struct Image {
     Pixel data[IMG_HEIGHT][IMG_WIDTH];
 };
 
-
-#endif // MAIN_H
+#endif // IMAGE_H

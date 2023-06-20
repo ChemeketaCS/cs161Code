@@ -1,35 +1,28 @@
 #include <iostream>
 using namespace std;
 
+int* reverse(const int* list, int size) {
+  // Make new array same size as original
+  int* result = new int[size];
 
+  int reverseIndex = size - 1;
+  for (int i = 0; i < size; i++) {
+    result[reverseIndex] = list[i];
+    reverseIndex--;
+  }
 
-int* reverse(const int* list, int size)
-{
-    //Make new array same size as original
-    int* result = new int[size];
-
-    int reverseIndex = size - 1;
-    for (int i = 0; i < size; i++)
-    {
-        result[reverseIndex] = list[i];
-        reverseIndex--;
-    }
-
-    //Return memory address of new array
-    return result;
+  // Return memory address of new array
+  return result;
 }
 
+int main() {
+  const int listSize = 6;
+  int list[] = {1, 2, 3, 4, 5, 6};
 
-int main()
-{
-    const int listSize = 6;
-    int list[] = {1, 2, 3, 4, 5, 6};
+  // make a reversed copy, get its address
+  int* backwards = reverse(list, listSize);
 
-    //make a reversed copy, get its address
-    int* backwards = reverse(list, listSize);
-
-    //use address as an array
-    for (int i = 0; i < listSize; i++)
-        cout << backwards[i] << " ";
-
+  // use address as an array
+  for (int i = 0; i < listSize; i++) 
+    cout << backwards[i] << " ";
 }

@@ -1,20 +1,16 @@
 #include <iostream>
 using namespace std;
 
-//Return pointer to item in stack
+// Return pointer to item in stack
 int* getBadPointer() {
-    int x = 10;
-    int* px = &x;
-    return px;
+  int x = 10;
+  int* px = &x;
+  return px;
 }
 
+int main() {
+  int* pTen = getBadPointer();
 
-int main()
-{
-    int* pTen = getBadPointer();
-
-    cout << *pTen << endl;
-    cout << *pTen << endl;
-
+  cout << *pTen << endl;
+  cout << *pTen << endl;
 }
-

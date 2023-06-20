@@ -2,35 +2,31 @@
 
 using namespace std;
 
-int main()
-{
-    //Array on stack
-    int nums[5] = {1, 2, 3, 4, 5};
+int main() {
+  // Array on stack
+  int nums[5] = {1, 2, 3, 4, 5};
 
-    //Store array's address in pointer
-    int* pToArray = nums;
+  // Store array's address in pointer
+  int* pToArray = nums;
 
-    //Use pointer as alias to array
-    cout << pToArray[2] << endl;
+  // Use pointer as alias to array
+  cout << pToArray[2] << endl;
 
+  int listSize;
+  cout << "How many elements do you need? ";
+  cin >> listSize;
 
-    int listSize;
-    cout << "How many elements do you need? ";
-    cin >> listSize;
+  // Array on heap, address stored in pointer
+  int* nums2 = new int[listSize];
 
-    //Array on heap, address stored in pointer
-    int* nums2 = new int[listSize];
+  // Index into pointer to use as array
+  for (int i = 0; i < listSize; i++) {
+    nums2[i] = i + 1;
+  }
 
-    //Index into pointer to use as array
-    for(int i = 0; i < listSize; i++) {
-        nums2[i] = i + 1;
-    }
+  // Free memory used by nums2
+  delete[] nums2;
 
-    //Free memory used by nums2
-    delete[] nums2;
-
-    //Clear pointer
-    nums2 = nullptr;
-
+  // Clear pointer
+  nums2 = nullptr;
 }
-

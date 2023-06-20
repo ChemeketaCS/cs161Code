@@ -1,19 +1,16 @@
 #include <iostream>
 using namespace std;
 
-//Make and return pointer on the heap
+// Make and return pointer on the heap
 int* getGoodPointerToTen() {
-    int* px = new int;
-    *px = 10;
-    return px;
+  int* px = new int;
+  *px = 10;
+  return px;
 }
 
+int main() {
+  int* pTen = getGoodPointerToTen();
 
-int main()
-{
-    int* pTen = getGoodPointerToTen();
-
-    cout << *pTen << endl;
-    cout << *pTen << endl;
-
+  cout << *pTen << endl;
+  cout << *pTen << endl;
 }

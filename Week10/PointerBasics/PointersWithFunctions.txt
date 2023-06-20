@@ -2,47 +2,38 @@
 
 using namespace std;
 
+// C++ style
+void doubleVariable(int& x) { x = x * 2; }
 
-//C++ style
-void doubleVariable(int& x) {
-    x = x * 2;
-}
-
-
-//C style
+// C style
 void doubleVariableCStyle(int* x) {
-    //Get value at location stored x and multiply by 2
-    int temp = (*x) * 2;
+  // Get value at location stored x and multiply by 2
+  int temp = (*x) * 2;
 
-    //Set value at location stored in x
-    *x = temp;
+  // Set value at location stored in x
+  *x = temp;
 }
 
-
-//Swap the values contained in two variables
+// Swap the values contained in two variables
 void swapValues(int* x, int* y) {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
+  int temp = *x;
+  *x = *y;
+  *y = temp;
 }
 
+int main() {
+  int num = 10;
+  cout << num << endl;
 
+  doubleVariable(num);
+  cout << num << endl;
 
-int main()
-{
+  doubleVariableCStyle(&num);
+  cout << num << endl;
 
-    int num = 10;
-    cout << num << endl;
+  int a = 5, b = 10;
+  cout << "a = " << a << "; b = " << b << endl;
 
-    doubleVariable(num);
-    cout << num << endl;
-
-    doubleVariableCStyle(&num);
-    cout << num << endl;
-
-    int a = 5, b = 10;
-    cout << "a = " << a << "; b = " << b << endl;
-
-    swapValues(&a, &b);
-    cout << "a = " << a << "; b = " << b << endl;
+  swapValues(&a, &b);
+  cout << "a = " << a << "; b = " << b << endl;
 }
