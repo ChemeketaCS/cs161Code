@@ -57,7 +57,7 @@ int main() {
   bool sorted = true;
   for (int i = 0; i < NUM_VALUES - 1; i++) {
     // is current item larger than next item?
-    if (values[i] < values[i + 1]) {
+    if (values[i] > values[i + 1]) {
       sorted = false;  // we found a problem!
       break;
     }
