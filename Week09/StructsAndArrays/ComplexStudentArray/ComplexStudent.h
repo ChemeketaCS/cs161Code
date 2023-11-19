@@ -3,6 +3,9 @@
 
 #include <string>
 
+
+//Use std::string instead "using namespace std" to avoid forcing
+// all files that include this to use namespace std
 struct Name {
     std::string first;
     std::string middle;
