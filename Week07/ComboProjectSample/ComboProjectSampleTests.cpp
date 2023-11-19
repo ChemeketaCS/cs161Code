@@ -4,13 +4,13 @@
  */
 
 //-----------------------------------------------------------------------------------
-//Bring in unit testing code and tell it to build a main function
-//If you have multiple unit test files, only one should have this line
+// Bring in unit testing code and tell it to build a main function
+// If you have multiple unit test files, only one should have this line
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 
 #include "doctest.h"
 
-//Use Approx from doctest without saying doctest::Approx
+// Use Approx from doctest without saying doctest::Approx
 using doctest::Approx;
 //-----------------------------------------------------------------------------------
 

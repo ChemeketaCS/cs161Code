@@ -8,13 +8,14 @@ int main() {
   srand(time(0));
   int numberOfHits = 0;
 
-  for (int i = 0; i < NUMBER_OF_TRIALS; i++) {
+  for(int i = 0; i < NUMBER_OF_TRIALS; i++) {
     // Make random point in unit square (-1 to 1, -1 to 1)
     double x = rand() * 2.0 / RAND_MAX - 1;
     double y = rand() * 2.0 / RAND_MAX - 1;
 
     // Distance <= 1 means inside unit circle
-    if (x * x + y * y <= 1) numberOfHits++;
+    if(x * x + y * y <= 1)
+      numberOfHits++;
   }
 
   double pi = 4.0 * numberOfHits / NUMBER_OF_TRIALS;

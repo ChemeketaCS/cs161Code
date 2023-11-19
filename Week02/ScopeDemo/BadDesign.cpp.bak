@@ -16,17 +16,17 @@ int main() {
   cout << "Enter employee type (0: salaried, 1: hourly): ";
   cin >> employeeType;
 
-  if (employeeType == SALARIED_EMPLOYEE) {
+  if(employeeType == SALARIED_EMPLOYEE) {
     cout << "Enter salary: ";
     cin >> salary;
     // assumes biweekly paychecks
     pay = salary / 26;
-  } else if (employeeType == HOURLY_EMPLOYEE) {
+  } else if(employeeType == HOURLY_EMPLOYEE) {
     cout << "Enter hours worked: ";
     cin >> hours;
     cout << "Enter hourly rate: ";
     cin >> payRate;
-    if (hours > 40) {
+    if(hours > 40) {
       overtimeHours = hours - 40;
       hours = 40;
     } else {

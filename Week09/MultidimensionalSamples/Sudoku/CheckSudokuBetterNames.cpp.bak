@@ -20,17 +20,18 @@ int main() {
 
 void readASolution(int grid[][9]) {
   cout << "Enter a Sudoku puzzle:" << endl;
-  for (int i = 0; i < 9; i++)
-    for (int j = 0; j < 9; j++) cin >> grid[i][j];
+  for(int i = 0; i < 9; i++)
+    for(int j = 0; j < 9; j++)
+      cin >> grid[i][j];
 }
 
 bool isValid(const int grid[][9]) {
-  for (int i = 0; i < 9; i++)
-    for (int j = 0; j < 9; j++)
-      if (grid[i][j] < 1 || grid[i][j] > 9 || !isValid(i, j, grid))
+  for(int i = 0; i < 9; i++)
+    for(int j = 0; j < 9; j++)
+      if(grid[i][j] < 1 || grid[i][j] > 9 || !isValid(i, j, grid))
         return false;
 
-  return true;  // The fixed cells are valid
+  return true; // The fixed cells are valid
 }
 
 bool isValid(int row, int col, const int grid[][9]) {
@@ -38,23 +39,24 @@ bool isValid(int row, int col, const int grid[][9]) {
   //  column and box as itself
 
   // Check whether grid[i][j] is valid within row
-  for (int curColumn = 0; curColumn < 9; curColumn++)
-    if (curColumn != col && grid[row][curColumn] == grid[row][col])
+  for(int curColumn = 0; curColumn < 9; curColumn++)
+    if(curColumn != col && grid[row][curColumn] == grid[row][col])
       return false;
 
   // Check whether grid[i][j] is valid within column
-  for (int curRow = 0; curRow < 9; curRow++)
-    if (curRow != row && grid[curRow][col] == grid[row][col]) return false;
+  for(int curRow = 0; curRow < 9; curRow++)
+    if(curRow != row && grid[curRow][col] == grid[row][col])
+      return false;
 
   // Check whether grid[i][j] is valid in the 3-by-3 box
   // row 0-2 are one box, 3-5 another, 6-8 another
   // row/3 gives box number (0,1,2)
   // boxNumber * 3 gives starting index
-  for (int curRow = (row / 3) * 3; curRow < (row / 3) * 3 + 3; curRow++)
-    for (int curCol = (col / 3) * 3; curCol < (col / 3) * 3 + 3; curCol++)
-      if (curRow != row && curCol != col &&
-          grid[curRow][curCol] == grid[row][col])
+  for(int curRow = (row / 3) * 3; curRow < (row / 3) * 3 + 3; curRow++)
+    for(int curCol = (col / 3) * 3; curCol < (col / 3) * 3 + 3; curCol++)
+      if(curRow != row && curCol != col &&
+         grid[curRow][curCol] == grid[row][col])
         return false;
 
-  return true;  // The current value at grid[i][j] is valid
+  return true; // The current value at grid[i][j] is valid
 }

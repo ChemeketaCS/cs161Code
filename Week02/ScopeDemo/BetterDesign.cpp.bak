@@ -13,13 +13,13 @@ int main() {
   // weekly paycheck
   double pay;
 
-  if (employeeType == SALARIED_EMPLOYEE) {
+  if(employeeType == SALARIED_EMPLOYEE) {
     double salary;
     cout << "Enter salary: ";
     cin >> salary;
     // assumes biweekly paychecks
     pay = salary / 26;
-  } else if (employeeType == HOURLY_EMPLOYEE) {
+  } else if(employeeType == HOURLY_EMPLOYEE) {
     int hours;
     cout << "Enter hours worked: ";
     cin >> hours;
@@ -29,7 +29,7 @@ int main() {
     cin >> payRate;
 
     int overtimeHours = 0;
-    if (hours > 40) {
+    if(hours > 40) {
       overtimeHours = hours - 40;
       hours = 40;
     }

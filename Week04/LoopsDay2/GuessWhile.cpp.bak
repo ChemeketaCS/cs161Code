@@ -1,5 +1,5 @@
 #include <cstdlib>
-#include <ctime>  // Needed for the time function
+#include <ctime> // Needed for the time function
 #include <iostream>
 using namespace std;
 
@@ -16,10 +16,10 @@ int main() {
   cout << "Enter your guess: ";
   cin >> guess;
 
-  while (guess != number) {
-    if (guess > number)
+  while(guess != number) {
+    if(guess > number)
       cout << "Your guess is too high" << endl;
-    else if (guess < number)
+    else if(guess < number)
       cout << "Your guess is too low" << endl;
 
     // Prompt the user to guess the number

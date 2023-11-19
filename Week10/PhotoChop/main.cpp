@@ -1,5 +1,5 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 
 #include "Image.h"
 #include "ImageIOLib.h"
@@ -64,12 +64,12 @@ int main() {
  * @return the created image
  */
 Image makeAqua() {
-  Image newImage = {};  // all black
+  Image newImage = {}; // all black
 
-  Pixel aqua = {0, 128, 255};  //(0 red, 128 green, 255 blue)
+  Pixel aqua = {0, 128, 255}; //(0 red, 128 green, 255 blue)
 
-  for (int i = 0; i < IMG_HEIGHT; i++) {   // for each row
-    for (int j = 0; j < IMG_WIDTH; j++) {  // for each column
+  for(int i = 0; i < IMG_HEIGHT; i++) {  // for each row
+    for(int j = 0; j < IMG_WIDTH; j++) { // for each column
       // Copy the aqua pixel over that one
       newImage.data[i][j] = aqua;
     }
@@ -82,15 +82,15 @@ Image makeAqua() {
  * @return the created image
  */
 Image makeGradient() {
-  Image newImage;  // all black
+  Image newImage; // all black
 
-  for (int i = 0; i < IMG_HEIGHT; i++) {  // for each row
+  for(int i = 0; i < IMG_HEIGHT; i++) { // for each row
     // Set a gray value by making each color = to row * 2
     // That will start at 0,0,0 and grow up to 254,254,254
     byte grayValue = i * 2;
     Pixel gray = {grayValue, grayValue, grayValue};
 
-    for (int j = 0; j < IMG_WIDTH; j++) {
+    for(int j = 0; j < IMG_WIDTH; j++) {
       newImage.data[i][j] = gray;
     }
   }
@@ -105,8 +105,8 @@ Image makeGradient() {
  * Red amount is capped in range 0-255, will not "wrap" around.
  */
 void redShift(Image& source, int shiftAmount) {
-  for (int i = 0; i < IMG_HEIGHT; i++) {   // for each row
-    for (int j = 0; j < IMG_WIDTH; j++) {  // for each column
+  for(int i = 0; i < IMG_HEIGHT; i++) {  // for each row
+    for(int j = 0; j < IMG_WIDTH; j++) { // for each column
       // Clamp function makes sure we don't go past 255 and wrap back around to
       // 0
       int resultValue = source.data[i][j].red + shiftAmount;
@@ -124,8 +124,9 @@ void redShift(Image& source, int shiftAmount) {
 void blur(Image& source) {
   // Skip first and last row and column. Avoids reading outside of array when we
   //  are reading "neighboring" pixels
-  for (int i = 1; i < IMG_HEIGHT - 1; i++) {  // for each row but first and last
-    for (int j = 1; j < IMG_WIDTH - 1; j++) {  // for each column but first and last
+  for(int i = 1; i < IMG_HEIGHT - 1; i++) { // for each row but first and last
+    for(int j = 1; j < IMG_WIDTH - 1;
+        j++) { // for each column but first and last
       // get value of this and 4 neighbors
       Pixel currentPixel = source.data[i][j];
       Pixel abovePixel = source.data[i - 1][j];
@@ -161,11 +162,11 @@ void rotateRight(Image& source) {
   // First make a temp image to rotate into - makes easier to avoid
   //  overwriting old work as we go.
   Image temp;
-  for (int i = 0; i < IMG_HEIGHT; i++) {   // for each row
-    for (int j = 0; j < IMG_WIDTH; j++) {  // for each column
+  for(int i = 0; i < IMG_HEIGHT; i++) {  // for each row
+    for(int j = 0; j < IMG_WIDTH; j++) { // for each column
       // calculate where i, j should rotate to
-      int newRow = j;                    // new row = old column
-      int newCol = (IMG_WIDTH - 1) - i;  // new column = last column - old row
+      int newRow = j;                   // new row = old column
+      int newCol = (IMG_WIDTH - 1) - i; // new column = last column - old row
 
       temp.data[newRow][newCol] = source.data[i][j];
     }

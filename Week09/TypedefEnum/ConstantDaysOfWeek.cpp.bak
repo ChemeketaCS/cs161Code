@@ -17,7 +17,8 @@ int main() {
   int tomorrow = today + 1;
   cout << DAY_NAMES[tomorrow] << endl;
 
-  if (today == THURSDAY) cout << "Today is traash day" << endl;
+  if(today == THURSDAY)
+    cout << "Today is traash day" << endl;
 
   // uhhhh... constant does not protect us from Stupidity
   int someDay = 123;

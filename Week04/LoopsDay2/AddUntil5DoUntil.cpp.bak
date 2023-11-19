@@ -15,7 +15,7 @@ int main() {
     // add this number... depends on 0 not affecting result!
     sum += data;
 
-  } while (data != 0);
+  } while(data != 0);
 
   cout << "The sum is " << sum << endl;
 }

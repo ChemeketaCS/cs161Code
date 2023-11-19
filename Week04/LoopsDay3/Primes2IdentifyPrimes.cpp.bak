@@ -5,12 +5,12 @@ using namespace std;
 int main() {
   int number = 11;
   bool isPrime = true;
-  for (int i = 2; i < number; i++) {
-    if (number % i == 0) {
+  for(int i = 2; i < number; i++) {
+    if(number % i == 0) {
       isPrime = false;
     }
   }
-  if (isPrime)
+  if(isPrime)
     cout << number << " is prime" << endl;
   else
     cout << " nope" << endl;

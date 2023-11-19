@@ -5,11 +5,11 @@ using namespace std;
 int main() {
   int x = 1;
 
-  if (true) {
+  if(true) {
     x = 4;
     int y = 2;
     cout << y;
   }
 
-  cout << x;  // x is now 4
+  cout << x; // x is now 4
 }

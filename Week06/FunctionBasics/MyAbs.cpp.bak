@@ -5,7 +5,8 @@ using namespace std;
 
 // returns absolute value of a number
 double myAbs(double number) {
-  if (number < 0) number = -number;
+  if(number < 0)
+    number = -number;
 
   return number;
 }

@@ -25,10 +25,10 @@ int main() {
   cout << "------------" << endl;
 
   string s5 = "4a";
-  int num3 = stoi(s5);  // OK, starts with a number
+  int num3 = stoi(s5); // OK, starts with a number
   cout << num3 << endl;
 
   string s6 = "a4";
-  int num4 = stoi(s6);  // blows up - no number at start of string
+  int num4 = stoi(s6); // blows up - no number at start of string
   cout << num4 << endl;
 }

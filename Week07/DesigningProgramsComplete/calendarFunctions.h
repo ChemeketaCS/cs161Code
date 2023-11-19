@@ -1,7 +1,7 @@
 #ifndef CALENDARFUNCTIONS_H
 #define CALENDARFUNCTIONS_H
 
-//Need to include string so we can talk about it in this file
+// Need to include string so we can talk about it in this file
 #include <string>
 using namespace std;
 

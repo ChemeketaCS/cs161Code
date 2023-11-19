@@ -1,5 +1,5 @@
-#include <cstdio>    //getchar()
-#include <iostream>  //has cin
+#include <cstdio>   //getchar()
+#include <iostream> //has cin
 
 using namespace std;
 

@@ -6,7 +6,7 @@ using namespace std;
 int main() {
   double myNumber = 3 + 0.01 + 0.01;
 
-  if (myNumber == 3.02) {
+  if(myNumber == 3.02) {
     // Not going to work!!
     cout << "myNumber is == to 3.02" << endl;
   }
@@ -14,7 +14,7 @@ int main() {
   const double EPSILON = 1E-14;
 
   double difference = abs(3.02 - myNumber);
-  if (difference < EPSILON) {
+  if(difference < EPSILON) {
     // Anything within 0.0000000000001 is ==
     cout << "myNumber is CLOSE to 3.02" << endl;
   }

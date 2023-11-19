@@ -12,7 +12,9 @@ double myRound(double num, int places) {
   return num;
 }
 
-double myRound(double num) { return myRound(num, 2); }
+double myRound(double num) {
+  return myRound(num, 2);
+}
 
 int main() {
   const double PI = 3.14159265;

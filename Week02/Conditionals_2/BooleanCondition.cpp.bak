@@ -16,7 +16,9 @@ int main() {
 
   cin >> tempOK;
 
-  if (true == tempOK) cout << "Don't touch that dial!" << endl;
+  if(true == tempOK)
+    cout << "Don't touch that dial!" << endl;
 
-  if (false == tempOK) cout << "Adjust the thermostat!" << endl;
+  if(false == tempOK)
+    cout << "Adjust the thermostat!" << endl;
 }

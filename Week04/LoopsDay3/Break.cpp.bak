@@ -8,8 +8,9 @@ int main() {
   int number = MYSTERY_VALUE;
   int curNumber = number - 1;
 
-  while (curNumber >= 1) {
-    if (number % curNumber == 0) break;
+  while(curNumber >= 1) {
+    if(number % curNumber == 0)
+      break;
 
     // never get here if we break...
     curNumber--;

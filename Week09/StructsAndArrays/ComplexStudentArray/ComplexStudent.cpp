@@ -21,7 +21,7 @@ string getStudentRecordString(const Student& s) {
   outStream << left << setw(NAME_COL_WIDTH);
   outStream << getFirstCommaLast(s.name);
 
-  for (int i = 0; i < NUM_SCORES; i++) {
+  for(int i = 0; i < NUM_SCORES; i++) {
     outStream << setw(SCORE_COL_WIDTH) << s.scores[i];
   }
 
@@ -31,7 +31,7 @@ string getStudentRecordString(const Student& s) {
 double getAverageForAssignment(const Student studentList[], int size,
                                int assignmentNum) {
   int total = 0;
-  for (int studentIndex = 0; studentIndex < size; studentIndex++) {
+  for(int studentIndex = 0; studentIndex < size; studentIndex++) {
     // get current student from list
     //   then desired score from their score list
     //   add to total
@@ -42,14 +42,14 @@ double getAverageForAssignment(const Student studentList[], int size,
 
 void printStudentRecords(const Student studentList[], int size) {
   // print each student
-  for (int i = 0; i < size; i++) {
+  for(int i = 0; i < size; i++) {
     cout << getStudentRecordString(studentList[i]) << endl;
   }
 
   // print averages
   cout << right << setw(NAME_COL_WIDTH) << "Averages: ";
-  cout << fixed << setprecision(1) << left;  // reset format for avgs
-  for (int i = 0; i < NUM_SCORES; i++) {
+  cout << fixed << setprecision(1) << left; // reset format for avgs
+  for(int i = 0; i < NUM_SCORES; i++) {
     // get average for current assignment
     double assignAvg = getAverageForAssignment(studentList, size, i);
     cout << setw(SCORE_COL_WIDTH) << assignAvg;
@@ -62,10 +62,10 @@ int getHighestScorerForAssignment(const Student studentList[], int size,
   // Assume Student 0 has the highest score
   int highestScorer = 0;
   // Search rest
-  for (int i = 1; i < size; i++) {
+  for(int i = 1; i < size; i++) {
     double curScore = studentList[i].scores[assignNumber];
 
-    if (curScore > studentList[highestScorer].scores[assignNumber])
+    if(curScore > studentList[highestScorer].scores[assignNumber])
       highestScorer = i;
   }
   return highestScorer;
@@ -75,12 +75,12 @@ void readStudents(Student studentList[], int size) {
   ifstream inFile;
   inFile.open("ComplexStudentData.txt");
 
-  if (inFile.fail()) {
+  if(inFile.fail()) {
     cout << "File open error!";
-    exit(0);  // Close program
+    exit(0); // Close program
   }
 
-  for (int studentIndex = 0; studentIndex < size; studentIndex++) {
+  for(int studentIndex = 0; studentIndex < size; studentIndex++) {
     // Read in name
     inFile >> studentList[studentIndex].name.first >>
         studentList[studentIndex].name.middle >>
@@ -92,13 +92,13 @@ void readStudents(Student studentList[], int size) {
         studentList[studentIndex].birthDay.year;
 
     // Read in the scores that each student has
-    for (int j = 0; j < NUM_SCORES; j++) {
+    for(int j = 0; j < NUM_SCORES; j++) {
       inFile >> studentList[studentIndex].scores[j];
     }
 
-    if (inFile.fail()) {
+    if(inFile.fail()) {
       cout << "File read error!";
-      exit(0);  // Close program
+      exit(0); // Close program
     }
   }
 }

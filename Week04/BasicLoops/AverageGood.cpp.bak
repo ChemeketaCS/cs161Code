@@ -6,12 +6,12 @@ int main() {
   int i = 1;
   int total = 0;
 
-  while (i <= 100) {
-    total += i;  // add current value
-    i++;         // go to next value
+  while(i <= 100) {
+    total += i; // add current value
+    i++;        // go to next value
   }
 
-  int count = i - 1;  // counter went one too far
+  int count = i - 1; // counter went one too far
   double average = static_cast<double>(total) / count;
 
   cout << average << endl;

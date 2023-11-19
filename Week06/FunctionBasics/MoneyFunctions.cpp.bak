@@ -15,9 +15,9 @@ double getBalanceFromUser() {
   double balance = -1;
   cout << "Enter your bank balance: ";
   cin >> balance;
-  while (cin.fail()) {
-    cin.clear();                // reset error state
-    cin.ignore(INT_MAX, '\n');  // ignore existing input
+  while(cin.fail()) {
+    cin.clear();               // reset error state
+    cin.ignore(INT_MAX, '\n'); // ignore existing input
     cout << "Enter your bank balance: ";
     cin >> balance;
   }
@@ -28,7 +28,7 @@ int main() {
   double money = getBalanceFromUser();
 
   cout << "Invested over 15 years at 5% that will look like:" << endl;
-  for (int y = 1; y < 15; y++) {
+  for(int y = 1; y < 15; y++) {
     money *= 1.05;
     printAsMoney(money);
   }

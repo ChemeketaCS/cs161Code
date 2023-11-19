@@ -9,15 +9,16 @@ int main() {
 
   cout << "The prime numbers are:" << endl;
 
-  int number = 2;  // number we are testing for primeness
-  while (number <= n) {
+  int number = 2; // number we are testing for primeness
+  while(number <= n) {
     bool isPrime = true;
-    for (int i = 2; i < number; i++) {
-      if (number % i == 0) {
+    for(int i = 2; i < number; i++) {
+      if(number % i == 0) {
         isPrime = false;
       }
     }
-    if (isPrime) cout << number << " ";
+    if(isPrime)
+      cout << number << " ";
 
     number++;
   }

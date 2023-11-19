@@ -6,8 +6,8 @@ const int COL_SIZE = 4;
 // add all elements of an array
 int sum(const int a[][COL_SIZE], int rowSize) {
   int total = 0;
-  for (int row = 0; row < rowSize; row++) {
-    for (int column = 0; column < COL_SIZE; column++) {
+  for(int row = 0; row < rowSize; row++) {
+    for(int column = 0; column < COL_SIZE; column++) {
       total += a[row][column];
     }
   }
@@ -22,8 +22,8 @@ int main() {
   int matrix[ROW_SIZE][COL_SIZE];
 
   // init to random values
-  for (int i = 0; i < ROW_SIZE; i++) {
-    for (int j = 0; j < COL_SIZE; j++) {
+  for(int i = 0; i < ROW_SIZE; i++) {
+    for(int j = 0; j < COL_SIZE; j++) {
       matrix[i][j] = rand() % 10 + 1;
     }
   }

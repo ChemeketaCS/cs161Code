@@ -5,14 +5,18 @@ using namespace std;
 
 int y = 100;
 
-void messWithGlobal1() { y = 102; }
+void messWithGlobal1() {
+  y = 102;
+}
 
 void messWithGlobal2() {
   int y;
   y = 202;
 }
 
-void messWithGlobal3(int y) { y = 302; }
+void messWithGlobal3(int y) {
+  y = 302;
+}
 
 // void messWithGlobal4() {
 //	int y;

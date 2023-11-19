@@ -18,7 +18,7 @@ Student parseStudent(string dataString) {
   newStudent.name = dataString.substr(0, commaLoc);
 
   // get quiz score
-  dataString.erase(0, commaLoc + 1);  // clear everything up to first comma
+  dataString.erase(0, commaLoc + 1); // clear everything up to first comma
   string::size_type commaLoc2 = dataString.find(",");
   string qString = dataString.substr(0, commaLoc2);
 

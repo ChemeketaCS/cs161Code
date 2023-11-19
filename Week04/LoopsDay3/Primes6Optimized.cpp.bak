@@ -10,25 +10,25 @@ int main() {
 
   cout << "The prime numbers are:" << endl;
 
-  int numberOfPrimes = 1;  // know that 2 is prime...
+  int numberOfPrimes = 1; // know that 2 is prime...
   const int NUMBERS_PER_LINE = 10;
   int numbersOnLine = 1;
   cout << "2 ";
-  int number = 3;  // number we are testing for primeness
-  while (number <= n) {
+  int number = 3; // number we are testing for primeness
+  while(number <= n) {
     bool isPrime = true;
     int maxFactor = static_cast<int>(sqrt(number));
-    for (int i = 3; i <= maxFactor; i += 2) {
-      if (number % i == 0) {
+    for(int i = 3; i <= maxFactor; i += 2) {
+      if(number % i == 0) {
         isPrime = false;
         break;
       }
     }
-    if (isPrime) {
+    if(isPrime) {
       cout << number << " ";
       numberOfPrimes++;
       numbersOnLine++;
-      if (numbersOnLine == NUMBERS_PER_LINE) {
+      if(numbersOnLine == NUMBERS_PER_LINE) {
         cout << endl;
         numbersOnLine = 0;
       }

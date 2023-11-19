@@ -3,7 +3,8 @@ using namespace std;
 
 // returns the absolute value of a number
 int myAbs(int number) {
-  if (number < 0) number = -number;
+  if(number < 0)
+    number = -number;
 
   return number;
 }
@@ -14,7 +15,7 @@ bool closeEnough(int num1, int num2) {
   // use myabs to ensure value is positive
   difference = myAbs(difference);
 
-  if (difference <= 1)
+  if(difference <= 1)
     return true;
   else
     return false;

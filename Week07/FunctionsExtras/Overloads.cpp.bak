@@ -2,15 +2,25 @@
 #include <iostream>
 using namespace std;
 
-void print(string s) { cout << "A" << endl; }
+void print(string s) {
+  cout << "A" << endl;
+}
 
-void print(double x) { cout << "B" << endl; }
+void print(double x) {
+  cout << "B" << endl;
+}
 
-void print(int x) { cout << "C" << endl; }
+void print(int x) {
+  cout << "C" << endl;
+}
 
-void print(int x, int y) { cout << "D" << endl; }
+void print(int x, int y) {
+  cout << "D" << endl;
+}
 
-void print(double x, double y) { cout << "E" << endl; }
+void print(double x, double y) {
+  cout << "E" << endl;
+}
 
 ////------------------------------------------------
 ////Bad overloads

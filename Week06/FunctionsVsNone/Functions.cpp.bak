@@ -46,42 +46,42 @@ void printMonthTitle(int year, int month) {
 
 // Get the English name for the month
 string getMonthName(int month) {
-  switch (month) {
-    case 1:
-      return "January";
-      break;
-    case 2:
-      return "February";
-      break;
-    case 3:
-      return "March";
-      break;
-    case 4:
-      return "April";
-      break;
-    case 5:
-      return "May";
-      break;
-    case 6:
-      return "June";
-      break;
-    case 7:
-      return "July";
-      break;
-    case 8:
-      return "August";
-      break;
-    case 9:
-      return "September";
-      break;
-    case 10:
-      return "October";
-      break;
-    case 11:
-      return "November";
-      break;
-    case 12:
-      return "December";
+  switch(month) {
+  case 1:
+    return "January";
+    break;
+  case 2:
+    return "February";
+    break;
+  case 3:
+    return "March";
+    break;
+  case 4:
+    return "April";
+    break;
+  case 5:
+    return "May";
+    break;
+  case 6:
+    return "June";
+    break;
+  case 7:
+    return "July";
+    break;
+  case 8:
+    return "August";
+    break;
+  case 9:
+    return "September";
+    break;
+  case 10:
+    return "October";
+    break;
+  case 11:
+    return "November";
+    break;
+  case 12:
+    return "December";
   }
   return "???";
 }
@@ -95,15 +95,18 @@ void printMonthBody(int year, int month) {
   int numberOfDaysInMonth = getNumberOfDaysInMonth(year, month);
 
   // Pad space before the first day of the month
-  for (int i = 0; i < startDay; i++) cout << "    ";
+  for(int i = 0; i < startDay; i++)
+    cout << "    ";
 
-  for (int i = 1; i <= numberOfDaysInMonth; i++) {
+  for(int i = 1; i <= numberOfDaysInMonth; i++) {
     cout << setw(4) << i;
 
-    if ((i + startDay) % 7 == 0) cout << endl;
+    if((i + startDay) % 7 == 0)
+      cout << endl;
   }
   // Add newline if don't already end with one
-  if ((numberOfDaysInMonth + startDay) % 7 != 0) cout << endl;
+  if((numberOfDaysInMonth + startDay) % 7 != 0)
+    cout << endl;
 
   cout << "-----------------------------" << endl;
 }
@@ -124,14 +127,14 @@ int getTotalNumberOfDays(int year, int month) {
   int total = 0;
 
   // Get the total days from 1800 to year - 1
-  for (int i = 1800; i < year; i++)
-    if (isLeapYear(i))
+  for(int i = 1800; i < year; i++)
+    if(isLeapYear(i))
       total = total + 366;
     else
       total = total + 365;
 
   // Add days from Jan to the month prior to the calendar month
-  for (int i = 1; i < month; i++)
+  for(int i = 1; i < month; i++)
     total = total + getNumberOfDaysInMonth(year, i);
 
   return total;
@@ -139,12 +142,12 @@ int getTotalNumberOfDays(int year, int month) {
 
 // Get the number of days in a month
 int getNumberOfDaysInMonth(int year, int month) {
-  if (month == 4 || month == 6 || month == 9 || month == 11)
+  if(month == 4 || month == 6 || month == 9 || month == 11)
     return 30;
-  else if (month == 2)
+  else if(month == 2)
     return isLeapYear(year) ? 29 : 28;
 
-  return 31;  // All other months have 31 days
+  return 31; // All other months have 31 days
 }
 
 // Determine if it is a leap year

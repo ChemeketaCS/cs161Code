@@ -29,8 +29,8 @@ int main() {
   int32 z = 1000;
 
   // c++11 standard type
-  int32_t c = 1000;  // stores a 32-bit value on any platform
+  int32_t c = 1000; // stores a 32-bit value on any platform
 
-  int8_t b;   // stores an 8-bit value (-128 to 127)
-  uint8_t a;  // stores an unsigned (positive) 8-bit value (0-255)
+  int8_t b;  // stores an 8-bit value (-128 to 127)
+  uint8_t a; // stores an unsigned (positive) 8-bit value (0-255)
 }

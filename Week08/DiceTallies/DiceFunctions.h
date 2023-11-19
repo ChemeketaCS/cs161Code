@@ -17,7 +17,6 @@ int getRandomInt(int minValue, int maxValue);
  * @param sides how many sides on each die - default value is 6
  * @return sum of the roll
  */
-int rollDice( int dice, int sides = 6);
-
+int rollDice(int dice, int sides = 6);
 
 #endif // DICEFUNCTIONS_H

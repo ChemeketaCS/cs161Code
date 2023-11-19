@@ -10,12 +10,13 @@ int main() {
 
   int sum = 0;
   int numNumbers = 0;
-  int highestValue = INT_MIN;  // super low value
+  int highestValue = INT_MIN; // super low value
 
   int num;
-  while (inFile >> num) {
+  while(inFile >> num) {
     // check to see if this is the highest number
-    if (num > highestValue) highestValue = num;
+    if(num > highestValue)
+      highestValue = num;
     sum += num;
     numNumbers++;
   }

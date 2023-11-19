@@ -12,7 +12,7 @@ int main() {
 
   string::size_type chunkStart = 0;
   string::size_type chunkEnd = pattern.find('-');
-  while (chunkEnd != string::npos) {
+  while(chunkEnd != string::npos) {
     // grab chunk
     string::size_type chunkLength = chunkEnd - chunkStart;
     string chunk = pattern.substr(chunkStart, chunkLength);
@@ -22,5 +22,5 @@ int main() {
     // find next dash after it
     chunkEnd = pattern.find('-', chunkStart);
   }
-  cout << pattern.substr(chunkStart) << endl;  // last part
+  cout << pattern.substr(chunkStart) << endl; // last part
 }

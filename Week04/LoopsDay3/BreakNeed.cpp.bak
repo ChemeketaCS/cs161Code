@@ -8,8 +8,8 @@ int main() {
   int number = MYSTERY_VALUE;
   int curNumber = number - 1;
   bool found = false;
-  while (curNumber >= 1 && !found) {
-    if (number % curNumber == 0)
+  while(curNumber >= 1 && !found) {
+    if(number % curNumber == 0)
       found = true;
     else
       curNumber--;

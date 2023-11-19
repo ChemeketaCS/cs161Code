@@ -21,15 +21,15 @@ int main() {
 
   // roll a lot of dice...
   const int ROLLS = 1000;
-  for (int i = 0; i < ROLLS; i++) {
+  for(int i = 0; i < ROLLS; i++) {
     int roll = rollDice(NUM_DICE);
-    counts[roll]++;  // add one to the location indexed by the roll
+    counts[roll]++; // add one to the location indexed by the roll
   }
 
   // print results = don't bother with indexes less than MIN_ROLL
   cout << "Results of " << ROLLS << " rolls with " << NUM_DICE
        << " dice (value:times)" << endl;
-  for (int i = MIN_ROLL; i <= MAX_ROLL; i++) {
+  for(int i = MIN_ROLL; i <= MAX_ROLL; i++) {
     cout << right << setw(4) << i << ":" << left << counts[i] << endl;
   }
 }

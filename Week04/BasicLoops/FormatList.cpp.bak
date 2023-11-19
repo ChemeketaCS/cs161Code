@@ -8,13 +8,13 @@ int main() {
   cout << "(";
 
   // stop before last number
-  while (i < 50) {
+  while(i < 50) {
     cout << i;
-    cout << " ";  // always print space
+    cout << " "; // always print space
     i = i + 5;
   }
 
-  cout << i;  // output last number
+  cout << i; // output last number
 
   cout << ")" << endl;
 }

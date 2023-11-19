@@ -12,7 +12,7 @@ int main() {
   int sum = 0;
 
   // Keep reading data until the input is 0
-  while (data != 0) {
+  while(data != 0) {
     // add this number
     sum += data;
 

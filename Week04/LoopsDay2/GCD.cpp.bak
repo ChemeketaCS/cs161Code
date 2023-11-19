@@ -17,8 +17,8 @@ int main() {
 
   // count down until we find common factor
   bool found = false;
-  while (!found) {
-    if (n1 % curNumber == 0 && n2 % curNumber == 0) {
+  while(!found) {
+    if(n1 % curNumber == 0 && n2 % curNumber == 0) {
       found = true;
     } else
       curNumber--;

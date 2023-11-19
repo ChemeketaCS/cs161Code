@@ -11,8 +11,8 @@ int main() {
 
   // temperature should be between 68 and 72
 
-  if (temperature <= 72) {
-    if (temperature >= 68) {
+  if(temperature <= 72) {
+    if(temperature >= 68) {
       cout << "Temp is OK!";
     } else
       cout << "Turn it up!";

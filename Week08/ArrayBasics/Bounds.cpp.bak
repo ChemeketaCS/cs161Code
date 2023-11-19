@@ -7,6 +7,6 @@ int main() {
   int x = 10;
 
   cout << x << endl;
-  nums[5] = 15;  // ooops there is no [5] in that array
+  nums[5] = 15; // ooops there is no [5] in that array
   cout << x << endl;
 }

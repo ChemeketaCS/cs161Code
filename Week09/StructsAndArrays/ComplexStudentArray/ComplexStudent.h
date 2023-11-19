@@ -3,31 +3,30 @@
 
 #include <string>
 
-
-//Use std::string instead "using namespace std" to avoid forcing
-// all files that include this to use namespace std
+// Use std::string instead "using namespace std" to avoid forcing
+//  all files that include this to use namespace std
 struct Name {
-    std::string first;
-    std::string middle;
-    std::string last;
+  std::string first;
+  std::string middle;
+  std::string last;
 };
 
 struct Date {
-    int year;
-    int month;
-    int day;
+  int year;
+  int month;
+  int day;
 };
 
 const int NUM_SCORES = 10;
 
 struct Student {
-    Name name;
-    Date birthDay;
-    int scores[NUM_SCORES];
+  Name name;
+  Date birthDay;
+  int scores[NUM_SCORES];
 };
 
 /**
- * @brief Gets name as 
+ * @brief Gets name as
  * @param n Name to format
  */
 std::string getFirstCommaLast(const Name& n);
@@ -53,20 +52,19 @@ void printStudentRecords(const Student studentList[], int size);
  * @param assignmentNum which score to find average of
  * @return mean value
  */
-double getAverageForAssignment(const Student studentList[],
-                               int size,
+double getAverageForAssignment(const Student studentList[], int size,
                                int assignmentNum);
 
 /**
- * @brief Gets the index for the student with the highest score on a particular assignment
- *          If multiple students share the high score, returns the first one
+ * @brief Gets the index for the student with the highest score on a particular
+ * assignment If multiple students share the high score, returns the first one
  * @param studentList array of students to print
  * @param size number of students in array
  * @param assignNumber which assignment number
  * @return index of student with highest score
  */
-int getHighestScorerForAssignment(const Student studentList[], int size, int assignNumber);
-
+int getHighestScorerForAssignment(const Student studentList[], int size,
+                                  int assignNumber);
 
 /**
  * @brief Reads in students data from file complexData.txt

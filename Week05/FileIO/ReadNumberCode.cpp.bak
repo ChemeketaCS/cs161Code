@@ -8,7 +8,7 @@ int main() {
   inFile.open("Numbers.txt");
 
   int number;
-  inFile >> number;  // read number from file
+  inFile >> number; // read number from file
 
   cout << number;
 }

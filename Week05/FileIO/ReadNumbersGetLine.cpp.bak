@@ -8,17 +8,17 @@ int main() {
   inFile.open("Numbers.txt");
 
   string line;
-  getline(inFile, line);  // line is 15 12 14 18 22
+  getline(inFile, line); // line is 15 12 14 18 22
 
   string::size_type spaceLoc = line.find(" ");
   string part1 = line.substr(0, spaceLoc);
-  int num1 = stoi(part1);    // stoi : string to int
-  line.erase(spaceLoc + 1);  // line now 12 14 18 22
+  int num1 = stoi(part1);   // stoi : string to int
+  line.erase(spaceLoc + 1); // line now 12 14 18 22
 
   spaceLoc = line.find(" ");
   string part2 = line.substr(0, spaceLoc);
-  int num2 = stoi(part2);    // stoi : string to int
-  line.erase(spaceLoc + 1);  // line now 14 18 22
+  int num2 = stoi(part2);   // stoi : string to int
+  line.erase(spaceLoc + 1); // line now 14 18 22
 
   //...
 

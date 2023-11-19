@@ -20,7 +20,7 @@ int main() {
   int* nums2 = new int[listSize];
 
   // Index into pointer to use as array
-  for (int i = 0; i < listSize; i++) {
+  for(int i = 0; i < listSize; i++) {
     nums2[i] = i + 1;
   }
 

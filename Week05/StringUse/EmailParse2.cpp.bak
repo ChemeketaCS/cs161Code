@@ -9,14 +9,14 @@ int main() {
 
   string::size_type index = mystring.find("@");
 
-  if (index != string::npos) {
+  if(index != string::npos) {
     // copy the original string
     string front = mystring;
-    front.erase(index);  // delete everything at or beyond index
+    front.erase(index); // delete everything at or beyond index
 
     // another copy for rear
     string rear = mystring;
-    rear.erase(0, index + 1);  // delete up to and including @
+    rear.erase(0, index + 1); // delete up to and including @
 
     cout << front << endl;
     cout << rear << endl;

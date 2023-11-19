@@ -1,19 +1,18 @@
 #ifndef SIMPLESTUDENT_H
 #define SIMPLESTUDENT_H
 
-
 #include <string>
 using namespace std;
 
 /**
- * @brief The Student struct defines a structure to hold a student's name and grade
+ * @brief The Student struct defines a structure to hold a student's name and
+ * grade
  */
 struct Student {
-    string name;
-    int quizAvg;
-    int labAvg;
+  string name;
+  int quizAvg;
+  int labAvg;
 };
-
 
 /**
  * @brief printStudent prints a student struct to the console

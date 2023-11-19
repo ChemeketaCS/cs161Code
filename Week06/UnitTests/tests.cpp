@@ -20,10 +20,11 @@ using namespace std;
  * @return true if number is prime, else false
  */
 bool isPrime(int number) {
-  if (number < 2) return false;
+  if(number < 2)
+    return false;
 
-  for (int i = 2; i < number; i++) {
-    if (number % i == 0) {
+  for(int i = 2; i < number; i++) {
+    if(number % i == 0) {
       return false;
     }
   }
@@ -38,9 +39,10 @@ bool isPrime(int number) {
 int nthPrime(int n) {
   int number = 1;
   int primeCount = 0;
-  while (primeCount < n) {
+  while(primeCount < n) {
     number++;
-    if (isPrime(number)) primeCount++;
+    if(isPrime(number))
+      primeCount++;
   }
   return number;
 }

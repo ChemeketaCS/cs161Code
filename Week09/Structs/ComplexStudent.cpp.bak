@@ -27,7 +27,7 @@ string toString(const Date& theDate) {
   // Use string stream to avoid having to convert int's to strings and can use
   // endl
   outStream << theDate.month << "/" << theDate.day << "/" << theDate.year;
-  return outStream.str();  // return string that outStream built
+  return outStream.str(); // return string that outStream built
 }
 
 string toString(const Student& theStudent) {

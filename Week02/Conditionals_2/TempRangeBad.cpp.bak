@@ -8,12 +8,12 @@ int main() {
   int temperature;
   cin >> temperature;
 
-  if (temperature > 72)
+  if(temperature > 72)
     cout << "Adjust the thermostat!" << endl;
   else
     cout << "Don't touch that dial!" << endl;
 
-  if (temperature < 68)
+  if(temperature < 68)
     cout << "Adjust the thermostat!" << endl;
   else
     cout << "Don't touch that dial!" << endl;

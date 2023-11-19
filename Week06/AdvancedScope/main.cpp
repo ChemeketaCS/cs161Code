@@ -11,7 +11,7 @@ int keepCount() {
 // Occaisionally useful to make sure an initialization happens just once
 int rollDie() {
   static bool initialized = false;
-  if (!initialized) {
+  if(!initialized) {
     srand(time(0));
     initialized = true;
   }

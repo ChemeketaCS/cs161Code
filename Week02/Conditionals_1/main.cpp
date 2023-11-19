@@ -15,9 +15,9 @@ int main() {
   cout << "isHappy: " << isHappy << endl;
   cout << "isSad:   " << isSad << endl;
 
-  bool isBlue = 3.3;  // true
-  bool isGreen = -5;  // true
-  bool isRed = 0;     // false
+  bool isBlue = 3.3; // true
+  bool isGreen = -5; // true
+  bool isRed = 0;    // false
 
   cout << "isBlue:   " << isBlue << endl;
   cout << "isGreen:  " << isGreen << endl;

@@ -3,7 +3,7 @@ using namespace std;
 
 // Silly function - only works with size 5 arrays of ints
 void printLength5Array(int list[5]) {
-  for (int i = 0; i < 5; i++) {
+  for(int i = 0; i < 5; i++) {
     cout << list[i] << " ";
   }
 }

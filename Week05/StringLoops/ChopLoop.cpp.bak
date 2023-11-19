@@ -11,7 +11,7 @@ int main() {
   pattern = "5033-123-1233-49544-2-32-434";
 
   string::size_type nextDashLoc = pattern.find('-');
-  while (nextDashLoc != string::npos) {
+  while(nextDashLoc != string::npos) {
     // grab up to dash
     string chunk = pattern.substr(0, nextDashLoc);
     cout << chunk << endl;
@@ -20,5 +20,5 @@ int main() {
     // find next
     nextDashLoc = pattern.find('-');
   }
-  cout << pattern << endl;  // last part
+  cout << pattern << endl; // last part
 }

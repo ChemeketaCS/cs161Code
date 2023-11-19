@@ -3,7 +3,9 @@
 using namespace std;
 
 // C++ style
-void doubleVariable(int& x) { x = x * 2; }
+void doubleVariable(int& x) {
+  x = x * 2;
+}
 
 // C style
 void doubleVariableCStyle(int* x) {

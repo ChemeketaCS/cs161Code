@@ -7,23 +7,23 @@ int main() {
   int grade = 95;
 
   // This does not work!!!
-  if (80 <= grade < 90) {
+  if(80 <= grade < 90) {
     cout << "B" << endl;
   }
 
   // Correct:
-  if (80 <= grade && grade < 90) {
+  if(80 <= grade && grade < 90) {
     cout << "B" << endl;
   }
 
   // This does not work and no warning!!!
   int age = 10;
-  if (age == 11 || 12) {
+  if(age == 11 || 12) {
     cout << "Preteen" << endl;
   }
 
   // Correct:
-  if (age == 11 || age == 12) {
+  if(age == 11 || age == 12) {
     cout << "Preteen" << endl;
   }
 }

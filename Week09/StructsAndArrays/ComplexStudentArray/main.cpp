@@ -18,7 +18,7 @@ int main() {
   printStudentRecords(students, NUM_STUDENTS);
 
   cout << endl << "Highest scores: " << endl;
-  for (int assignNum = 0; assignNum < NUM_SCORES; assignNum++) {
+  for(int assignNum = 0; assignNum < NUM_SCORES; assignNum++) {
     int highestScoreIndex =
         getHighestScorerForAssignment(students, NUM_STUDENTS, assignNum);
     cout << (assignNum + 1) << " : ";

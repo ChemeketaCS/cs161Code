@@ -9,7 +9,7 @@ int main() {
 
   string::size_type index = mystring.find("@");
 
-  if (index != string::npos) {
+  if(index != string::npos) {
     cout << "email address";
 
     // front is from 0, has number chars

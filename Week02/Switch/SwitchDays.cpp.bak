@@ -7,17 +7,17 @@ int main() {
   int day;
   cin >> day;
 
-  switch (day) {
-    case 1:  // Fall to through to the next case
-    case 2:  // Fall to through to the next case
-    case 3:  // Fall to through to the next case
-    case 4:  // Fall to through to the next case
-    case 5:
-      cout << "Weekday";
-      break;
-    case 0:  // Fall to through to the next case
-    case 6:
-      cout << "Weekend";
+  switch(day) {
+  case 1: // Fall to through to the next case
+  case 2: // Fall to through to the next case
+  case 3: // Fall to through to the next case
+  case 4: // Fall to through to the next case
+  case 5:
+    cout << "Weekday";
+    break;
+  case 0: // Fall to through to the next case
+  case 6:
+    cout << "Weekend";
   }
 
   cout << endl;

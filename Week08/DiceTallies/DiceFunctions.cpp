@@ -5,7 +5,7 @@
 
 int getRandomInt(int minValue, int maxValue) {
   static bool firstRun = true;
-  if (firstRun) {
+  if(firstRun) {
     srand(time(0));
     firstRun = false;
   }
@@ -17,7 +17,7 @@ int getRandomInt(int minValue, int maxValue) {
 
 int rollDice(int dice, int sides) {
   int total = 0;
-  while (dice > 0) {
+  while(dice > 0) {
     total += getRandomInt(1, sides);
     dice--;
   }

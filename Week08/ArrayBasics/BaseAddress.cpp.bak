@@ -8,7 +8,7 @@ int main() {
 
   cout << nums << endl;
 
-  if (nums < otherNums) {
+  if(nums < otherNums) {
     cout << "num's ADDRESS is smaller" << endl;
   } else {
     cout << "otherNum's ADDRESS is smaller" << endl;

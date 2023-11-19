@@ -6,8 +6,8 @@ using namespace std;
 int main() {
   /// Part 0
   string s1 = "Welcome to HTML";
-  cout << s1.find("come") << endl;  // Returns 3
-  cout << s1.find("XX") << endl;    // Returns string::npos
+  cout << s1.find("come") << endl; // Returns 3
+  cout << s1.find("XX") << endl;   // Returns string::npos
 
   cout << "string::npos = " << string::npos << endl;
 
@@ -19,15 +19,18 @@ int main() {
 
   /// Part 1
   //------------------------------------------
-  int x = 0xffffffff;           // hex for 32 1's
-  unsigned int y = 0xffffffff;  // hex for 32 1's
+  int x = 0xffffffff;          // hex for 32 1's
+  unsigned int y = 0xffffffff; // hex for 32 1's
 
   cout << "signed: " << x << endl;
   cout << "unsigned: " << y << endl;
 
-  if (x < 0) cout << "x is less than 0" << endl;
-  if (y < 0) cout << "y is less than 0" << endl;
-  if (x == y) cout << "x == y" << endl;
+  if(x < 0)
+    cout << "x is less than 0" << endl;
+  if(y < 0)
+    cout << "y is less than 0" << endl;
+  if(x == y)
+    cout << "x == y" << endl;
 
   /// Part 2
   //------------------------------------------
@@ -40,7 +43,8 @@ int main() {
     cout << "School is " << schoolLength << " letters long" << endl;
 
     string::size_type xLocation = school.find("x");
-    if (xLocation == string::npos) cout << "No x" << endl;
+    if(xLocation == string::npos)
+      cout << "No x" << endl;
   }
 
   // Method 2 - OK but warnings
@@ -51,7 +55,8 @@ int main() {
     cout << "School is " << schoolLength << " letters long" << endl;
 
     int xLocation = school.find("x");
-    if (xLocation == string::npos) cout << "No x" << endl;
+    if(xLocation == string::npos)
+      cout << "No x" << endl;
   }
 
   // Method 3 - Use cast to get rid of warnings
@@ -62,6 +67,7 @@ int main() {
     cout << "School is " << schoolLength << " letters long" << endl;
 
     int xLocation = static_cast<int>(school.find("x"));
-    if (xLocation == static_cast<int>(string::npos)) cout << "No x" << endl;
+    if(xLocation == static_cast<int>(string::npos))
+      cout << "No x" << endl;
   }
 }

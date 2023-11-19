@@ -1,11 +1,12 @@
 #ifndef IMAGEIOLIB_H
 #define IMAGEIOLIB_H
 
-#include <string>
 #include "Image.h"
+#include <string>
 
 /**
- * @brief readImage Reads data from .bmp file on disk, loads into an Image struct
+ * @brief readImage Reads data from .bmp file on disk, loads into an Image
+ * struct
  * @param fileName name of file to read
  * @return Image struct with data from file
  *

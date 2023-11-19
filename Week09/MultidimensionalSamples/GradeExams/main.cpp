@@ -20,11 +20,12 @@ int main() {
   char keys[] = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
 
   // Grade all answers
-  for (int i = 0; i < NUMBER_OF_STUDENTS; i++) {
+  for(int i = 0; i < NUMBER_OF_STUDENTS; i++) {
     // Grade one student
     int correctCount = 0;
-    for (int j = 0; j < NUMBER_OF_QUESTIONS; j++) {
-      if (answers[i][j] == keys[j]) correctCount++;
+    for(int j = 0; j < NUMBER_OF_QUESTIONS; j++) {
+      if(answers[i][j] == keys[j])
+        correctCount++;
     }
 
     cout << "Student " << i << "'s correct count is " << correctCount << endl;

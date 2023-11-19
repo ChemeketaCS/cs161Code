@@ -8,11 +8,12 @@ using namespace std;
  * @return          Lowest value from array
  */
 int findMin(const int theArray[], int arraySize) {
-  int smallest = theArray[0];  // smallest is first
+  int smallest = theArray[0]; // smallest is first
 
-  for (int index = 1; index < arraySize; index++) {
+  for(int index = 1; index < arraySize; index++) {
     // if current value smaller, update smallest
-    if (theArray[index] < smallest) smallest = theArray[index];
+    if(theArray[index] < smallest)
+      smallest = theArray[index];
   }
   return smallest;
 }
@@ -24,18 +25,20 @@ int findMin(const int theArray[], int arraySize) {
  * @return          Index of lowest value from array
  */
 int findIndexOfMin(const int theArray[], int arraySize) {
-  int smallestIndex = 0;  // first value (index 0) is smallest
+  int smallestIndex = 0; // first value (index 0) is smallest
 
-  for (int index = 1; index < arraySize; index++) {
+  for(int index = 1; index < arraySize; index++) {
     // if current value smaller than smallest, update index of smallest
-    if (theArray[index] < theArray[smallestIndex]) smallestIndex = index;
+    if(theArray[index] < theArray[smallestIndex])
+      smallestIndex = index;
   }
   return smallestIndex;
 }
 
 // Print size elements of the array list
 void printArray(const int list[], int size) {
-  for (int i = 0; i < size; i++) cout << list[i] << " ";
+  for(int i = 0; i < size; i++)
+    cout << list[i] << " ";
 }
 
 int main() {

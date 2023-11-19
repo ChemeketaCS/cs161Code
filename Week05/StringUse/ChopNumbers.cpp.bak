@@ -10,12 +10,12 @@ int main() {
   string digits = "5033-1223-1234";
   string::size_type loc = digits.find("-");
 
-  string part1 = digits.substr(0, loc);  // 5033
-  string rest = digits.substr(loc + 1);  // 1233-1234
+  string part1 = digits.substr(0, loc); // 5033
+  string rest = digits.substr(loc + 1); // 1233-1234
 
-  string::size_type loc2 = rest.find("-");  // now working with 1233-1234
-  string part2 = rest.substr(0, loc2);      // 1233
-  string part3 = rest.substr(loc2 + 1);     // 1234
+  string::size_type loc2 = rest.find("-"); // now working with 1233-1234
+  string part2 = rest.substr(0, loc2);     // 1233
+  string part3 = rest.substr(loc2 + 1);    // 1234
 
   //    ///Version 2
   //    //---------------------------------------

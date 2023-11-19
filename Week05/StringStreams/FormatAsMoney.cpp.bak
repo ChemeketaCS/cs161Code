@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
   double money = 12000.05;
-  money *= 1.015;  // 1.5% interest paid
+  money *= 1.015; // 1.5% interest paid
 
   // Use a string stream to build up something like "$1324.12"
   stringstream s;

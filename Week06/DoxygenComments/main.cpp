@@ -20,7 +20,7 @@ int sum(int start, int end) {
  *              Examples: Jan 1st = 0, Feb 1st = 31
  * @param range How many days in addition to start day to search
  * @return Max temp in degrees C
- * 
+ *
  */
 double getMaxTemperature(int start, int range);
 
@@ -44,5 +44,4 @@ double getForecastTemperature(int day) {
 }
 
 int main() {
-  
 }

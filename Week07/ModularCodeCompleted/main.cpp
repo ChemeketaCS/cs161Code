@@ -12,14 +12,14 @@ int main() {
   int job;
   cin >> job;
 
-  if (job == 1) {
+  if(job == 1) {
     cout << "What number do you want to stop searching at? ";
     int maxNum;
     cin >> maxNum;
 
     printPrimesUpTo(maxNum);
     cout << endl;
-  } else if (job == 2) {
+  } else if(job == 2) {
     cout << "Which prime do you want to find? ";
     int n;
     cin >> n;

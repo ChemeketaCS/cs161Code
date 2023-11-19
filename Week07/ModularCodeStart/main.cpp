@@ -13,8 +13,8 @@ using namespace std;
  * @return True if number is prime
  */
 bool isPrime(int number) {
-  for (int i = 2; i < number; i++) {
-    if (number % i == 0) {
+  for(int i = 2; i < number; i++) {
+    if(number % i == 0) {
       return false;
     }
   }
@@ -29,9 +29,10 @@ bool isPrime(int number) {
 int nthPrime(int n) {
   int number = 1;
   int primeCount = 0;
-  while (primeCount < n) {
+  while(primeCount < n) {
     number++;
-    if (isPrime(number)) primeCount++;
+    if(isPrime(number))
+      primeCount++;
   }
   return number;
 }
@@ -44,13 +45,13 @@ void printPrimesUpTo(int limit) {
   int numberOfPrimes = 0;
   const int NUMBERS_PER_LINE = 8;
   int numbersOnLine = 0;
-  int number = 2;  // number we are testing for primeness
-  while (number <= limit) {
-    if (isPrime(number)) {
+  int number = 2; // number we are testing for primeness
+  while(number <= limit) {
+    if(isPrime(number)) {
       cout << setw(8) << number;
       numberOfPrimes++;
       numbersOnLine++;
-      if (numbersOnLine == NUMBERS_PER_LINE) {
+      if(numbersOnLine == NUMBERS_PER_LINE) {
         cout << endl;
         numbersOnLine = 0;
       }
@@ -67,14 +68,14 @@ int main() {
   int job;
   cin >> job;
 
-  if (job == 1) {
+  if(job == 1) {
     cout << "What number do you want to stop searching at? ";
     int maxNum;
     cin >> maxNum;
 
     printPrimesUpTo(maxNum);
     cout << endl;
-  } else if (job == 2) {
+  } else if(job == 2) {
     cout << "Which prime do you want to find? ";
     int n;
     cin >> n;

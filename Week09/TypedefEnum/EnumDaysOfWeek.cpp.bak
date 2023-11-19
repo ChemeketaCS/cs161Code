@@ -16,9 +16,11 @@ int main() {
   cout << "Today is " << today << endl;
   cout << "Today is " << DAY_NAMES[today] << endl;
 
-  if (today == THURSDAY) cout << "Today is trash day" << endl;
+  if(today == THURSDAY)
+    cout << "Today is trash day" << endl;
 
-  if (today < FRIDAY) cout << "No weekend in sight" << endl;
+  if(today < FRIDAY)
+    cout << "No weekend in sight" << endl;
 
   //    //wrap around to monday after friday
   //    weekday nextBusinessDay = static_cast<weekday>(today + 1);
@@ -49,29 +51,29 @@ int main() {
 }
 
 void printDay(weekday day) {
-  switch (day) {
-    case MONDAY:
-      cout << "Monday";
-      break;
-    case TUESDAY:
-      cout << "Tuesday";
-      break;
-    default:
-      cout << "Other";
+  switch(day) {
+  case MONDAY:
+    cout << "Monday";
+    break;
+  case TUESDAY:
+    cout << "Tuesday";
+    break;
+  default:
+    cout << "Other";
   }
 }
 
 weekday getDay(string name) {
-  if (name == "Monday")
+  if(name == "Monday")
     return MONDAY;
-  else if (name == "Tuesday")
+  else if(name == "Tuesday")
     return TUESDAY;
-  else if (name == "Wednesady")
+  else if(name == "Wednesady")
     return WEDNESDAY;
-  else if (name == "Thursday")
+  else if(name == "Thursday")
     return THURSDAY;
-  else if (name == "Friday")
+  else if(name == "Friday")
     return FRIDAY;
 
-  return FRIDAY;  // better not reach this
+  return FRIDAY; // better not reach this
 }

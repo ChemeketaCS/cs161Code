@@ -10,18 +10,18 @@ int main() {
 
   // Number the cells in row major order
   int cellNum = 1;
-  for (int rowNumber = 0; rowNumber < ROW_SIZE; rowNumber++) {
-    for (int colNumber = 0; colNumber < COL_SIZE; colNumber++) {
+  for(int rowNumber = 0; rowNumber < ROW_SIZE; rowNumber++) {
+    for(int colNumber = 0; colNumber < COL_SIZE; colNumber++) {
       scores[rowNumber][colNumber] = cellNum;
       cellNum++;
     }
   }
 
   // Print out the cells
-  for (int rowNumber = 0; rowNumber < ROW_SIZE; rowNumber++) {
-    for (int colNumber = 0; colNumber < COL_SIZE; colNumber++) {
+  for(int rowNumber = 0; rowNumber < ROW_SIZE; rowNumber++) {
+    for(int colNumber = 0; colNumber < COL_SIZE; colNumber++) {
       cout << scores[rowNumber][colNumber] << "\t";
     }
-    cout << endl;  // end of row
+    cout << endl; // end of row
   }
 }

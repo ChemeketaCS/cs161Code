@@ -9,21 +9,21 @@ int main() {
 
   // Forward
   int textLength = static_cast<int>(text.length());
-  for (int i = 0; i < textLength; i++) {
+  for(int i = 0; i < textLength; i++) {
     cout << text.at(i) << " . ";
   }
   cout << endl;
 
   // Reverse
-  for (int i = textLength - 1; i >= 0; i--) {
+  for(int i = textLength - 1; i >= 0; i--) {
     cout << text.at(i) << " . ";
   }
   cout << endl;
 
   // Shift every character by one letter
-  string text2 = text;  // make a copy to modify
+  string text2 = text; // make a copy to modify
   int stringLength = static_cast<int>(text2.length());
-  for (int i = 0; i < stringLength; i++) {
+  for(int i = 0; i < stringLength; i++) {
     char currentChar = text2.at(i);
     char shiftedChar = static_cast<char>(currentChar + 1);
 

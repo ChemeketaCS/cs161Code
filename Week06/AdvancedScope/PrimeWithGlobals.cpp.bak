@@ -8,13 +8,13 @@ bool wasPrime;
 
 // Awful version of isPrime
 void isPrime() {
-  if (number < 2) {
+  if(number < 2) {
     wasPrime = false;
     return;
   }
 
-  for (int i = 2; i < number; i++) {
-    if (number % i == 0) {
+  for(int i = 2; i < number; i++) {
+    if(number % i == 0) {
       wasPrime = false;
       return;
     }
@@ -26,10 +26,10 @@ void isPrime() {
 // Number holds final answer
 void nthPrime(int n) {
   int primeCount = 0;
-  while (primeCount < n) {
-    number++;      // set special variable
-    isPrime();     // call function
-    if (wasPrime)  // know that wasPrime has the result
+  while(primeCount < n) {
+    number++;    // set special variable
+    isPrime();   // call function
+    if(wasPrime) // know that wasPrime has the result
       primeCount++;
   }
 }

@@ -1,11 +1,11 @@
 #ifndef CALENDARFUNCTIONS_H
 #define CALENDARFUNCTIONS_H
 
-//Need to include string so we can talk about it in this file
+// Need to include string so we can talk about it in this file
 #include <string>
 using namespace std;
 
-//Refined list of things I think I want to do
+// Refined list of things I think I want to do
 void printMonth(int year, int month);
 
 string getTitle(int year, int month);

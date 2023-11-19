@@ -41,7 +41,7 @@ Student parseStudent(string dataString) {
   newStudent.name = dataString.substr(0, commaLoc);
 
   // get quiz score
-  dataString.erase(0, commaLoc + 1);  // clear everything up to first comma
+  dataString.erase(0, commaLoc + 1); // clear everything up to first comma
   string::size_type commaLoc2 = dataString.find(",");
   string qString = dataString.substr(0, commaLoc2);
   // stoi turns a string into an int - defined in <string>
@@ -67,7 +67,7 @@ int main() {
 
   // s3 exact copy of s1
   Student s3 = s1;
-  s3.name = "Dianne Jones";  // Changing copy does not affect original
+  s3.name = "Dianne Jones"; // Changing copy does not affect original
 
   //    //Not allowed
   //    if(s1 == s2)
@@ -78,7 +78,7 @@ int main() {
   //    cout << s2;
 
   // compare grades of two students
-  if (s1.quizAvg > s2.quizAvg)
+  if(s1.quizAvg > s2.quizAvg)
     cout << s2.name << " needs help from " << s1.name << endl;
 
   // print entire student - have to print members

@@ -8,8 +8,8 @@ using namespace std;
  * @param size    Number of elements to be reversed
  */
 void reverse(const int list[], int newList[], int size) {
-  int reverseIndex = size - 1;  // will count down from size - 1 to 0
-  for (int i = 0; i < size; i++) {
+  int reverseIndex = size - 1; // will count down from size - 1 to 0
+  for(int i = 0; i < size; i++) {
     newList[reverseIndex] = list[i];
     reverseIndex--;
   }
@@ -29,7 +29,8 @@ void swapElements(int theArray[], int location1, int location2) {
 
 // Print size elements of the array list
 void printArray(const int list[], int size) {
-  for (int i = 0; i < size; i++) cout << list[i] << " ";
+  for(int i = 0; i < size; i++)
+    cout << list[i] << " ";
 }
 
 int main() {

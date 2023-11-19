@@ -13,5 +13,6 @@ int main() {
   outFile << setw(10) << 12;
 
   outFile.close();
-  if (!outFile.fail()) cout << "File written successfully" << endl;
+  if(!outFile.fail())
+    cout << "File written successfully" << endl;
 }

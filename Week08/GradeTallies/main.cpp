@@ -22,15 +22,15 @@ int main() {
   int gradeCounts[5] = {0};
 
   // loop through the students
-  for (int i = 0; i < NUM_STUDENTS; i++) {
+  for(int i = 0; i < NUM_STUDENTS; i++) {
     int currentScore = scores[i];
-    if (currentScore < 60)
+    if(currentScore < 60)
       gradeCounts[F_BUCKET]++;
-    else if (currentScore < 70)
+    else if(currentScore < 70)
       gradeCounts[D_BUCKET]++;
-    else if (currentScore < 80)
+    else if(currentScore < 80)
       gradeCounts[C_BUCKET]++;
-    else if (currentScore < 90)
+    else if(currentScore < 90)
       gradeCounts[B_BUCKET]++;
     else
       gradeCounts[A_BUCKET]++;

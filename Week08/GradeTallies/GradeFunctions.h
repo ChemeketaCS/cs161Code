@@ -25,5 +25,4 @@ void fillRandomScores(int theArray[], int arraySize);
  */
 int getRandomInt(int minValue, int maxValue);
 
-
 #endif // GRADETALLIES_H

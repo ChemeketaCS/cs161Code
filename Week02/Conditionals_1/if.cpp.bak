@@ -7,5 +7,6 @@ int main() {
   int grade;
   cin >> grade;
 
-  if (grade >= 60) cout << "Passed" << endl;
+  if(grade >= 60)
+    cout << "Passed" << endl;
 }

@@ -9,8 +9,8 @@ int main() {
 
   cout << "The prime numbers are:" << endl;
 
-  int number = 2;  // number we are testing for primeness
-  while (number <= n) {
+  int number = 2; // number we are testing for primeness
+  while(number <= n) {
     cout << number << " ";
 
     number++;

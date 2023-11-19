@@ -1,9 +1,9 @@
 #ifndef PRIMESTUFF_H
 #define PRIMESTUFF_H
 
-//IF WE USED STRING IN FUNCTION DECLARATIONS WE WOULD NEED
+// IF WE USED STRING IN FUNCTION DECLARATIONS WE WOULD NEED
 //#include <string>
-//using namespace std;
+// using namespace std;
 
 /**
  * @brief Determines if given number is prime or not
@@ -12,7 +12,6 @@
  */
 bool isPrime(int number);
 
-
 /**
  * @brief Finds the nth prime number
  * @param n assumed to be positive
@@ -20,12 +19,10 @@ bool isPrime(int number);
  */
 int nthPrime(int n);
 
-
 /**
  * @brief Prints all primes up to given limit
  * @param limit Highest value (inclusive) to consider
  */
 void printPrimesUpTo(int limit);
-
 
 #endif // PRIMESTUFF_H

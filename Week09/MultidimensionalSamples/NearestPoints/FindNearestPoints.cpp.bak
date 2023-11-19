@@ -14,27 +14,27 @@ int main() {
   double points[NUMBER_OF_POINTS][2];
 
   cout << "Enter " << NUMBER_OF_POINTS << " points: ";
-  for (int i = 0; i < NUMBER_OF_POINTS; i++)
+  for(int i = 0; i < NUMBER_OF_POINTS; i++)
     cin >> points[i][0] >> points[i][1];
 
   // p1 and p2 are the indices in the points array
-  int p1 = 0, p2 = 1;  // Initial two points
+  int p1 = 0, p2 = 1; // Initial two points
 
   // Assume first two points are closest
   double shortestDistance =
       getDistance(points[p1][0], points[p1][1], points[p2][0], points[p2][1]);
 
   // Compute distance for every two points
-  for (int i = 0; i < NUMBER_OF_POINTS; i++) {
-    for (int j = i + 1; j < NUMBER_OF_POINTS; j++) {
+  for(int i = 0; i < NUMBER_OF_POINTS; i++) {
+    for(int j = i + 1; j < NUMBER_OF_POINTS; j++) {
       // Find distance, see if closer than closest known pair
       double distance =
           getDistance(points[i][0], points[i][1], points[j][0], points[j][1]);
 
-      if (shortestDistance > distance) {
-        p1 = i;                       // Update p1
-        p2 = j;                       // Update p2
-        shortestDistance = distance;  // Update shortestDistance
+      if(shortestDistance > distance) {
+        p1 = i;                      // Update p1
+        p2 = j;                      // Update p2
+        shortestDistance = distance; // Update shortestDistance
       }
     }
   }

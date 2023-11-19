@@ -7,13 +7,13 @@ int main() {
   ifstream inFile;
   inFile.open("Numbers.txt");
 
-  if (inFile.fail()) {
+  if(inFile.fail()) {
     cout << "Could not open file" << endl;
     return 0;
   }
 
   int number;
-  inFile >> number;  // read number from file
+  inFile >> number; // read number from file
 
   cout << number << endl;
 }
