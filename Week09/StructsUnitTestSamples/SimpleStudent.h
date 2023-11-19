@@ -27,5 +27,14 @@ string toString(const Student& s);
  */
 Student parseStudent(const string& data);
 
+/**
+ * @brief Calculates the average quiz score over all the students
+ * 
+ * @param students Array of students
+ * @param numStudents Size of students array
+ * @return Average score on quizzes 
+ */
+double getAverageQuizzes(const Student students[], int numStudents);
+
 
 #endif // SIMPLESTUDENT_H

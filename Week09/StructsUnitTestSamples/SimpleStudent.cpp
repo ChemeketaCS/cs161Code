@@ -35,3 +35,12 @@ Student parseStudent(const string& data) {
 
   return newStudent;
 }
+
+
+double getAverageQuizzes(const Student students[], int numStudents) {
+  double total = 0;
+  for(int i = 0; i < numStudents; i++) {
+    total += students[i].quizAvg;
+  }
+  return total / numStudents;
+}
