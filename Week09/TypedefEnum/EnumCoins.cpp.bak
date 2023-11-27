@@ -3,12 +3,19 @@
 using namespace std;
 
 // enum with defined values
-enum coin { PENNY = 1, NICKEL = 5, DIME = 10, QUARTER = 25 };
+enum Coin
+{
+  PENNY = 1,
+  NICKEL = 5,
+  DIME = 10,
+  QUARTER = 25
+};
 
-int main() {
-  coin c1 = PENNY;
-  coin c2 = DIME;
+int main()
+{
+  Coin c1 = PENNY;
+  Coin c2 = DIME;
 
   int value = c1 + c2;
-  cout << value << endl;
+  cout << "Value is " << value << endl;
 }

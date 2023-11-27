@@ -2,35 +2,78 @@
 
 using namespace std;
 
-// dumb idea
-typedef int number;
+// A Weekday type can only take these values:
+enum Weekday { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY };
 
-// If we are on a 64-bit intel processor, int is 32 bits
-#ifdef __x86_64
-typedef int int32;
-#endif
+const string DAY_NAMES[5] = {"Mon", "Tues", "Wed", "Thurs", "Fri"};
 
-// If we are on an 8-bit bit AVR processor, long is 32 bits
-#if defined(__AVR_ATmega328P__)
-typedef long int32;
-#endif
-
-// But c++11 already provides a tool for this
-// int32_t  - always a 32 bit value
-// int8_t - always a 8 bit value
-// uint8_t - always a value 0-255
+// functions that take/return Weekday
+void printDay(Weekday day);
+Weekday getDay(string name);
 
 int main() {
-  // these mean int x, y
-  number x = 10;
-  number y = 5;
+  Weekday today = FRIDAY;
+  cout << "Today is " << today << endl;
+  cout << "Today is " << DAY_NAMES[today] << endl;
 
-  // my typedef
-  int32 z = 1000;
+  if(today == THURSDAY)
+    cout << "Today is trash day" << endl;
 
-  // c++11 standard type
-  int32_t c = 1000; // stores a 32-bit value on any platform
+  if(today < FRIDAY)
+    cout << "No weekend in sight" << endl;
 
-  int8_t b;  // stores an 8-bit value (-128 to 127)
-  uint8_t a; // stores an unsigned (positive) 8-bit value (0-255)
+  //    //wrap around to monday after friday
+  //    Weekday nextBusinessDay = static_cast<Weekday>(today + 1);
+  //    if(nextBusinessDay > FRIDAY)
+  //        nextBusinessDay = MONDAY;
+
+  //    //loop
+  //    for(Weekday d = MONDAY; d <= FRIDAY; d = static_cast<Weekday>(d+1)) {
+  //        cout << DAY_NAMES[d] << " ";
+  //    }
+  //    cout << endl;
+
+  //    switch(today) {
+  //        case MONDAY: cout << "Mon"; break;
+  //        case TUESDAY: cout << "Tue"; break;
+  //        case WEDNESDAY: cout << "Wed"; break;
+  //    }
+
+  //    //call function, pass enumerated value
+  //    printDay(today);
+
+  //    string userInput;
+  //    cin >> userInput;
+
+  //    //get Weekday from function
+  //    Weekday meetingDay = getDay(userInput);
+  //    printDay(meetingDay);
+}
+
+void printDay(Weekday day) {
+  switch(day) {
+  case MONDAY:
+    cout << "Monday";
+    break;
+  case TUESDAY:
+    cout << "Tuesday";
+    break;
+  default:
+    cout << "Other";
+  }
+}
+
+Weekday getDay(string name) {
+  if(name == "Monday")
+    return MONDAY;
+  else if(name == "Tuesday")
+    return TUESDAY;
+  else if(name == "Wednesady")
+    return WEDNESDAY;
+  else if(name == "Thursday")
+    return THURSDAY;
+  else if(name == "Friday")
+    return FRIDAY;
+
+  return FRIDAY; // better not reach this
 }

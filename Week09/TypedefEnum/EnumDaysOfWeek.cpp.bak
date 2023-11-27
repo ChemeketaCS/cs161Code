@@ -2,17 +2,17 @@
 
 using namespace std;
 
-// A weekday type can only take these values:
-enum weekday { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY };
+// A Weekday type can only take these values:
+enum Weekday { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY };
 
 const string DAY_NAMES[5] = {"Mon", "Tues", "Wed", "Thurs", "Fri"};
 
-// functions that take/return weekday
-void printDay(weekday day);
-weekday getDay(string name);
+// functions that take/return Weekday
+void printDay(Weekday day);
+Weekday getDay(string name);
 
 int main() {
-  weekday today = FRIDAY;
+  Weekday today = FRIDAY;
   cout << "Today is " << today << endl;
   cout << "Today is " << DAY_NAMES[today] << endl;
 
@@ -23,12 +23,12 @@ int main() {
     cout << "No weekend in sight" << endl;
 
   //    //wrap around to monday after friday
-  //    weekday nextBusinessDay = static_cast<weekday>(today + 1);
+  //    Weekday nextBusinessDay = static_cast<Weekday>(today + 1);
   //    if(nextBusinessDay > FRIDAY)
   //        nextBusinessDay = MONDAY;
 
   //    //loop
-  //    for(weekday d = MONDAY; d <= FRIDAY; d = static_cast<weekday>(d+1)) {
+  //    for(Weekday d = MONDAY; d <= FRIDAY; d = static_cast<Weekday>(d+1)) {
   //        cout << DAY_NAMES[d] << " ";
   //    }
   //    cout << endl;
@@ -45,12 +45,12 @@ int main() {
   //    string userInput;
   //    cin >> userInput;
 
-  //    //get weekday from function
-  //    weekday meetingDay = getDay(userInput);
+  //    //get Weekday from function
+  //    Weekday meetingDay = getDay(userInput);
   //    printDay(meetingDay);
 }
 
-void printDay(weekday day) {
+void printDay(Weekday day) {
   switch(day) {
   case MONDAY:
     cout << "Monday";
@@ -63,7 +63,7 @@ void printDay(weekday day) {
   }
 }
 
-weekday getDay(string name) {
+Weekday getDay(string name) {
   if(name == "Monday")
     return MONDAY;
   else if(name == "Tuesday")
