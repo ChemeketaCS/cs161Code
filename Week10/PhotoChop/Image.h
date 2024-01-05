@@ -18,14 +18,14 @@ struct Pixel {
   byte blue;
 };
 
-// Size related constants
+// Image dimension constants
 const int IMG_HEIGHT = 128;
 const int IMG_WIDTH = 128;
 
-/** @brief The Image struct wraps a 2D array of Pixels
+/**
+ * @brief The Image struct wraps a 2D array of Pixels
  *
- *  Making a struct instead of a naked 2D array allows for easy
- *   copying
+ * Making a struct instead of a naked 2D array allows for easy copying
  */
 struct Image {
   Pixel data[IMG_HEIGHT][IMG_WIDTH];
