@@ -4,12 +4,12 @@ CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
 CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -Wno-deprecated-copy
 
 # list your .h files here
-HEADERS = PrimeStuff.h
+HEADERS = calendarFunctions.h
 
 # list .cpp files here according to main program, tests, or both
 PROGRAM_FILES = main.cpp
 TEST_FILES = tests.cpp
-SHARED_FILES = PrimeStuff.cpp
+SHARED_FILES = calendarFunctions.cpp
 
 .PHONY: all
 all: program.exe tests.exe
