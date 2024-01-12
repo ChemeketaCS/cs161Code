@@ -13,13 +13,14 @@ using std::ios;
 using std::ofstream;
 using std::string;
 
-Image readImage(const string& fileName) {
+Image readImage(const string& fileName)
+{
   // Empty image we will return
   Image newImage;
 
   ifstream inFile;
   inFile.open(fileName, ios::binary);
-  if(!inFile.is_open()) {
+  if (!inFile.is_open()) {
     cout << "File " << fileName << " not found." << endl;
     assert(0); // force program to die
   }
@@ -34,12 +35,11 @@ Image readImage(const string& fileName) {
 
   // Every pixel is 3 bytes. Every row must be a multiple of 4 bytes.
   // Calculate needed padding to reach that.
-  int extraBytes =
-      (IMG_WIDTH * 3 % 4); // how many bytes over multiple of 4 do we have
+  int extraBytes = (IMG_WIDTH * 3 % 4);
   int paddingBytes = extraBytes == 0 ? 0 : 4 - extraBytes;
 
-  for(int row = IMG_HEIGHT - 1; row >= 0; row--) {
-    for(int col = 0; col < IMG_WIDTH; col++) {
+  for (int row = IMG_HEIGHT - 1; row >= 0; row--) {
+    for (int col = 0; col < IMG_WIDTH; col++) {
       // color order in file is BGR
       inFile.read((char*)(&newImage.data[row][col].blue), sizeof(byte));
       inFile.read((char*)(&newImage.data[row][col].green), sizeof(byte));
@@ -51,10 +51,11 @@ Image readImage(const string& fileName) {
   return newImage;
 }
 
-void writeImage(const Image& theImage, const string& fileName) {
+void writeImage(const Image& theImage, const string& fileName)
+{
   ofstream oFile;
   oFile.open(fileName, ios::binary);
-  if(!oFile.is_open()) {
+  if (!oFile.is_open()) {
     cout << "File " << fileName << " not found." << endl;
     assert(0); // force program to die
   }
@@ -64,9 +65,8 @@ void writeImage(const Image& theImage, const string& fileName) {
   oFile.write(MAGIC_BYTES, 2);
 
   // Write file size
-  //  Every pixel is 3 bytes. Every row must be a multiple of 4 bytes.
-  int extraBytes =
-      (IMG_WIDTH * 3 % 4); // how many bytes over multiple of 4 do we have
+  // Every pixel is 3 bytes. Every row must be a multiple of 4 bytes.
+  int extraBytes = (IMG_WIDTH * 3 % 4);
   int paddingBytes = extraBytes == 0 ? 0 : 4 - extraBytes;
   uint32_t dataSize = IMG_HEIGHT * (IMG_WIDTH * 3 + paddingBytes);
   uint32_t fileSize = dataSize + 54; // 54 bits of header
@@ -110,8 +110,8 @@ void writeImage(const Image& theImage, const string& fileName) {
   oFile.write((char*)&ZERO, 4);
   oFile.write((char*)&ZERO, 4);
 
-  for(int row = IMG_HEIGHT - 1; row >= 0; row--) {
-    for(int col = 0; col < IMG_WIDTH; col++) {
+  for (int row = IMG_HEIGHT - 1; row >= 0; row--) {
+    for (int col = 0; col < IMG_WIDTH; col++) {
       oFile.write((char*)(&theImage.data[row][col].blue), 1);
       oFile.write((char*)(&theImage.data[row][col].green), 1);
       oFile.write((char*)(&theImage.data[row][col].red), 1);

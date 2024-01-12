@@ -5,19 +5,18 @@
 #include <string>
 
 /**
- * @brief readImage Reads data from .bmp file on disk, loads into an Image
- * struct
+ * @brief Read an image file
  * @param fileName name of file to read
  * @return Image struct with data from file
  *
- * @warning File on disk must be of dimensions IMG_HEIGHT x IMG_WIDTH
+ * @warning File on disk must be of dimensions IMG_HEIGHT by IMG_WIDTH
  */
 Image readImage(const std::string& fileName);
 
 /**
- * @brief writeImage saves the image to a file
- * @param theImage image struct to draw
- * @param fileName name to store as
+ * @brief Save an image
+ * @param theImage Image struct to save
+ * @param fileName name of file to create/replace
  */
 void writeImage(const Image& theImage, const std::string& fileName);
 
