@@ -8,9 +8,9 @@
             "name": "Run Program",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/program.exe",
+            "program": "${workspaceFolder}/tests.exe",
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "make program",
+            "preLaunchTask": "make tests.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -29,9 +29,9 @@
             "name": "Run Program (Mac)",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/program.exe",
+            "program": "${workspaceFolder}/tests.exe",
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "make program",
+            "preLaunchTask": "make tests.exe",
         },
     ]
 }

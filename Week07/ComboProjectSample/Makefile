@@ -1,20 +1,26 @@
-.PHONY: all program tests
-CPP = g++
-CPP_FLAGS = -std=c++17 -g
-WARNINGS = -Wall -Wextra -Wmissing-include-dirs -Wfloat-equal -Wredundant-decls -Winit-self -Wshadow -Wconversion
-STANDARDS = -pedantic -pedantic-errors
-PROGRAM_NAME = program.exe
-TESTER_NAME = tests.exe
+# compiler options
+CXXFLAGS = -g -Wall -Wextra
+CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
+CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -Wno-deprecated-copy
 
-PROGRAM_FILES = ComboProjectSample.cpp
-TEST_FILES = ComboProjectSampleTests.cpp
-INCLUDE_DIRS = .
+# list your .h files here
+HEADERS = PrimeStuff.h
+
+# list .cpp files here according to main program, tests, or both
+PROGRAM_FILES = main.cpp
+TEST_FILES = tests.cpp
 SHARED_FILES = PrimeStuff.cpp
 
-all: program tests
+.PHONY: all
+all: program.exe tests.exe
 
-program:
-	-$(CPP) $(CPP_FLAGS) $(STANDARDS) $(WARNINGS) -I $(INCLUDE_DIRS) -o $(PROGRAM_NAME) $(SHARED_FILES) $(PROGRAM_FILES)
+program.exe: $(PROGRAM_FILES) $(SHARED_FILES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) $(SHARED_FILES) -o $@
 
-tests:
-	-$(CPP) $(CPP_FLAGS) $(STANDARDS) $(WARNINGS) -I $(INCLUDE_DIRS) -o $(TESTER_NAME) $(SHARED_FILES) $(TEST_FILES)
+tests.exe: $(TEST_FILES) $(SHARED_FILES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(TEST_FILES) $(SHARED_FILES) -o $@
+
+.PHONY: clean
+clean:
+	rm -f program.exe
+	rm -f tests.exe
