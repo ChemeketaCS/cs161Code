@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() { 
+  double score = 75;
+
+  //This works but is repetitive
+  //And if's don't indicate that only one of the conditions can be true
+  if (score >= 90.0)
+    cout << "Grade is A";
+  if (score < 90.0 && score >= 80.0)
+    cout << "Grade is B";
+  if (score < 80.0 && score >= 70.0)
+    cout << "Grade is C";
+  if (score < 70.0 && score >= 60.0)
+    cout << "Grade is D";
+  if (score < 60.0)
+    cout << "Grade is F";
+}

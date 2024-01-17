@@ -1,0 +1,28 @@
+/**
+ * @brief Boolean Operators Demo
+ *
+ * .txt files have other samples. Copy and paste code from them into main.cpp
+ * to test them.
+ */
+#include <iostream>
+
+using namespace std;
+
+int main() { 
+  int creditsEarned = 12;
+  double GPA = 3.5;
+
+  // && is the AND operator
+  // Both conditions must be true for the if statement to execute
+  if (creditsEarned >= 12 && GPA >= 3.0) {
+    cout << "You made the honor role!" << endl;
+  }
+
+  // Same as above but wordier
+  if (creditsEarned >= 12) {
+    if (GPA >= 3.0) {
+      cout << "You made the honor role!" << endl;
+    }
+  }
+}
+
