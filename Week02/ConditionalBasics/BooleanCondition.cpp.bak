@@ -19,6 +19,16 @@ int main() {
   if(true == tempOK)
     cout << "Don't touch that dial!" << endl;
 
+  //Same but cleaner
+  if(true)
+    cout << "Don't touch that dial!" << endl;
+
+  //-------------------------------------------
+
   if(false == tempOK)
+    cout << "Don't touch that dial!" << endl;
+
+  //Same but cleaner
+  if(!tempOK)
     cout << "Adjust the thermostat!" << endl;
 }
