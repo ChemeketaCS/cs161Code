@@ -1,20 +1,18 @@
 # compiler options
 CXXFLAGS = -g -Wall -Wextra
 CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
-CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
+CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -Wno-deprecated-copy
 
-# list .h files here
-HEADERS = Image.h ImageIOLib.h
-
-# list .cpp files here
-PROGRAM_FILES = main.cpp ImageIOLib.cpp
+PROGRAM_FILES = *.cpp
 
 .PHONY: all
 all: program.exe
 
-program.exe: $(PROGRAM_FILES) $(HEADERS)
+#PHONY to force recompilation despite not knowing the dependencies
+.PHONY: program.exe
+program.exe: 
 	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@
 
 .PHONY: clean
 clean:
-	rm -f program.exe
+	-rm -f program.exe   
