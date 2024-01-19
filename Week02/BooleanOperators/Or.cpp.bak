@@ -1,0 +1,29 @@
+/**
+ * @brief Conditionals Demo
+ *
+ * .bak files have other samples. Copy and paste code from them into main.cpp
+ * to test them.
+ */
+#include <iostream>
+
+using namespace std;
+
+int main() { 
+  int creditsEarned = 12;
+  double GPA = 3.5;
+
+  // && is the OR operator
+  // If either condition is true the statement executes
+  if (creditsEarned < 8 || GPA < 2.0) {
+    cout << "You are on academic probation!" << endl;
+  }
+
+  // Same as above but wordier
+  if (creditsEarned < 8) {
+      cout << "You are on academic probation!" << endl;
+  } else {
+    if (GPA < 2.0) {
+      cout << "You are on academic probation!" << endl;
+    }
+  }
+}
