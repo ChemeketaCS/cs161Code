@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  double score = 75;
+
+  //Don't repeat the boundaries
+  //if/else if/else clearly indicates that only one of the conditions can be true
+  
+  if (score >= 90.0)
+    cout << "Grade is A";
+  else if (score >= 80.0)
+    cout << "Grade is B";
+  else if (score >= 70.0)
+    cout << "Grade is C";
+  else if (score >= 60.0)
+    cout << "Grade is D";
+  else
+    cout << "Grade is F";
+}

@@ -1,20 +1,18 @@
-.PHONY: all program tests
-CPP = g++
-CPP_FLAGS = -std=c++17 -g
-WARNINGS = -Wall -Wextra -Wmissing-include-dirs -Wfloat-equal -Wredundant-decls -Winit-self -Wshadow -Wconversion
-STANDARDS = -pedantic -pedantic-errors
-PROGRAM_NAME = program.exe
-TESTER_NAME = tests.exe
+# compiler options
+CXXFLAGS = -g -Wall -Wextra
+CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
+CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -Wno-deprecated-copy
 
-PROGRAM_FILES = calendar.cpp
-TEST_FILES = calendarTests.cpp
-INCLUDE_DIRS = .
-SHARED_FILES = calendarFunctions.cpp
+PROGRAM_FILES = *.cpp
 
-all: program tests
+.PHONY: all
+all: program.exe
 
-program:
-	-$(CPP) $(CPP_FLAGS) $(STANDARDS) $(WARNINGS) -I $(INCLUDE_DIRS) -o $(PROGRAM_NAME) $(SHARED_FILES) $(PROGRAM_FILES)
+#PHONY to force recompilation despite not knowing the dependencies
+.PHONY: program.exe
+program.exe: 
+	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@
 
-tests:
-	-$(CPP) $(CPP_FLAGS) $(STANDARDS) $(WARNINGS) -I $(INCLUDE_DIRS) -o $(TESTER_NAME) $(SHARED_FILES) $(TEST_FILES)
+.PHONY: clean
+clean:
+	-rm -f program.exe   

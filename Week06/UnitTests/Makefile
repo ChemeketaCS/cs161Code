@@ -1,16 +1,18 @@
-.PHONY: all program
-CPP = g++
-CPP_FLAGS = -std=c++17 -g
-WARNINGS = -Wall -Wextra -Wmissing-include-dirs -Wfloat-equal -Wredundant-decls -Winit-self -Wshadow -Wconversion
-STANDARDS = -pedantic -pedantic-errors
-PROGRAM_NAME = program.exe
-TESTER_NAME = tests.exe
+# compiler options
+CXXFLAGS = -g -Wall -Wextra
+CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
+CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -Wno-deprecated-copy
 
-TEST_FILES = tests.cpp
-INCLUDE_DIRS = .
-SHARED_FILES = 
+PROGRAM_FILES = *.cpp
 
-all: tests
+.PHONY: all
+all: program.exe
 
-tests:
-	-$(CPP) $(CPP_FLAGS) $(STANDARDS) $(WARNINGS) -I $(INCLUDE_DIRS) -o $(TESTER_NAME) $(SHARED_FILES) $(TEST_FILES)
+#PHONY to force recompilation despite not knowing the dependencies
+.PHONY: program.exe
+program.exe: 
+	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@
+
+.PHONY: clean
+clean:
+	-rm -f program.exe   

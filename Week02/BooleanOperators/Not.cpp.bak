@@ -1,0 +1,32 @@
+/**
+ * @brief Conditionals Demo
+ *
+ * .bak files have other samples. Copy and paste code from them into main.cpp
+ * to test them.
+ */
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int temp;
+  cout << "Enter a temperature:";
+  cin >> temp;
+  
+  bool tempOK = true;
+  
+  //If temp is NOT >= 68, it is too cold
+  if (!(temp >= 68)) {
+    tempOK = false;
+  }
+
+  //If temp is NOT >= 75, it is too hot
+  if (!(temp <= 75)) {
+    tempOK = false;
+  }
+
+  if(tempOK)
+    cout << "Don't touch that dial!" << endl;
+  else
+    cout << "Adjust the thermostat!" << endl;
+}

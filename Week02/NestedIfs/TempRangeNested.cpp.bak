@@ -14,8 +14,10 @@ int main() {
   if(temperature <= 72) {
     if(temperature >= 68) {
       cout << "Temp is OK!";
-    } else
+    } else {
       cout << "Turn it up!";
-  } else
+    }
+  } else {
     cout << "Turn it down!";
+  }
 }
