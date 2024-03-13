@@ -4,17 +4,19 @@
 using namespace std;
 
 int main() {
+  cout << "Enter the length of the hypotenuse: ";
+  double hypotenuse;
+  cin >> hypotenuse;
+
   cout << "Enter measure of an angle in degrees: ";
+  double angleDegrees;
+  cin >> angleDegrees;
 
-  double angle;
-  cin >> angle;
+  const double PI = 3.141592653589793;
+  double angleRadians = angleDegrees * PI / 180;
 
-  const double PI = 3.14159;
-  double angleRadians = angle * PI / 180;
-
-  double sinAngle = sin(angleRadians);
-
-  cout << sinAngle << endl;
-  cout << cos(angleRadians) << endl;
-  cout << tan(angleRadians) << endl;
+  double cosAngle = cos(angleRadians);
+  double opposite = cosAngle * hypotenuse;
+  cout << "The side opposite the angle has a length "
+      << opposite;
 }
