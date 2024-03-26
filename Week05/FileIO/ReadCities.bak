@@ -1,0 +1,21 @@
+#include <fstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  ifstream inFile;
+  inFile.open("Cities.txt");
+
+  // Get the entire first line
+  string line;
+  getline(inFile, line);
+  cout << line << endl;
+
+  // Get the next line
+  getline(inFile, line);
+  cout << line << endl;
+
+  //...
+}
