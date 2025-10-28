@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  // add 5 numbers the user enters....
+  // int total = 0;
+
+  for (int i = 0; i < 5; i++)
+  {
+    cout << i << endl;
+    // cout << "Enter a number: ";
+
+    // int curNumber;
+    // cin >> curNumber;
+
+    // total += curNumber;
+  }
+
+  // cout << "Those add to: " << total << endl;
+}
