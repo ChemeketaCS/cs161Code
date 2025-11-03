@@ -1,0 +1,14 @@
+#include <cctype> //toupper()
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  cout << "Enter a character: ";
+  char myChar;
+  cin >> myChar; // read one character (not whitespace)
+
+  myChar = static_cast<char>(toupper(myChar));
+
+  cout << myChar << endl;
+}

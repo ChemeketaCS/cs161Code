@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  cout << "Enter a character: ";
+  char myChar;
+  cin >> myChar; // read one character (not whitespace)
+
+  // if lower case, convert to upper
+  if(myChar >= 'a' && myChar <= 'z') {
+    int charNumber = myChar - 'a';
+    int upperASCII = charNumber + 'A';
+    myChar = static_cast<char>(upperASCII);
+  }
+
+  cout << myChar << endl;
+}
