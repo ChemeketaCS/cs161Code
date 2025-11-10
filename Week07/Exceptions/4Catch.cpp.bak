@@ -1,0 +1,28 @@
+#include <exception>
+#include <iostream>
+
+using namespace std;
+
+char getFifthLetter(const string& s)
+{
+  char letter = s.at(4);
+  return letter;
+}
+
+int main()
+{
+  cout << "Enter a word: ";
+  string word;
+  cin >> word;
+
+  // we know fifthLetter might throw an exception...
+  try {
+    char fifthLetter = getFifthLetter(word);
+    cout << "The 5th letter is " << fifthLetter << endl;
+  } catch (const exception& e) {
+    cout << "The word must be at least 5 letters long." << endl;
+    cout << "    Error message: " << e.what() << endl;
+  }
+
+  cout << "Program completed successfully." << endl;
+}

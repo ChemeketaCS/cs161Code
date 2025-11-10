@@ -1,0 +1,21 @@
+#include <cassert>
+#include <iostream>
+
+using namespace std;
+
+char getFifthLetter(const string& s)
+{
+  assert(s.length() >= 5);
+  char letter = s.at(4);
+  return letter;
+}
+
+int main()
+{
+  cout << "Enter a word: ";
+  string word;
+  cin >> word;
+  char letter = getFifthLetter(word);
+  cout << "The 5th letter is " << letter << endl;
+  cout << "Program completed successfully." << endl;
+}
