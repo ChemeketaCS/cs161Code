@@ -1,0 +1,18 @@
+#include <iomanip>
+#include <iostream>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+  double money = 12000.05;
+  money *= 1.015; // 1.5% interest paid
+
+  // Use a string stream to build up something like "$1324.12"
+  stringstream s;
+  s << fixed << setprecision(2) << "$" << money;
+  // Ask the stringstream for the string that was built up
+  string moneyString = s.str();
+
+  cout << moneyString << endl;
+}

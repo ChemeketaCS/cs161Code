@@ -1,0 +1,21 @@
+#include <iomanip>
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() {
+  //Make an output file stream
+  ofstream outFile;
+  //Tell it to open the file MyData.txt
+  outFile.open("MyData.txt");
+
+  //Write to the file
+  outFile << "Hello";
+  outFile << " there" << endl;
+  outFile << 12;
+
+  outFile.close();
+  if(!outFile.fail())
+    cout << "File written successfully" << endl;
+}
