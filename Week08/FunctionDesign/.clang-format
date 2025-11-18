@@ -1,0 +1,15 @@
+BasedOnStyle: LLVM
+AllowShortFunctionsOnASingleLine: None
+PointerAlignment: Left
+BreakBeforeBraces: WebKit
+AlwaysBreakTemplateDeclarations: Yes
+SpaceAfterTemplateKeyword: false
+BreakBeforeBinaryOperators: NonAssignment
+BreakConstructorInitializers: AfterColon
+BreakInheritanceList: AfterColon
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: false
+IndentGotoLabels: false
+KeepEmptyLinesAtTheStartOfBlocks: false
+SpaceAroundPointerQualifiers: Both
+IndentWidth: 2
