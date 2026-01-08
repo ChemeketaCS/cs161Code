@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  double pi = 3.14159;
+  int x = static_cast<int>(pi);
+  cout << "pi is still " << pi << endl; // pi is still 3.14159
+  cout << "x is " << x << endl;         // x is 3
+
+  // int one = 1;
+  // int three = 3;
+  // cout << (one / three) << endl;   // int division
+
+  // // force floating point division
+  // cout << (static_cast<double>(one) / three) << endl;
+}
