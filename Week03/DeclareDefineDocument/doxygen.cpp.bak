@@ -1,0 +1,21 @@
+/**
+ * @brief Finds the maximal temperature over a range of days
+ * @param start Day of the year representing the starting point
+ *              of the range.
+ *              Examples: Jan 1st = 0, Feb 1st = 31
+ * @param range How many days in addition to start day to search
+ * @return Max temp in degrees C
+ */
+double getMaxTemperature(int start, int range);
+
+/**
+ * @brief Get the average high temperature (in Fahrenheit) for
+ *        the specified day of the year
+ * @param day Day of the year. Jan 1st = 1, Feb 1st = 32...
+ * @return degrees F
+ * 
+ * This function will connect to weather.com to retrieve the
+ * average high temperature for the specified day. If a network
+ * error occurs, the function will return -1.
+ */
+double getAverageHighTemperature(int day);
