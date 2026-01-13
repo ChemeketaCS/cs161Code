@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x = 12;
+
+  // Incorrect way to test range
+  if (0 < x < 10) {
+    cout << "x is between 0 and 10";
+  }
+
+  // Correct way to test range
+  if (x > 0 && x < 10) {
+    cout << "x is between 0 and 10";
+  }
+
+  // Incorrect way to test multiple values
+  if (x == 3 || 4) {
+    cout << "x is either 3 or 4";
+  }
+
+  // Correct way to test multiple values
+  if (x == 3 || x == 4) {
+    cout << "x is either 3 or 4";
+  }
+}

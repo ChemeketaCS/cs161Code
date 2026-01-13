@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+bool isOdd(int number) {
+    if (number % 2 == 1) {
+        return true;
+    } else {
+        return false;
+    }
+    // never get here!
+}
+
+// bool isOdd(int number) {
+//     // This default value will be used if it is not changed in the if
+//     bool result = false;
+//     if (number % 2 == 1) {
+//         result = true;
+//     }
+//     return result;
+// }
+
+int main() {
+  cout << isOdd(3) << endl;
+  cout << isOdd(4) << endl;
+  cout << isOdd(15) << endl;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int grade;
+  cout << "Enter your grade: ";
+  cin >> grade;
+
+  if (grade >= 90) {
+    cout << "You got an A";
+  }
+  if (grade >= 80) {
+    cout << "You got a B";
+  }
+  if (grade >= 70) {
+    cout << "You got a C";
+  }
+  if (grade >= 60) {
+    cout << "You got a D";
+  } else {
+    cout << "You got an F";
+  }
+}

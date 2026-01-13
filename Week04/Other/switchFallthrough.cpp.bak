@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int dayOfWeek = 3;
+
+  switch (dayOfWeek) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+      cout << "Weekday!";
+      break;
+    case 0:
+    case 6:
+      cout << "Weekend!";
+      break;
+  }
+}

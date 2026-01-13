@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  cout << "(";
+  // values 1-9 all need a space after them
+  int i = 1;
+  while (i <= 9) {
+    cout << i;
+    cout << " ";
+    i = i + 1;
+  }
+  // last value is special... no space
+  // maybe better handled outside loop
+  cout << i << ")" << endl;
+}

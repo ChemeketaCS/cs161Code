@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int x = 12;
+  bool isEven = (x % 2 == 0) ? true : false;
+
+  int numMonkeys;
+  cin >> numMonkeys;
+
+  if (numMonkeys == 1) {
+      cout << "You chose " << numMonkeys << " monkey";
+  } else {
+      cout << "You chose " << numMonkeys << " monkeys";
+  }
+}

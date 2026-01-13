@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 5;
+
+    // test expression
+    if (x % 2 == 0) {
+        cout << "x is even" << endl;
+    }
+
+    // store result of test and use in if statement
+    bool isEven = (x % 2 == 0);
+    if (isEven) {
+        cout << "x is even" << endl;
+    }
+}

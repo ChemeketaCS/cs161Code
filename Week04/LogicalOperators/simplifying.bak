@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int x = 12;
+
+  if (!(x <= 5)) {
+    cout << "x is greater than 5";
+  }
+  // vs
+  if (x > 5) {
+    cout << "x is greater than 5";
+  }
+
+  int y = 4;
+  if (!(x == 0 || y == 0)) {
+    cout << "Neither x nor y is zero\n";
+  }
+  // vs
+  if (x != 0 && y != 0) {
+    cout << "Neither x nor y is zero\n";
+  }
+}

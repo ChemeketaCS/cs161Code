@@ -1,0 +1,28 @@
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a = 5.03;
+    double b = 5.00 + 0.01 + 0.01 + 0.01;
+
+    if (a == b) {
+        cout << "a and b are equal" << endl;
+    } else {
+        cout << "a and b are NOT equal" << endl;
+    }
+
+    // Epsilon: "a small allowable difference"
+    const double EPSILON = 0.0001;
+    // Test if a and b are "close enough"
+    if (abs(a - b) < EPSILON) {
+        cout << "a and b are pretty much equal" << endl;
+    } else {
+        cout << "a and b are NOT close enough to equal" << endl;
+    }
+
+    // OK to compare with inequality operators
+    if (a < b) {
+        cout << "a is less than b" << endl;
+    }
+}

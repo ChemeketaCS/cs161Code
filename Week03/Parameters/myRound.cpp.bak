@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double myRound(double num , int decimalPlaces = 2) {
+  num = num * pow(10, decimalPlaces);
+  num = round(num);
+  num = num / pow(10, decimalPlaces);
+  return num;
+}
+
+int main() {
+  double value = 123.456789;
+  cout << myRound(value) << endl;            // default 2 decimal places
+  cout << myRound(value, 4) << endl;         // 4 decimal places
+  cout << myRound(value, 0) << endl;         // 0 decimal places
+}
