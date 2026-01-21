@@ -1,0 +1,21 @@
+#include <iomanip>
+#include <iostream>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+  // Use a string stream to build up something like "1 2 3 4 5... 10"
+  stringstream s;
+  //write to the stringstream
+  s << "(";
+  for(int i = 1; i < 10; ++i) {
+    s << i << " ";
+  }
+  s << 10 << ")";
+
+  // Ask the stringstream for the string that was built up
+  string numberString = s.str();
+
+  cout << numberString << endl;
+}

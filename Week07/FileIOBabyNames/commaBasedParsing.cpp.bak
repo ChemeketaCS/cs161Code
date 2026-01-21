@@ -1,0 +1,51 @@
+#include <climits>
+#include <fstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  ifstream inFile;
+  inFile.open("Babynamesranking.csv");
+
+  if(inFile.fail()) {
+    cout << "No open file!" << endl;
+    return 0;
+  }
+
+  while(!inFile.eof()) {
+    //get an entire line from the file
+    string line;
+    getline(inFile, line);
+
+    if(inFile.fail() || line.empty())
+      break; // ooops - went too far
+
+    size_t nextComma = line.find(",");
+    //get the text up to the first comma
+    string rankStr = line.substr(0, nextComma);
+    //turn it into an int
+    int rank = stoi(rankStr);
+    //delete up to and including comma
+    line = line.substr(nextComma + 1);
+
+    //get the next part - boyname
+    nextComma = line.find(",");
+    string boyname = line.substr(0, nextComma);
+    line = line.substr(nextComma + 1);
+
+    //next part - trash just find comma and delete up to it
+    nextComma = line.find(",");
+    line = line.substr(nextComma + 1);
+
+    //next part - girlname
+    nextComma = line.find(",");
+    string girlname = line.substr(0, nextComma);
+
+    //don't need anything else on the line
+    
+    cout << "Rank " << rank << " most popular names were: " << boyname
+         << " and " << girlname << endl;
+  }
+}

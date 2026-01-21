@@ -1,0 +1,36 @@
+#include <climits>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  /// Version 1
+  //---------------------------------------
+  string digits = "5033-1223-1234";
+  size_t loc = digits.find("-");
+
+  string part1 = digits.substr(0, loc); // 5033
+  string rest = digits.substr(loc + 1); // 1233-1234
+
+  size_t loc2 = rest.find("-"); // now working with 1233-1234
+  string part2 = rest.substr(0, loc2);     // 1233
+  string part3 = rest.substr(loc2 + 1);    // 1234
+
+  //    ///Version 2
+  //    //---------------------------------------
+  //    string digits = "5033-1223-1234";
+  //    //find first '-'
+  //    size_t loc = digits.find("-");
+  //    //find second '-' by starting after first
+  //    size_t loc2 = digits.find("-", loc + 1);
+
+  //    string part1 = digits.substr(0, loc);  //5033
+  //    size_t length = (loc2 - loc) - 1;  //how long is second part?
+  //    string part2 = digits.substr(loc+1, length); //1233
+  //    string part3 = digits.substr(loc2+1);   //1234
+
+  cout << part1 << endl;
+  cout << part2 << endl;
+  cout << part3 << endl;
+}

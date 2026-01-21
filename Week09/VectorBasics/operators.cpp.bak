@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<int> numbers = {1, 2, 3};
+  // Declare copy and assign it the same value as numbers
+  vector<int> copy = numbers;
+
+  // Modify copy
+  copy.at(0) = 10;
+
+  vector<int> v1 = {1, 2, 3};
+  vector<int> v2 = {1, 2, 4};
+  vector<int> v3 = {1, 2};
+  vector<int> v4 = {1, 2, 3};
+  if (v1 < v2) {
+    cout << "v1 is less than v2" << endl; // YES
+  }
+  if (v3 < v1) {
+    cout << "v3 is less than v1" << endl; // YES
+  }
+  if (v1 == v4) {
+    cout << "v1 is equal to v4" << endl; // YES
+  }
+}

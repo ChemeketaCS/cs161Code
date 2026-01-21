@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+char getFifthLetter(const string& s)
+{
+  char letter = s.at(4);
+  return letter;
+}
+
+int main()
+{
+  cout << "Enter a word: ";
+  string word;
+  cin >> word;
+
+  if (word.length() < 5) {
+    cerr << "Error: The word must be at least 5 letters long." << endl;
+    return 1;
+  }
+
+  char letter = getFifthLetter(word);
+  cout << "The 5th letter is " << letter << endl;
+  cout << "Program completed successfully." << endl;
+}

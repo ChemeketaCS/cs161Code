@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  vector<vector<int>> matrix = {
+      {6, 3, 2, 5, 7}, {11, 1, 4, 5, 8}, {7, 2, 6, 5, 3}};
+
+  size_t rowCount = matrix.size();
+  size_t colCount = matrix.at(0).size();
+
+  for (size_t row = 0; row < rowCount; ++row) {
+    cout << "Row " << row << ": ";
+    for (size_t col = 0; col < colCount; ++col) {
+      cout << matrix.at(row).at(col) << " ";
+    }
+    cout << endl;
+  }
+}

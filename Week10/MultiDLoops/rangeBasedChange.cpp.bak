@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Create a 2D vector (3x4) and initialize it
+    vector<vector<int>> matrix = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+
+    // Access row by reference
+    for (vector<int>& row : matrix) {
+        // Access element by reference to modify
+        for (int& elem : row) {
+            elem *= 2;  // Double each element
+        }
+    }
+
+    // Traverse the matrix using range-based for loop
+    cout << "Matrix elements:" << endl;
+    // Const ref to avoid copy but prevent modification
+    for (const vector<int>& row : matrix) {
+        // Access element by value since we don't need to modify here
+        for (int elem : row) {
+            cout << elem << " ";
+        }
+        cout << endl;
+    }
+}

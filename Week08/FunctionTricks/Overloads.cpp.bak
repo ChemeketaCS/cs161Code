@@ -1,0 +1,60 @@
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+void print(string s) {
+  cout << "A" << endl;
+}
+
+void print(double x) {
+  cout << "B" << endl;
+}
+
+void print(int x) {
+  cout << "C" << endl;
+}
+
+void print(int x, int y) {
+  cout << "D" << endl;
+}
+
+void print(double x, double y) {
+  cout << "E" << endl;
+}
+
+////------------------------------------------------
+////Bad overloads
+
+// double cosine(double angleDegrees) {
+//     double answer = angleDegrees;  //do magic here
+//     return answer;
+// }
+
+// double cosine(double angleRadians) {
+//     double answer = angleRadians;  //do other magic here
+//     return answer;
+// }
+
+////return random 0-1
+// double getRandom() {
+//     return static_cast<double>(rand()) / RAND_MAX;
+// }
+
+////return random integer 1-10
+// int getRandom() {
+//     return rand() % 10 + 1;
+// }
+////------------------------------------------------
+
+int main() {
+  print("hello");
+  print(12.2);
+  print('a');
+  print(12);
+  print(6, 2);
+  print(6.3, 2.1);
+
+  //    double ratio = cosine(2.5);
+
+  //    cout << getRandom();
+}

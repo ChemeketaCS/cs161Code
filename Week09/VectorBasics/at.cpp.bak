@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<int> counts = {10, 20, 30, 40};
+  int first = counts.at(0);    // first is 10
+
+  vector<string> words = {"apple", "banana", "cherry"};
+  string second = words.at(1); // second is "banana"
+
+  vector<double> measurements = {1.1, 2.2, 3.3};
+  double third = measurements.at(2); // third is 3.3
+
+  // set first element to 7
+  counts.at(0) = 7;
+  // set second element to twice the first
+  counts.at(1) = counts.at(0) * 2;
+  // increment the third element
+  ++counts.at(2);
+  // reduce the fourth element by 6
+  counts.at(3) -= 6;
+
+  cout << counts.at(0) << endl;
+  cout << counts.at(1) << endl;
+  cout << counts.at(2) << endl;
+  cout << counts.at(3) << endl;
+  // uh-oh, this will cause an error
+  cout << counts.at(4) << endl;
+}

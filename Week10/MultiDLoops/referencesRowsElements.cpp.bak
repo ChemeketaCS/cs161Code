@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  vector<vector<int>> table(3, vector<int>(5, 0));
+
+  int x = table.at(0).at(1);
+  // x has a copy of the value at row 0, column 1
+  x = 5; // no change to table
+
+
+  // Reference to an element
+  int& row0col1 = table.at(0).at(1);
+  row0col1 = 3; // changes table
+
+  // Reference to a row
+  vector<int>& row0 = table.at(0);
+  // row0 is a reference to the first row of the table
+  cout << row0.size();  // prints 5
+  row0.at(1) = 3; // changes element at row 0, column 1 in table
+}

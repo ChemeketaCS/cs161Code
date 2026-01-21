@@ -1,0 +1,27 @@
+#include <climits>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  string mystring = "bob@a.com";
+
+  size_t index = mystring.find("@");
+
+  if(index != string::npos) {
+    // copy the original string
+    string front = mystring;
+    front.erase(index); // delete everything at or beyond index
+
+    // another copy for rear
+    string rear = mystring;
+    rear.erase(0, index + 1); // delete up to and including @
+
+    cout << front << endl;
+    cout << rear << endl;
+
+  } else {
+    cout << "not email address";
+  }
+}

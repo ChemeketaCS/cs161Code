@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+    vector<int> numbers = {1, 2, 3, 4, 5};
+    for (int value : numbers) {
+        cout << value << " ";
+    }
+    cout << endl;
+
+    vector<double> temps = {74.2, 78.6, 80.1, 82.5, 85.0};
+    for (double t : temps) {
+        cout << t << " ";
+    }
+
+
+    vector<int> a = {1, 2, 3, 4, 5};
+    //Use reference to modify elements
+    for (int& value : a) {
+      value = value * 2; // double each element
+    }
+    // print the modified vector on one line
+    for (int value : a) {
+        cout << value << " ";
+    }
+}

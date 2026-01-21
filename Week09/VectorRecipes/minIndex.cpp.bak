@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+  vector<double> values = {4.5, 2.3, 5.7, 1.9, 3.6};
+
+  // assume the first element is the minimum
+  size_t indexOfMin = 0;
+  // loop through the rest of the vector to see if any elements are smaller
+  for (size_t i = 1; i < values.size(); ++i) {
+    double value = values.at(i);
+    if (value < values.at(indexOfMin)) {
+      indexOfMin = i; // found a new minimum
+    }
+  }
+
+  cout << "Index of minimum value is: " << indexOfMin << endl;
+  cout << "Minimum value is: " << values.at(indexOfMin) << endl;
+}

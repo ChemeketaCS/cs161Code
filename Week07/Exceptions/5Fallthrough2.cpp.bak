@@ -1,0 +1,31 @@
+#include <exception>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string mediumJob(const string& s) {
+    string substrResult = s.substr(5, 1);
+    string mediumResult = "mediumJob(" + s + ")";
+    return mediumResult;
+}
+
+string bigJob(const string& s) {
+    string bigResult = "";
+    // we know mediumResult function might blow up
+    try {
+        string mediumResult = mediumJob(s);
+        // it must have worked!
+        bigResult = "bigJob(" + mediumResult + ")";
+    } catch(const exception& e) {
+        cout << "---Caught exception in bigJob: " << e.what() << endl;
+        cout << "---Returning bigJob(mediumJob(?))" << endl;
+        bigResult = "bigJob(mediumJob(?))";
+    }
+    return bigResult;
+}
+
+int main() {
+    string finalResult = bigJob("cat");
+    cout << "Result is " << finalResult << endl;
+}
