@@ -1,0 +1,30 @@
+#include <cmath>
+#include <iostream>
+
+using namespace std;
+
+// return the area
+double getTriangleArea(double width, double height)
+{
+  double area = 0.5 * width * height;
+  return area;
+}
+
+// print the area
+void printTriangleArea(double width, double height)
+{
+  double area = 0.5 * width * height;
+  cout << "Area is " << area << endl;
+}
+
+int main()
+{
+  // Can just print - will never know the value
+  printTriangleArea(3, 5);
+  printTriangleArea(2, 5);
+
+  // can use the value to do more math or to print
+  double area = getTriangleArea(3, 5);
+  cout << "Area is " << area << endl;
+  cout << "Rounded up to the nearest integer: " << ceil(area);
+}
