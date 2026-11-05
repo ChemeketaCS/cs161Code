@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello!\nHow are you doing?\nGoodbye!" << endl;
+    cout << "She said \"Hello!\" to me." << endl;
+    //cout << "She said \"Hello!\" to me.";
+
+    
+    cout << "c:\\folder\\file.txt" << endl;
+}

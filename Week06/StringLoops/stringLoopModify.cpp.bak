@@ -1,0 +1,20 @@
+#include <cctype>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  string myString = "Hello";
+  cout << myString << endl;
+
+  // Loop through the characters
+  for (size_t i = 0; i < myString.size(); ++i) {
+    // Get the character at the current index
+    char letter = myString.at(i);
+    // Convert the character to uppercase using toupper
+    char newLetter = static_cast<char>(toupper(letter));
+    // Update the character in the string
+    myString.at(i) = newLetter;
+  }
+  cout << myString << endl;
+}

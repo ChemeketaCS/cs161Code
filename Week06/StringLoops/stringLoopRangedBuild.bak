@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  string myString = "Hello";
+  string reversed = "";
+
+  // Build up reversed string one character at a time:
+  for (char letter : myString) {
+    cout << "Current character: " << letter << endl;
+    reversed = letter + reversed;
+    cout << "Reversed so far: " << reversed << endl;
+  }
+  cout << "Final reversed string: " << reversed << endl;
+}

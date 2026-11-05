@@ -4,21 +4,21 @@ using namespace std;
 
 // countEs that modifies the input string
 int countEs(string& s) {
-    int count = 0;
-    for (size_t i = 0; i < s.size(); ++i) {
-        s.at(i) = tolower(s.at(i));
-        if (s.at(i) == 'e') {
-            count++;
-        }
+  int count = 0;
+  for (size_t i = 0; i < s.size(); ++i) {
+    s.at(i) = static_cast<char>(tolower(s.at(i)));
+    if (s.at(i) == 'e') {
+      count++;
     }
-    return count;
+  }
+  return count;
 }
 
 // Safe countEs function using const reference parameter
 // int countEs(const string& s) {
 //     int count = 0;
 //     for (char c : s) {
-//         c = tolower(c);
+//         c = static_cast<char>(tolower(c));
 //         if (c == 'e') {
 //             count++;
 //         }
@@ -27,7 +27,7 @@ int countEs(string& s) {
 // }
 
 int main() {
-    string testString = "Elephant";
-    cout << "Number of 'e's: " << countEs(testString) << endl;
-    cout << "Original string: " << testString << endl;
+  string testString = "Elephant";
+  cout << "Number of 'e's: " << countEs(testString) << endl;
+  cout << "Original string: " << testString << endl;
 }

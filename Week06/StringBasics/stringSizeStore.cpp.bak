@@ -1,9 +1,11 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
     string fruit = "Watermelon";
-    size_t wordsize = fruit.size();
+    int wordsize = fruit.size();
+
     cout << wordsize << endl;
 
     if (wordsize > 5) {
@@ -20,5 +22,4 @@ int main() {
 
     // Works fine if you want to just use an int
     int wordsize2 = static_cast<int>(fruit.size());
-
 }

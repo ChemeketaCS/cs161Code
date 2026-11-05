@@ -1,0 +1,9 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string s = "Hello";
+    cout << s.size() << endl;        // prints 5
+    cout << "Hello".size() << endl;  // ERROR! There is no size method for a string literal
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  string myString = "There are spaces in this string";
+  int spaceCount = 0;
+
+  // Ranged-based for loop
+  // automatically iterates through each character in the string
+  for (char letter : myString) {
+    cout << letter << endl; // Print each character
+    if (letter == ' ') {
+      ++spaceCount;
+    }
+  }
+  cout << spaceCount << endl;
+}
