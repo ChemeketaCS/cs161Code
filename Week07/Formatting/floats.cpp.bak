@@ -12,5 +12,11 @@ int main()
   cout << format("{:.5}", a) << endl;
   cout << format("{:.20}", a) << endl;
 
-  cout << endl;
+  cout << "--------------" << endl;
+  cout << format("{}", 97) << endl;
+  cout << format("{:c}", 97) << endl;
+  cout << format("{:b}", 97) << endl;
+  cout << format("{:x}", 97) << endl;
+  cout << "--------------" << endl;
+
 }

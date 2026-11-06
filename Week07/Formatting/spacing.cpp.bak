@@ -1,0 +1,36 @@
+#include <format>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+  int a = 12345;
+  int b = 789;
+  cout << "2 chars space:" << endl;
+  cout << format("_{:2}_", a) << endl;
+  cout << format("_{:2}_", b) << endl;
+  cout << "5 chars space:" << endl;
+  cout << format("_{:5}_", a) << endl;
+  cout << format("_{:5}_", b) << endl;
+  cout << "10 chars space:" << endl;
+  cout << format("_{:10}_", a) << endl;
+  cout << format("_{:10}_", b) << endl;
+
+  cout << "--------------------------------" << endl;
+  // Fill with -'s and align to the left
+  cout << format("{:-<10}", a) << endl;
+  // Fill with -'s and align to the center
+  cout << format("{:-^10}", a) << endl;
+  // No fill, just left align
+  cout << format("{:<10}", a) << endl;
+  // No fill, just center
+  cout << format("{:^10}", a) << endl;
+
+  cout << "--------------------------------" << endl;
+  // Show the difference between + and space for positive and negative numbers
+  int a2 = 30;
+  int b2 = -30;
+  cout << format("_{}_{}_", a2, b2) << endl;
+  cout << format("_{:+}_{:+}_", a2, b2) << endl;
+  cout << format("_{: }_{: }_", a2, b2) << endl;
+}

@@ -12,5 +12,15 @@ int main()
   cout << format("{:.5}", a) << endl;
   cout << format("{:.20}", a) << endl;
 
-  cout << endl;
+  cout << "--------------------------" << endl;
+  
+  double d = 123.456789;
+  cout << "Fixed decimal:" << endl;
+  cout << format("{:.1f}", a) << endl;
+  cout << format("{:.2f}", a) << endl;
+  cout << format("{:.3f}", a) << endl;
+  cout << "Scientific (floating decimal):" << endl;
+  cout << format("{:.1e}", a) << endl;
+  cout << format("{:.2e}", a) << endl;
+  cout << format("{:.3e}", a) << endl;
 }
