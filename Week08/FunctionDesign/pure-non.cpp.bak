@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+// Take a modifiable reference
+void capitalize(string& s) {
+    // modify the string
+    for(char& c : s) {
+        c = toupper(c);
+    }
+    // no return value, the original string is modified
+}
+
+int main() {
+  string userName = "John Doe";
+  capitalize(userName);
+  cout << userName << endl;       // the original string is modified
+}

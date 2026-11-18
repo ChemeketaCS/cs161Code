@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+// Take a constant reference
+string capitalize(const string& s) {
+    string copy = s;  //copy the original string
+    // modify the copy
+    for(char& c : copy) {
+        c = toupper(c);
+    }
+    return copy;
+}
+
+int main() {
+  string userName = "John Doe";
+  string upperUserName = capitalize(userName);
+  cout << userName << endl;
+  cout << upperUserName << endl;
+}
