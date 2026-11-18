@@ -3,24 +3,34 @@
 #include <string>
 using namespace std;
 
-int main()
-{
-  double a = 123.456789;
-  cout << format("{:.2}", a) << endl;
-  cout << format("{:.3}", a) << endl;
-  cout << format("{:.4}", a) << endl;
-  cout << format("{:.5}", a) << endl;
-  cout << format("{:.20}", a) << endl;
+int main() {
+  int a = 12345;
+  int b = 789;
+  cout << "2 chars space:" << endl;
+  cout << format("_{:2}_", a) << endl;
+  cout << format("_{:2}_", b) << endl;
+  cout << "5 chars space:" << endl;
+  cout << format("_{:5}_", a) << endl;
+  cout << format("_{:5}_", b) << endl;
+  cout << "10 chars space:" << endl;
+  cout << format("_{:10}_", a) << endl;
+  cout << format("_{:10}_", b) << endl;
 
-  cout << "--------------------------" << endl;
-  
-  double d = 123.456789;
-  cout << "Fixed decimal:" << endl;
-  cout << format("{:.1f}", a) << endl;
-  cout << format("{:.2f}", a) << endl;
-  cout << format("{:.3f}", a) << endl;
-  cout << "Scientific (floating decimal):" << endl;
-  cout << format("{:.1e}", a) << endl;
-  cout << format("{:.2e}", a) << endl;
-  cout << format("{:.3e}", a) << endl;
+  cout << "--------------------------------" << endl;
+  // No fill, just left align
+  cout << format("_{:<10}_", a) << endl;
+  // No fill, just center
+  cout << format("_{:^10}_", a) << endl;
+  // Fill with -'s and align to the left
+  cout << format("_{:-<10}_", a) << endl;
+  // Fill with -'s and align to the center
+  cout << format("_{:-^10}_", a) << endl;
+
+  cout << "--------------------------------" << endl;
+  // Show the difference between + and space for positive and negative numbers
+  int a2 = 30;
+  int b2 = -30;
+  cout << format("_{}_{}_", a2, b2) << endl;
+  cout << format("_{:+}_{:+}_", a2, b2) << endl;
+  cout << format("_{: }_{: }_", a2, b2) << endl;
 }
